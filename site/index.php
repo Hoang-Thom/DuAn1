@@ -13,6 +13,9 @@
         case 'cart':
             echo "Trang cart";
             break;
+        case 'blog':
+            echo "Trang bài viết";
+            break;
         default: 
             echo "Trang không tồn tại";
             break;
