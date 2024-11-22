@@ -1,0 +1,50 @@
+.main-content {
+    padding: 20px 0;
+}
+
+.forgot-password-box {
+    background-color: rgb(230, 186, 221);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    /* Thu nhỏ chiều rộng của box */
+    margin: 0 auto;
+    /* Căn giữa box */
+}
+
+.forgot-password-box h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.forgot-password-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password-box p {
+    color: #555;
+    font-size: 14px;
+    /* margin-bottom: 15px; */
+    margin: 0;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.forgot-password-button {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgb(102, 50, 92);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0 30px;
+    box-sizing: border-box;
+    /* transition: all 0.3s ease; */
+}

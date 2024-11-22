@@ -19,6 +19,12 @@
         case 'login':
             require_once('view/login.php');
             break;
+        case 'register':
+            require_once('view/register.php');
+            break;
+        case 'forget':    
+            require_once('view/forget.php');    
+            break;                 
         default: 
             echo "Trang không tồn tại";
             break;
