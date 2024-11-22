@@ -13,6 +13,9 @@
         case 'cart':
             echo "Trang cart";
             break;
+        case 'login':
+            echo "Trang Login";
+            break;
         default: 
             echo "Trang không tồn tại";
             break;
