@@ -8,7 +8,7 @@
             require_once('view/home.php');
             break;
         case 'shop':
-            echo "Trang shop";
+            echo "Trang shop :sản phẩm";
             break;
         default: 
             echo "Trang không tồn tại";
