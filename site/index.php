@@ -13,6 +13,9 @@
         case 'cart':
             echo "Trang cart";
             break;
+        case 'blog':
+            echo "Trang bài viết";
+            break;
         case 'login':
             echo "Trang Login";
             break;
