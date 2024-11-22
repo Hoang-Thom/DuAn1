@@ -1,3 +1,6 @@
 <?php
 
-echo "Dự án 1";
+    header('location: site/index.php');
+
+
+?>

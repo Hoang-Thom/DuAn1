@@ -1,0 +1,1081 @@
+/* --------------------------------------- Trang chủ -----------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgb(48, 48, 48);
+}
+
+/* --------------------------------------- Header --------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    height: 6vw;
+    object-fit: cover;
+}
+
+.head1 {
+    height: 6vw;
+    overflow: hidden;
+}
+
+.head1 .logo {
+    width: auto;
+    max-height: 100%;
+}
+
+.head2 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.head2 ul li {
+    margin: 0 1vw;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: rgb(248, 248, 248);
+}
+
+.head2 ul li a:hover {
+    color: rgba(48, 48, 48, 1);
+}
+
+.head3 ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+    padding: 0;
+    margin: 0;
+}
+
+.head3  ul li form {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    border-radius: 0.4rem;
+    padding: 0.1rem;
+    box-sizing: border-box;
+}
+
+.head3  ul li form input {
+    border: none;
+}
+
+.head3  ul li form input:focus {
+    outline: none; /* Ẩn viền khi ô tìm kiếm được chọn */
+    border: none; /* Ẩn viền nếu có */
+}
+
+.head3  ul li form button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.head3  ul li form button .fa-solid {
+    font-size: 1.1vw;
+    color: rgb(48, 48, 48, 0.6);
+}
+
+.head3 ul li a img {
+    width: 1.6vw;
+    height: auto;
+    filter: invert(0%);
+    /* Mặc định là 0% (không thay đổi) */
+    transition: filter 0.3s ease;
+}
+
+.head3 ul li a:hover img {
+    filter: invert(100%);
+    /* Chuyển màu ảnh thành đen khi hover */
+}
+
+/* --------------------------------------- footer --------------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}
+
+/* ---------------------------------------- main ---------------------------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 5rem; */
+    /* background-color: rgb(107, 145, 96); */
+    /* color: rgb(248, 248, 248); */
+}
+
+/* ---------------------------------------- banner ---------------------------------------- */
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner-slide {
+    width: 100%;
+    background: url(/DuAn1/public/img/baner-01.png);
+    /* Đường dẫn đến ảnh */
+    flex: 1 0 100%;
+    position: relative;
+    background-size: cover;
+    /* Điều chỉnh kích thước ảnh nền */
+    background-repeat: no-repeat;
+    /* Ngăn ảnh nền lặp lại */
+    background-position: center;
+    /* Căn giữa ảnh nền */
+    height: 100%;
+    /* Đảm bảo chiều cao của ảnh nền */
+}
+
+.banner-slide .banner {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem 5rem;
+}
+
+.banner-slide .banner .banner-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 2;
+    text-align: center;
+    color: white;
+    padding-right: 3rem;
+}
+
+.banner-slide .banner .banner-img {
+    display: flex;
+    justify-content: flex-end;
+    flex: 3;
+    padding-right: 1rem;
+}
+
+.banner-slide .banner .banner-img img {
+    display: block;
+    width: 40vw;
+    border-radius: 1.2rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-slide .banner .banner-content .banner-p {
+    font-size: 1.6vw;
+    margin: 0;
+}
+
+.banner-slide .banner .banner-content h2 {
+    line-height: 2vw;
+    font-size: 2vw;
+    font-weight: 500;
+    padding: 0.8rem 4rem 0.6rem;
+    color: rgb(255, 255, 255);
+    background: rgb(230, 186, 221);
+    /* clip-path: polygon(100% 0%, calc(100% - 0.75rem) 50%, 100% 100%, 0 100%, 0.75rem 50%, 0 0); */
+    clip-path: polygon(100% 0%, calc(100% - 1.5rem) 50%, 100% 100%, 0 100%, 1.5rem 50%, 0 0);
+    font-optical-sizing: auto;
+}
+
+.banner-slide .banner .banner-content p {
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+.banner-slide .banner .banner-content .buy-btn {
+    width: 10vw;
+    background-color: rgb(102, 50, 92);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin-top: 1.2rem;
+}
+
+.banner-slide .banner .banner-content .buy-btn:hover {
+    background-color: rgb(230, 186, 221);
+    color: rgba(48, 48, 48, 0.8);
+}
+
+.banner-container .banner-prev,
+.banner-container .banner-next {
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    font-size: 1.6vw;
+    border-radius: 50rem;
+    padding: 0 0.7rem;
+    color: rgb(255, 255, 255);
+    background-color: unset;
+    border: 1px solid rgba(255, 255, 255, 0.161);
+    cursor: pointer;
+}
+
+.banner-container .banner-prev {
+    left: 6vw;
+}
+
+.banner-container .banner-next {
+    right: 6vw;
+}
+
+/* ---------------------------------------- banner2 ---------------------------------------- */
+
+.banner-slide2 {
+    width: 100%;
+    background: url(/DuAn1/public/img/baner-02.png);
+    /* Đường dẫn đến ảnh */
+    flex: 1 0 100%;
+    position: relative;
+    background-size: cover;
+    /* Điều chỉnh kích thước ảnh nền */
+    background-repeat: no-repeat;
+    /* Ngăn ảnh nền lặp lại */
+    background-position: center;
+    /* Căn giữa ảnh nền */
+    height: 100%;
+    /* Đảm bảo chiều cao của ảnh nền */
+}
+
+.banner-slide2 .banner {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem 5rem;
+}
+
+.banner-slide2 .banner-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 2;
+    text-align: center;
+    color: white;
+    padding-right: 3rem;
+}
+
+.banner-slide2 .banner-img {
+    display: flex;
+    justify-content: flex-end;
+    flex: 3;
+    padding-right: 1rem;
+}
+
+.banner-slide2 .banner-img img {
+    display: block;
+    width: 40vw;
+    border-radius: 1.2rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-slide2 .banner-content .banner-p {
+    font-size: 1.6vw;
+    color: rgba(48, 48, 48, 0.8);
+    margin: 0;
+}
+
+.banner-slide2 .banner-content h2 {
+    line-height: 2vw;
+    font-size: 2vw;
+    font-weight: 500;
+    padding: 0.8rem 4rem 0.6rem;
+    color: rgba(48, 48, 48, 0.8);
+    background: rgb(195, 230, 186);
+    /* clip-path: polygon(100% 0%, calc(100% - 0.75rem) 50%, 100% 100%, 0 100%, 0.75rem 50%, 0 0); */
+    clip-path: polygon(100% 0%, calc(100% - 1.5rem) 50%, 100% 100%, 0 100%, 1.5rem 50%, 0 0);
+    font-optical-sizing: auto;
+}
+
+.banner-slide2 .banner-content p {
+    font-size: 1.2vw;
+    color: rgba(48, 48, 48, 0.8);
+    margin: 0;
+}
+
+.banner-slide2 .buy-btn {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin-top: 1.2rem;
+}
+
+.banner-slide2 .buy-btn:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
+
+/* ---------------------------------------- welcome ---------------------------------------- */
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.welcome-img {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.welcome-img img {
+    width: 26vw;
+    border-radius: 0.8rem;
+}
+
+.welcome-text {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+
+.welcome-text h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: rgb(107, 145, 96);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+}
+
+.welcome-text h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    /* flex-grow: 1; */
+    border-block-start: 1px solid rgb(107, 145, 96);
+}
+
+.welcome-text .welcome-p {
+    margin: 0;
+    /* padding-top: 0.6rem; */
+    font-size: 1.2vw;
+    color: rgb(107, 145, 96);
+}
+
+.welcome-text p {
+    font-size: 1vw;
+}
+
+.welcome-text .buy-btn {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin: 0 4rem;
+    text-align: center;
+}
+
+.welcome-text .buy-btn:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
+
+/* ---------------------------------------- products ---------------------------------------- */
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 5rem 2rem;
+    background: rgb(230, 186, 221);
+}
+
+.products .products-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* Ẩn phần sản phẩm ngoài tầm nhìn */
+}
+
+.products .products-container h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+    padding-top: 1vw;
+}
+
+.products .products-container h2::before {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 1px solid rgb(255, 255, 255);
+    border-block-start: 0;
+}
+
+.products .products-container h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    border-block-start: 1px solid rgb(255, 255, 255);
+}
+
+.products .products-container .products-p {
+    margin: 0;
+    font-size: 1.2vw;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.products .products-container .product-list {
+    /* width: 90%;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fill, minmax(16vw, 1fr));
+    gap: 1.5vw;
+    margin: 1vw 0; */
+
+    width: 90%;
+    display: flex;
+    box-sizing: border-box;
+    margin: 1vw 0;
+    gap: 1.5vw;
+    transition: transform 0.5s ease;
+    will-change: transform; /* Tối ưu hóa hiệu suất */
+}
+
+.products .products-container .product-list a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.products .products-container .product-list .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+    cursor: pointer;
+
+    transition: transform 0.5s ease;
+    box-sizing: border-box;
+    flex: 0 0 22%; /* Điều chỉnh kích thước sản phẩm để phù hợp với số lượng mong muốn */
+    max-width: 22%; /* Giới hạn chiều rộng tối đa */
+}
+
+.products .products-container .product-list .product img {
+    width: 100%;
+}
+
+.products .products-container .product-list .product h3 {
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0.8vw 0;
+    color: rgb(102, 50, 92);
+    /* white-space: nowrap; Không xuống dòng
+    text-overflow: ellipsis;  Hiển thị dấu ba chấm khi nội dung vượt quá 
+    overflow: hidden; */
+}
+
+.products .products-container .product-list .product p {
+    font-size: 1.2vw;
+    font-weight: 200;
+    margin: 0.4vw 0 0;
+    color: rgb(102, 50, 92);
+}
+
+.products .products-container .product-list .product .buy-btn {
+    width: 12vw;
+    background-color: rgb(230, 186, 221);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.5rem 1rem 0.4rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.2vw;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.products .products-container .product-list .product .buy-btn:hover {
+    background-color: rgb(102, 50, 92);
+}
+
+.products-navigation {
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+}
+
+.products-navigation .products-prev,
+.products-navigation .products-next {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 1.6vw;
+    border-radius: 50rem;
+    padding: 0 0.7rem;
+    color: rgb(255, 255, 255);
+    background-color: unset;
+    border: 1px solid rgba(255, 255, 255, 0.161);
+    cursor: pointer;
+}
+
+.products-navigation .products-prev {
+    right: 2vw;
+}
+
+.products-navigation .products-next {
+    left: 2vw;
+}
+
+/* ------------------------------------------- cake-types ------------------------------------------- */
+
+.cake-types {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.cake-types h2 {
+    /* line-height: 2vw; */
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding: 0.6rem 4rem 0.4rem;
+    color: rgb(255, 255, 255);
+    background: rgba(107, 145, 96, 1);
+    /* clip-path: polygon(100% 0%, calc(100% - 0.75rem) 50%, 100% 100%, 0 100%, 0.75rem 50%, 0 0); */
+    clip-path: polygon(100% 0%, calc(100% - 1.5rem) 50%, 100% 100%, 0 100%, 1.5rem 50%, 0 0);
+    font-optical-sizing: auto;
+    margin-bottom: 0;
+}
+
+.cake-types .cake-types-p {
+    text-align: center;
+    width: 60vw;
+    font-size: 2.5vw;
+    line-height: 1;
+    font-weight: 500;
+    color: rgba(102, 50, 92, 0.8);
+    margin: 1rem 0;
+}
+
+.cake-types .cake-types-h5 {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.cake-types .cake-types-h5 h5 {
+    /* padding: 0 0.8rem; */
+    font-size: 2.5vw;
+    line-height: 1.4;
+    color: rgba(107, 145, 96, 1);
+    font-family: "Solitreo", cursive;
+    margin: 0;
+    text-shadow: -3px -2px 5px rgba(107, 145, 96, 0.6);
+}
+
+.cake-types .cake-types-h5::before {
+    width: 4vw;
+    content: "";
+    display: block;
+    border-block-end: 0;
+    border-block-start: 1px solid rgba(107, 145, 96, 1);
+}
+
+.cake-types .cake-types-h5::after{
+    width: 4vw;
+    content: "";
+    display: block;
+    border-block-end: 0;
+    border-block-start: 1px solid rgba(107, 145, 96, 1);
+}
+
+.cake-type-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+/* -----------------------------------------  .cake-type-list .col1 ---------------------------------------- */
+
+.cake-type-list .col1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Thiết lập lưới gồm 1 cột, và cột này sẽ chiếm toàn bộ không gian khả dụng trong container. Ở đây, 1fr nghĩa là "1 phần" của không gian có sẵn. */
+    grid-template-rows: repeat(3, 1fr);
+    /* Thiết lập lưới gồm 3 hàng, mỗi hàng có kích thước bằng nhau và chiếm 1 phần không gian khả dụng theo chiều dọc. Mỗi hàng sẽ nhận được 1 phần bằng nhau của chiều cao container. */
+    grid-auto-flow: row;
+    /* Các phần tử bên trong lưới sẽ điền vào hàng từ trái sang phải. */
+    /* transition: background 0.3s ease; */
+}
+
+.cake-type-list .col1 .boxleft {
+    max-width: 100%;
+}
+
+.cake-type-list .col1 .boxleft a {
+    text-decoration: none;
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.cake-type-list .col1 .boxleft:hover {
+    cursor: pointer;
+}
+
+.cake-type-list .col1 .boxleft:hover .img {
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.cake-type-list .col1 .boxleft a .img {
+    margin: 1rem;
+    padding: 0.4rem;
+    padding-bottom: 0rem;
+    width: 6vw;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.cake-type-list .col1 .boxleft a .img img {
+    width: 100%;
+}
+
+.cake-type-list .col1 .boxleft a .text h4 {
+    margin: 0;
+    color: rgb(107, 145, 96);
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+
+.cake-type-list .col1 .boxleft a .text p {
+    margin: 0;
+    font-size: 1vw;
+    color: rgba(48, 48, 48, 1);
+}
+
+/* -----------------------------------------  .cake-type-list .col2 ---------------------------------------- */
+
+.cake-type-list .col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 60% / 45%;/* Tạo hình ô van */
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+.cake-type-list .col2 img {
+    width: 14vw;
+    height: 22vw;
+    object-fit: cover;
+    border-radius: 60% / 45%;/* Tạo hình ô van */
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+/* -----------------------------------------  .cake-type-list .col3 ---------------------------------------- */
+
+.cake-type-list .col3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Thiết lập lưới gồm 1 cột, và cột này sẽ chiếm toàn bộ không gian khả dụng trong container. Ở đây, 1fr nghĩa là "1 phần" của không gian có sẵn. */
+    grid-template-rows: repeat(3, 1fr);
+    /* Thiết lập lưới gồm 3 hàng, mỗi hàng có kích thước bằng nhau và chiếm 1 phần không gian khả dụng theo chiều dọc. Mỗi hàng sẽ nhận được 1 phần bằng nhau của chiều cao container. */
+    grid-auto-flow: row;
+    /* Các phần tử bên trong lưới sẽ điền vào hàng từ trái sang phải. */
+    /* transition: background 0.3s ease; */
+}
+
+.cake-type-list .col3 .boxright {
+    max-width: 100%;
+}
+
+.cake-type-list .col3 .boxright a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cake-type-list .col3 .boxright:hover {
+    cursor: pointer;
+}
+
+.cake-type-list .col3 .boxright:hover .img {
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.cake-type-list .col3 .boxright .img {
+    margin: 1rem;
+    padding: 0.4rem;
+    padding-bottom: 0rem;
+    width: 6vw;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.cake-type-list .col3 .boxright .img img {
+    width: 100%;
+}
+
+.cake-type-list .col3 .boxright .text h4 {
+    margin: 0;
+    color: rgb(107, 145, 96);
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+
+.cake-type-list .col3 .boxright .text p {
+    margin: 0;
+    font-size: 1vw;
+    color: rgba(48, 48, 48, 1);
+}
+
+/* ------------------------------------------- menu ------------------------------------------- */
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    background-color: rgb(195, 230, 186);
+    margin-top: 2rem;
+}
+
+.menu .menu-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 0.1vw solid rgba(0, 0, 0, 0.2);
+    background-color: hwb(208 94% 0%);
+    width: 35vw;
+    height: auto;
+}
+
+.menu .menu-img img {
+    width: 100%;
+    border: 0.1vw solid rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu-items {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin: 0 0 0 2rem;
+}
+
+.menu .menu-items h2 {
+    margin: 0;
+    color: rgba(102, 50, 92, 1);
+    font-size: 2.4vw;
+    line-height: 2;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.menu .menu-items h2::before {
+    width: 4vw;
+    content: "";
+    display: block;
+    border-block-end: 0;
+    border-block-start: 1px solid rgba(102, 50, 92, 1);
+}
+
+.menu .menu-items h2::after{
+    width: 4vw;
+    content: "";
+    display: block;
+    border-block-end: 0;
+    border-block-start: 1px solid rgba(102, 50, 92, 1);
+}
+
+.menu .menu-items .menu-item {
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem 0 0;
+}
+
+.menu .menu-items .menu-item a {
+    text-decoration: none;
+}
+
+.menu .menu-items .menu-item a .menu-item-name {
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem 0;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.menu .menu-items .menu-item a .menu-item-name h3 {
+    font-size: 2vw;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgba(102, 50, 92, 1);
+    margin: 0;
+}
+
+.menu .menu-items .menu-item a .menu-item-name b {
+    border-top-style: dashed;
+    border-top-width: 1px;
+    flex-grow: 1;
+    margin: 0 1rem;
+    color: rgba(48, 48, 48, 1);
+}
+
+.menu .menu-items .menu-item a .menu-item-name .price {
+    font-size: 1.5vw;
+    color: rgba(102, 50, 92, 1);
+    margin: 0;
+}
+
+.menu .menu-items .menu-item a p {
+    font-size: 1.2vw;
+    margin: 0;
+    color: rgba(48, 48, 48, 1);
+    overflow: hidden; /* Ẩn nội dung vượt ra ngoài khung */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi nội dung vượt quá */
+    /* white-space: nowrap; Không xuống dòng */
+}
+
+/* ------------------------------------------- blog-posts ------------------------------------------- */
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.blog-posts h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: rgb(107, 145, 96);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+    padding-top: 1vw;
+}
+
+.blog-posts h2::before {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 1px solid rgb(107, 145, 96);
+    border-block-start: 0;
+}
+
+.blog-posts h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    border-block-start: 1px solid rgb(107, 145, 96);
+}
+
+.blog-posts .post-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    gap: 1vw;
+    margin-top: 1rem;
+}
+
+.blog-posts .post-list .post {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    /* border: 0.1vw solid rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 0.5vw 0 rgba(0, 0, 0, 0.4);
+    border-radius: 0.6rem;
+    transition: transform 0.5s ease;
+}
+
+.blog-posts .post-list .post:hover {
+    transform: translateY(-5%);
+    cursor: pointer;
+}
+
+.blog-posts .post-list .post a {
+    text-decoration: none;
+}
+
+.blog-posts .post-list .post a img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.blog-posts .post-list .post a h3 {
+    height: 3rem;
+    width: fit-content;
+    font-size: 1.4vw;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0.8rem 0.6rem;
+    color: rgba(48, 48, 48, 0.9);
+    overflow: hidden; /* Ẩn nội dung vượt ra ngoài khung */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi nội dung vượt quá */
+    /* white-space: nowrap; Không xuống dòng */
+}
+
+.blog-posts .post-list .post a .post-meta {
+    border-block-start: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog-posts .post-list .post a .post-meta p{
+    margin: 0.6rem;
+    font-size: 1vw;
+    color: rgba(48, 48, 48, 1);
+}
+
+.blog-posts .post-list .post a .post-meta .date {
+    color: rgb(107, 145, 96);
+}
+
