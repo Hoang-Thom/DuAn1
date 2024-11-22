@@ -14,7 +14,7 @@
             echo "Trang cart";
             break;
         case 'login':
-            echo "Trang Login";
+            require_once('view/login.php');
             break;
         default: 
             echo "Trang không tồn tại";
