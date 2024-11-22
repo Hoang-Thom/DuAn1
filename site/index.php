@@ -14,7 +14,7 @@
             echo "Trang cart";
             break;
         case 'blog':
-            echo "Trang bài viết";
+            require_once('view/blog.php');
             break;
         case 'login':
             require_once('view/login.php');

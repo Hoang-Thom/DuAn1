@@ -1,0 +1,157 @@
+/* --------------------------------------- blog -----------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+/* ---------------------------------------- Main Container ---------------------------------------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5rem;
+    gap: 20px;
+}
+
+/* ---------------------------------------- Main Content ---------------------------------------- */
+
+.main-content {
+    flex: 2;
+    margin-top: 30px;
+}
+
+.main-content img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.main-content .post-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-block-end: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.main-content .post-meta span {
+    font-size: 18px;
+    color: rgba(51, 51, 51, 0.7);
+    margin: 0;
+}
+
+.main-content .post-meta p {
+    font-size: 16px;
+    color: rgba(107, 145, 96, 0.8);
+    margin: 0;
+}
+
+.main-content h2 {
+    color: rgb(107, 145, 96);
+    font-size: 24px;
+}
+
+.main-content p,
+.main-content ul {
+    margin-top: 18px;
+    line-height: 24px;
+    margin: 5px;
+}
+
+.main-content ul {
+    list-style: none;
+}
+
+.main-content ul li::before {
+    content: "•";
+    color: rgb(107, 145, 96);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.navigation .next,
+.navigation .next2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.navigation .next img,
+.navigation .next2 img {
+    width: 25px;
+    height: 25px;
+    filter: invert(0%);/* Mặc định là 0% (không thay đổi) */
+    transition: filter 0.3s ease;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(107, 145, 96);
+    font-size: 24px;
+    line-height: 20px;
+}
+
+/* ---------------------------------------- Sidebar ---------------------------------------- */
+.sidebar {
+    flex: 1;
+}
+
+.sidebar h4 {
+    color: rgb(107, 145, 96);
+    font-size: 24px;
+}
+
+.latest-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+    border-block-end: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.post-item img {
+    width: 131px; /* Chiều rộng lớn hơn để tạo hình chữ nhật ngang */
+    height: 78px; /* Chiều cao nhỏ hơn để tạo hình chữ nhật */
+    border-radius: 3px; /* Bo tròn góc ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+.post-item:hover .post-date a {
+    color: rgb(107, 145, 96);
+}
+
+.post-item .post-date {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.post-item .post-date a {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.post-item .post-date b {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
