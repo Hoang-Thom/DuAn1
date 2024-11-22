@@ -11,7 +11,7 @@
             echo "Trang shop";
             break;
         case 'cart':
-            echo "Trang cart";
+            echo "Trang cart: giỏ hàng";
             break;
         default: 
             echo "Trang không tồn tại";
