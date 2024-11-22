@@ -1,0 +1,97 @@
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.blog-posts h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: rgb(107, 145, 96);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+    padding-top: 1vw;
+}
+
+.blog-posts h2::before {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 1px solid rgb(107, 145, 96);
+    border-block-start: 0;
+}
+
+.blog-posts h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    border-block-start: 1px solid rgb(107, 145, 96);
+}
+
+.blog-posts .post-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    gap: 1vw;
+    margin-top: 1rem;
+}
+
+.blog-posts .post-list .post {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    /* border: 0.1vw solid rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 0.5vw 0 rgba(0, 0, 0, 0.4);
+    border-radius: 0.6rem;
+    transition: transform 0.5s ease;
+}
+
+.blog-posts .post-list .post:hover {
+    transform: translateY(-5%);
+    cursor: pointer;
+}
+
+.blog-posts .post-list .post a {
+    text-decoration: none;
+}
+
+.blog-posts .post-list .post a img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.blog-posts .post-list .post a h3 {
+    height: 3rem;
+    width: fit-content;
+    font-size: 1.4vw;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0.8rem 0.6rem;
+    color: rgba(48, 48, 48, 0.9);
+    overflow: hidden; /* Ẩn nội dung vượt ra ngoài khung */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi nội dung vượt quá */
+    /* white-space: nowrap; Không xuống dòng */
+}
+
+.blog-posts .post-list .post a .post-meta {
+    border-block-start: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog-posts .post-list .post a .post-meta p{
+    margin: 0.6rem;
+    font-size: 1vw;
+    color: rgba(48, 48, 48, 1);
+}
+
+.blog-posts .post-list .post a .post-meta .date {
+    color: rgb(107, 145, 96);
+}
