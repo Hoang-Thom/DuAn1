@@ -10,6 +10,9 @@
         case 'shop':
             echo "Trang shop";
             break;
+        case 'cart':
+            echo "Trang cart";
+            break;
         default: 
             echo "Trang không tồn tại";
             break;
