@@ -11,7 +11,7 @@
             echo "Trang shop";
             break;
         case 'cart':
-            echo "Trang cart";
+            require_once('view/cart.php');
             break;
         case 'blog':
             require_once('view/blog.php');

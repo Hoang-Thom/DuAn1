@@ -1,0 +1,295 @@
+/* --------------------------------------- cart -----------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+/* --------------------------------------- Header --------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    height: 6vw;
+    object-fit: cover;
+}
+
+.head1 {
+    height: 6vw;
+    overflow: hidden;
+}
+
+.head1 .logo {
+    width: auto;
+    max-height: 100%;
+}
+
+.head2 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.head2 ul li {
+    margin: 0 1vw;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: rgb(248, 248, 248);
+}
+
+.head2 ul li a:hover {
+    color: rgba(48, 48, 48, 1);
+}
+
+.head3 ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2vw;
+    padding: 0;
+    margin: 0;
+}
+
+.head3 ul li a img {
+    width: 1.6vw;
+    height: auto;
+    filter: invert(0%);
+    /* Mặc định là 0% (không thay đổi) */
+    transition: filter 0.3s ease;
+}
+
+.head3 ul li a:hover img {
+    filter: invert(100%);
+    /* Chuyển màu ảnh thành đen khi hover */
+}
+
+/* --------------------------------------- footer --------------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}
+
+/* ---------------------------------------- main ---------------------------------------- */
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 10rem;
+}
+
+.cart h1 {
+    color: rgb(107, 145, 96);
+    font-size: 24px;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.cart table th, 
+.cart table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cart table img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.pro-quantity-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pro-quantity-input button {
+    padding: 8px 10px;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+.pro-quantity-input span {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+/* --------------------------------------------------------------------------------- */
+.cart-total {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.order-notes {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-notes label {
+    display: block;
+    color: rgba(48, 48, 48, 1);
+    margin: 10px 0;
+}
+
+.order-notes textarea {
+    width: 600px;
+    height: 100px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.total p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(48, 48, 48, 1);
+}
+.total p span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(107, 145, 96);
+}
+
+.muaNgay {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.muaNgay:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
+
+
