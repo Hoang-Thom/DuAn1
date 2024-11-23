@@ -1,6 +1,6 @@
-<div class="container">
+    <div class="container">
         <!-- Main Content -->
-        <div class="main-content">
+        <div class="main-blog">
             <img src="../public/img/quytrinhlambanh2.jpg" alt="Making a cake">
             <div class="post-meta">
                 <span>Viết bởi chúng tôi</span>
