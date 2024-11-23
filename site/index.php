@@ -10,6 +10,9 @@
         case 'shop':
             require_once('view/shop.php');
             break;
+        case 'detail':
+            require_once('view/detail.php');
+            break;
         case 'cart':
             require_once('view/cart.php');
             break;
