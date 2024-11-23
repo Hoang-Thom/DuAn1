@@ -1,4 +1,5 @@
-    <div class="container">
+    <div class="banner-blog">Bài Viết</div>
+    <div class="container-blog">
         <!-- Main Content -->
         <div class="main-blog">
             <img src="../public/img/quytrinhlambanh2.jpg" alt="Making a cake">

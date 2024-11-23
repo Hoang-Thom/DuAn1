@@ -1,3 +1,24 @@
+.banner-blog {
+    font-size: 2.2vw;
+    font-weight: 600;
+    color: #6b9160;
+    height: 10rem;
+    background: url(/DuAn1/public/img/02.png) no-repeat center center; /* Đặt ảnh nền */
+    background-size: cover;   /* Lấp đầy khung mà không bị bóp méo */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------------- Main Container ---------------------------------------- */
+
+.container-blog {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5rem;
+    gap: 20px;
+}
 
 .main-blog {
     flex: 2;
