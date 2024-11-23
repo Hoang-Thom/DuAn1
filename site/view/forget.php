@@ -1,4 +1,4 @@
-    <main class="main-content">
+    <main class="main-forget">
         <div class="forgot-password-box">
             <h2>Quên mật khẩu</h2>
             <form>

@@ -1,14 +1,5 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Baloo Bhaina 2", sans-serif;
-    line-height: 1.6vw;
-    background: rgb(248, 248, 248);
-    color: rgba(48, 48, 48, 1);
-}
 
-main {
+.main-shop {
     width: 1440px;
     height: 4380px;
     margin: 0px auto;

@@ -1,4 +1,4 @@
-<main>
+    <main class="main-shop">
         <div class="title-catagory">Các Loại Bánh Của Chúng Tôi</div>
         <div class="catagory">
             <div class="col-8 mgr-10">

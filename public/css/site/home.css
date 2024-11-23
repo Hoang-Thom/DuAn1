@@ -209,7 +209,7 @@ footer {
 
 /* ---------------------------------------- main ---------------------------------------- */
 
-main {
+.main-home {
     display: flex;
     flex-direction: column;
     /* padding: 0 5rem; */

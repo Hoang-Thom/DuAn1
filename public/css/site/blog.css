@@ -1,25 +1,3 @@
-/* --------------------------------------- blog -----------------------------------*/
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Baloo Bhaina 2", sans-serif;
-    line-height: 1.6vw;
-    background: rgb(248, 248, 248);
-    color: rgba(48, 48, 48, 1);
-}
-
-/* ---------------------------------------- Main Container ---------------------------------------- */
-
-.container {
-    display: flex;
-    flex-direction: row;
-    padding: 0 5rem;
-    gap: 20px;
-}
-
-/* ---------------------------------------- Main Content ---------------------------------------- */
 
 .main-content {
     flex: 2;
