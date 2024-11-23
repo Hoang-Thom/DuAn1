@@ -15,9 +15,9 @@
                 <td>200,000 VNĐ</td>
                 <td>
                     <div class="pro-quantity-input">
-                        <button>-</button>
-                        <span>1</span>
-                        <button>+</button>
+                        <button class="btn-decrease">-</button>
+                        <input type="text" class="quantity-input" value="1" min="1" max="5">
+                        <button class="btn-increase">+</button>
                     </div>
                 </td>
                 <td>200,000 VNĐ</td>
@@ -33,7 +33,7 @@
     
             <div class="total">
                 <p>Tổng tiền: <span>200,000 VNĐ</span></p>
-                <a href="#" class="muaNgay">Thanh toán</a>
+                <a href="?page=checkout" class="muaNgay">Thanh toán</a>
             </div>
         </div>
     </section>

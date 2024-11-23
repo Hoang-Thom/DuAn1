@@ -1,4 +1,4 @@
-/* --------------------------------------- cart -----------------------------------*/
+/* --------------------------------------- Xác nhận đơn hàng -----------------------------------*/
 
 body {
     margin: 0;
@@ -184,124 +184,111 @@ footer {
 
 /* ---------------------------------------- main ---------------------------------------- */
 
-.cart {
+main {
     display: flex;
     flex-direction: column;
-    padding: 2rem 10rem;
+    align-items: center;
 }
 
-.cart h1 {
-    color: rgb(107, 145, 96);
-    font-size: 24px;
-}
-
-.cart table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.cart table th,
-.cart table td {
-    padding: 10px;
+.order-details-container {
     text-align: center;
-    border: 1px solid #ddd;
 }
 
-.cart table img {
+.order-details-container h2 {
+    color: rgb(107, 145, 96);
+}
+
+.order-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: left;
+}
+
+.customer-info .order {
+    color: rgb(102, 50, 92);
+}
+
+.customer-info p {
+    font-size: 20px;
+    color: rgb(107, 145, 96);
+}
+
+.customer-info-color {
+    color: rgba(48, 48, 48, 0.8);
+}
+
+.image-quantity {
+    position: relative;
     width: 150px;
     height: 100px;
-    border-radius: 5px;
-    object-fit: cover;
 }
 
-.pro-quantity-input {
+.image-quantity p {
+    position: absolute;
+    border-radius: 50%;
+    top: -27px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(107, 145, 96);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.pro-quantity-input button {
-    padding: 8px 10px;
-    background-color: rgb(107, 145, 96);
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
+.order-summary img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-.pro-quantity-input span {
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    margin: 0 5px;
-}
-
-
-/* --------------------------------------------------------------------------------- */
-
-.cart-total {
+.order-item {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.161);
+    color: rgb(107, 145, 96);
+    padding-bottom: 10px;
+}
+
+.order-item-name {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.order-item-price {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.161);
+}
+
+.order-item-price-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
-.order-notes {
-    display: flex;
-    flex-direction: column;
-}
-
-.order-notes label {
-    display: block;
-    color: rgba(48, 48, 48, 1);
+.order-item-price-col p {
     margin: 10px 0;
 }
 
-.order-notes textarea {
-    width: 600px;
-    height: 100px;
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-.total {
+.order-item-price-cols {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.161);
 }
 
-.total p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: rgba(48, 48, 48, 1);
-}
-
-.total p span {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: rgb(107, 145, 96);
-}
-
-.muaNgay {
-    width: 10vw;
-    background-color: rgb(107, 145, 96);
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    padding: 0.6rem 2rem 0.5rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-size: 1.6vw;
-    transition: background-color 0.3s ease;
-    text-align: center;
-}
-
-.muaNgay:hover {
-    background-color: rgb(195, 230, 186);
-    color: rgba(48, 48, 48, 0.8);
-}
-
-.quantity-input {
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    font-size: 16px;
-    margin: 5px;
+.customer-info-col {
+    color: rgb(102, 50, 92);
+    font-size: 22px;
 }

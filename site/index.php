@@ -13,6 +13,12 @@
         case 'cart':
             require_once('view/cart.php');
             break;
+        case 'checkout':
+            require_once('view/checkout.php');
+            break;
+        case 'pay':
+            require_once('view/pay.php');
+            break;
         case 'blog':
             require_once('view/blog.php');
             break;
