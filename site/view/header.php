@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../public/css/site/register.css">
     <link rel="stylesheet" href="../public/css/site/forget.css">
     <link rel="stylesheet" href="../public/css/site/blog.css">
+    <link rel="stylesheet" href="../public/css/site/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
