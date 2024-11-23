@@ -1,6 +1,6 @@
 
 .main-shop-shop {
-    width: 1440px;
+    /* width: 1440px; */
     height: 4380px;
     margin: 0px auto;
 }
@@ -64,7 +64,7 @@
 }
 
 .main-shop>.ship {
-    width: 1440px;
+    /* width: 1440px; */
     height: 178px;
     font-size: 40px;
     color: #66325C;
@@ -85,7 +85,7 @@
 }
 
 .main-shop>.cakes {
-    width: 1440px;
+    /* width: 1440px; */
     height: 491px;
     text-align: center;
     font-size: 48px;
@@ -94,7 +94,7 @@
 }
 
 .main-shop>.cakes-1 {
-    width: 1440px;
+    /* width: 1440px; */
     height: 491px;
     text-align: center;
     font-size: 48px;
@@ -107,7 +107,7 @@
 }
 
 .main-shop>.cakes-2 {
-    width: 1440px;
+    /* width: 1440px; */
     height: 491px;
     text-align: center;
     font-size: 48px;
