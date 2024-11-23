@@ -88,7 +88,7 @@
                 <h2>Sản Phẩm Của Chúng Tôi</h2>
                 <p class="products-p">Bánh kem được lựa chọn nhiều nhất</p>
                 <div class="product-list">
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_01.webp" alt="">
                             <p>80 000 VNĐ</p>
@@ -97,7 +97,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_02.webp" alt="">
                             <p>600 000 VNĐ</p>
@@ -106,7 +106,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_03.webp" alt="">
                             <p>400 000 VNĐ</p>
@@ -115,7 +115,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_04.webp" alt="">
                             <p>650 000 VNĐ</p>
@@ -124,7 +124,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_05.webp" alt="">
                             <p>450 000 VNĐ</p>
@@ -133,7 +133,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_06.webp" alt="">
                             <p>700 000 VNĐ</p>
@@ -142,7 +142,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_07.webp" alt="Red Velvet Cake">
                             <p>450 000 VNĐ</p>
@@ -151,7 +151,7 @@
                         </div>
                     </a>
 
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="product">
                             <img src="../public/img/thum_08.webp" alt="Red Velvet Cake">
                             <p>580 000 VNĐ</p>
@@ -261,7 +261,7 @@
             <div class="menu-items">
                 <h2>Thực đơn</h2>
                 <div class="menu-item">
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="menu-item-name">
                             <h3>Pomegranate Cheesecake</h3>
                             <b></b>
@@ -272,7 +272,7 @@
                 </div>
 
                 <div class="menu-item">
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="menu-item-name">
                             <h3>Devil's Food Cake</h3>
                             <b></b>
@@ -283,7 +283,7 @@
                 </div>
 
                 <div class="menu-item">
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="menu-item-name">
                             <h3>Blueberry Cheesecake</h3>
                             <b></b>
@@ -294,7 +294,7 @@
                 </div>
 
                 <div class="menu-item">
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="menu-item-name">
                             <h3>Orange Pound Cake</h3>
                             <b></b>
@@ -305,7 +305,7 @@
                 </div>
 
                 <div class="menu-item">
-                    <a href="../html/detail.html">
+                    <a href="?page=detail.html">
                         <div class="menu-item-name">
                             <h3>Kiwi Tart</h3>
                             <b></b>
