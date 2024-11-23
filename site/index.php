@@ -8,7 +8,7 @@
             require_once('view/home.php');
             break;
         case 'shop':
-            echo "Trang shop";
+            require_once('view/shop.php');
             break;
         case 'cart':
             require_once('view/cart.php');
