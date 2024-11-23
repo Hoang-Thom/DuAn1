@@ -1,11 +1,11 @@
 
-.main-shop {
+..main-shop-shop {
     width: 1440px;
     height: 4380px;
     margin: 0px auto;
 }
 
-main>.title-catagory {
+.main-shop>.title-catagory {
     color: #6B9160;
     font-size: 32px;
     font-weight: 600;
@@ -18,7 +18,7 @@ main>.title-catagory {
     line-height: 50px;
 }
 
-main>.title-catagory::after {
+.main-shop>.title-catagory::after {
     content: "";
     display: block;
     border-block-start: 0;
@@ -26,19 +26,19 @@ main>.title-catagory::after {
     width: 200px;
 }
 
-main>.catagory {
+.main-shop>.catagory {
     width: 1230px;
     height: 195px;
     margin: 0px auto;
 }
 
-main>.catagory>.col-8 {
+.main-shop>.catagory>.col-8 {
     width: calc(calc(100% - 70px)/8);
     height: 195px;
     float: left;
 }
 
-main>.catagory>.col-8>.image-catagory {
+.main-shop>.catagory>.col-8>.image-catagory {
     width: 99%;
     height: 155px;
     border-radius: 10px;
@@ -51,7 +51,7 @@ main>.catagory>.col-8>.image-catagory {
     /* Hiệu ứng mượt mà khi phóng to */
 }
 
-main>.catagory>.col-8>.name-catagory {
+.main-shop>.catagory>.col-8>.name-catagory {
     font-size: 24px;
     font-weight: bold;
     color: #6B9160;
@@ -63,7 +63,7 @@ main>.catagory>.col-8>.name-catagory {
     margin-right: 10px;
 }
 
-main>.ship {
+.main-shop>.ship {
     width: 1440px;
     height: 178px;
     font-size: 40px;
@@ -79,12 +79,12 @@ main>.ship {
     margin-top: 10px;
 }
 
-main>.ship>.text {
+.main-shop>.ship>.text {
     width: 1440px;
     height: auto;
 }
 
-main>.cakes {
+.main-shop>.cakes {
     width: 1440px;
     height: 491px;
     text-align: center;
@@ -93,7 +93,7 @@ main>.cakes {
     font-weight: bold;
 }
 
-main>.cakes-1 {
+.main-shop>.cakes-1 {
     width: 1440px;
     height: 491px;
     text-align: center;
@@ -106,7 +106,7 @@ main>.cakes-1 {
     align-items: center;
 }
 
-main>.cakes-2 {
+.main-shop>.cakes-2 {
     width: 1440px;
     height: 491px;
     text-align: center;
@@ -234,52 +234,52 @@ main>.cakes-2 {
     border-block-start: 1px solid #ffffff;
 }
 
-main>.cakes {
+.main-shop>.cakes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main>.cakes>p {
+.main-shop>.cakes>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-main>.cakes-1>p {
+.main-shop>.cakes-1>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-main>.cakes-2>p {
+.main-shop>.cakes-2>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-main>.cakes>.meu-cake {
+.main-shop>.cakes>.meu-cake {
     width: 1236px;
     height: 410px;
     margin: 0px auto;
     position: relative;
 }
 
-main>.cakes-1>.meu-cake {
+.main-shop>.cakes-1>.meu-cake {
     width: 1236px;
     height: 410px;
     margin: 0px auto;
     position: relative;
 }
 
-main>.cakes-2>.meu-cake {
+.main-shop>.cakes-2>.meu-cake {
     width: 1236px;
     height: 410px;
     margin: 0px auto;
     position: relative;
 }
 
-main>.cakes>.meu-cake>.left,
+.main-shop>.cakes>.meu-cake>.left,
 .left-1,
 .left-2,
 .left-3 {
@@ -295,22 +295,22 @@ main>.cakes>.meu-cake>.left,
     border: none;
 }
 
-main>.cakes>.meu-cake>.left,
+.main-shop>.cakes>.meu-cake>.left,
 .left-1 {
     color: #ffffff;
 }
 
-main>.cakes-1>.meu-cake>.left-2 {
+.main-shop>.cakes-1>.meu-cake>.left-2 {
     color: #6B9160;
     border: 1px solid #303030;
 }
 
-main>.cakes-2>.meu-cake>.left-3 {
+.main-shop>.cakes-2>.meu-cake>.left-3 {
     color: #66325C;
     border: 1px solid #303030;
 }
 
-main>.cakes>.meu-cake>.right,
+.main-shop>.cakes>.meu-cake>.right,
 .right-1,
 .right-2,
 .right-3 {
@@ -326,12 +326,12 @@ main>.cakes>.meu-cake>.right,
     border: none;
 }
 
-main>.cakes-1>.meu-cake>.right-2 {
+.main-shop>.cakes-1>.meu-cake>.right-2 {
     color: #6B9160;
     border: 1px solid #303030;
 }
 
-main>.cakes-2>.meu-cake>.right-3 {
+.main-shop>.cakes-2>.meu-cake>.right-3 {
     color: #66325C;
     border: 1px solid #303030;
 }
