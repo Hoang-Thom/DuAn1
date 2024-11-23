@@ -1,5 +1,6 @@
 .main-forget {
-    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .forgot-password-box {
@@ -8,9 +9,9 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    min-width: 350px;
     /* Thu nhỏ chiều rộng của box */
-    margin: 0 auto;
+    margin: 50px 0;
     /* Căn giữa box */
 }
 

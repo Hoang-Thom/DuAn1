@@ -18,7 +18,7 @@
 //     }
 // }
 ?>
-    <main class="main">
+    <main class="main-login">
         <div class="login-box">
             <h2>Đăng nhập</h2>
             <forphpnjnm>

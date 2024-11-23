@@ -1,6 +1,6 @@
 .main-register {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 .register-box {
     background-color: #C3E6BA;
@@ -10,7 +10,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 350px;
     /* Giới hạn chiều rộng tối đa */
-    /* margin: 50px; */
+    margin: 50px 0;
     /* Căn giữa theo chiều ngang và thêm khoảng cách trên */
 }
 
