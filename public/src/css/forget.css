@@ -1,0 +1,230 @@
+/* -------------------------------------- forget ------------------------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    height: 6vw;
+    object-fit: cover;
+}
+
+.head1 {
+    height: 6vw;
+    overflow: hidden;
+}
+
+.head1 .logo {
+    width: auto;
+    max-height: 100%;
+}
+
+.head2 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.head2 ul li {
+    margin: 0 1vw;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: rgb(248, 248, 248);
+}
+
+.head2 ul li a:hover {
+    color: rgba(48, 48, 48, 1);
+}
+
+.head3 ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2vw;
+    padding: 0;
+    margin: 0;
+}
+
+.head3 ul li a img {
+    width: 1.6vw;
+    height: auto;
+    filter: invert(0%);
+    /* Mặc định là 0% (không thay đổi) */
+    transition: filter 0.3s ease;
+}
+
+.head3 ul li a:hover img {
+    filter: invert(100%);
+    /* Chuyển màu ảnh thành đen khi hover */
+}
+
+/* -------------------------------------- main ------------------------------------ */
+
+.main-content {
+    padding: 20px 0;
+}
+
+.forgot-password-box {
+    background-color: #f2d2e4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    /* Thu nhỏ chiều rộng của box */
+    margin: 0 auto;
+    /* Căn giữa box */
+}
+
+.forgot-password-box h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.forgot-password-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password-box p {
+    color: #555;
+    font-size: 14px;
+    /* margin-bottom: 15px; */
+    margin: 0;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.forgot-password-button {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgb(102, 50, 92);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0 30px;
+    box-sizing: border-box;
+    /* transition: all 0.3s ease; */
+}
+
+/* -------------------------------------- footer ------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}

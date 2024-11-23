@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCakes</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Imperial+Script&family=Marck+Script&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Send+Flowers&family=Solitreo&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="head1">
+            <a href="../html/index.html"><img class="logo" src="../img/Logo Green.png" alt="Logo SweetCakes"></a>
+        </div>
+        <div class="head2">
+            <ul>
+                <li><a href="../html/index.html">Trang chủ</a></li>
+                <li><a href="../html/about_us.html">Giới thiệu</a></li>
+                <li><a href="../html/shop.html">Sản phẩm</a></li>
+                <li><a href="../html/blog.html">Bài viết</a></li>
+                <li><a href="../html/contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="head3">
+            <ul>
+                <li><a href="#"><img src="../img/search.png" alt="Search"></a></li>
+                <li><a href="../html/cart.html"><img src="../img/shopping-cart.png" alt="Cart"></a></li>
+                <li><a href="../html/login.html"><img src="../img/user.png" alt="User"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <div class="info-order">
+                <div class="info-order-1">
+                    <h1>Thông tin giao hàng</h1>
+                    <p>Bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>
+                    <form action="">
+                        <input type="text" id="" placeholder="Họ và tên">
+                        <div class="form-info">
+                            <input class="form-email" type="text" id="" placeholder="Email">
+                            <input class="form-sdt" type="text" id="" placeholder="Số điện thoại">
+                        </div>
+                        <input type="text" id="" placeholder="Địa chỉ">
+                        <div class="form-address">
+                            <select id="thanh-pho" name="thanh-pho">
+                                <option value="">-- Chọn Thành Phố --</option>
+                                <option value="">Hà Nội</option>
+                                <option value="">TP. Hồ Chí Minh</option>
+                                <option value="">Cần Thơ</option>
+                                <option value="">Bình Dương</option>
+                                <option value="">Bạc Liêu</option>
+                            </select>
+                            <select id="quan-huyen" name="quan-huyen">
+                                <option value="">-- Chọn Quận/Huyện --</option>
+                                <option value="">Quận 1</option>
+                                <option value="">Quận 2</option>
+                                <option value="">Quận 3</option>
+                                <option value="">Quận 4</option>
+                                <option value="">Quận 5</option>
+                            </select>
+                            <select id="phuong-xa" name="phuong-xa">
+                                <option value="">-- Chọn Phường/Xã --</option>
+                                <option value="">Phường Bến Nghé</option>
+                                <option value="">Phường Bến Thành</option>
+                                <option value="">Phường Đa Kao</option>
+                                <option value="">Phường Phạm Ngũ Lão</option>
+                                <option value="">Phường Tân Định</option>
+                            </select>
+                        </div>
+                        <textarea class="" type="text" id="" placeholder="Ghi chú"></textarea>
+                    </form>
+                </div>
+                <div class="info-order-2">
+                    <h1>Phương thức thanh toán</h1>
+                    <div class="info-order-check"><input type="checkbox" id=""> Thanh toán khi nhận hàng</div>
+                    <div class="info-order-check"><input type="checkbox" id=""> Thanh toán qua Momo</div>
+                    <div class="info-order-check"><input type="checkbox" id=""> Thanh toán qua ví VNPay</div>
+                </div>
+            </div>
+            <div class="info-pro">
+                <div class="info-pro-1">
+                    <h1>Đơn hàng</h1>
+                    <p>1 Sản phẩm</p>
+                </div>
+                <div class="info-pro-2">
+                    <div class="info-pro-2-img">
+                        <p>1</p><img src="/img/pie&tart-cart.jpg" alt="">
+                    </div>
+                    <p class="info-pro-2-name">Set 6 Tart Mini</p>
+                    <p>200 000 VNĐ</p>
+                </div>
+                <div class="info-pro-3">
+                    <input type="text" id="" placeholder="Mã giảm giá">
+                    <button class="apdung" type="button">Áp dụng</button>
+                </div>
+                <div class="info-pro-4">
+                    <div class="info-pro-4-text">
+                        <p>Tạm tính:</p>
+                        <strong>200 000 VNĐ</strong>
+                    </div>
+                    <div class="info-pro-4-text">
+                        <p>Phí vận chuyển:</p>
+                        <strong>Miễn phí khu vực Hồ Chí Minh</strong>
+                    </div>
+                </div>
+                <div class="info-pro-5">
+                    <p>Tổng cộng:</p>
+                    <strong>200 000 VNĐ</strong>
+                </div>
+                <div class="info-pro-6">
+                    <a href="#" class="thanhtoan">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Liên hệ</h3>
+                <p>Email: sweetcakes2910@gmail.com</p>
+                <p>Điện thoại: +84 123 4567 789</p>
+            </div>
+            <div class="address-info">
+                <h3>Địa chỉ</h3>
+                <p>Tòa T, Công Viên Phần Mềm Quang Trung</p>
+                <p>Tô Ký, Trung Mỹ Tây, Q12</p>
+            </div>
+            <div class="opening-hours">
+                <h3>Giờ mở cửa</h3>
+                <p>Mỗi ngày: từ 08:00 đến 21:00</p>
+                <p>Web hoạt động 24/7</p>
+            </div>
+        </div>
+        <div class="footer-line">
+            <span><img src="./../img/cake.png" alt="" style="height: 2vw;"></span>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 Cakes, all rights reserved.</p>
+            <a href="../html/index.html"><img class="logo" src="../img/Logo Green.png" alt="Logo_Green"></a>
+            <div class="social-media">
+                <a href="#"><img src="../img/facebook.png" alt="Social Media 1"></a>
+                <a href="#"><img src="../img/tik-tok.png" alt="Social Media 2"></a>
+                <a href="#"><img src="../img/instagram.png" alt="Social Media 3"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

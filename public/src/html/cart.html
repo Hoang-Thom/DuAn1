@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCakes</title>
+    <link rel="stylesheet" href="../css/cart.css"> <!-- đổi đường dẫn css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Imperial+Script&family=Marck+Script&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Send+Flowers&family=Solitreo&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="head1">
+            <a href="../html/index.html"><img class="logo" src="../img/Logo Green.png" alt="Logo SweetCakes"></a>
+        </div>
+        <div class="head2">
+            <ul>
+                <li><a href="../html/index.html">Trang chủ</a></li>
+                <li><a href="../html/about_us.html">Giới thiệu</a></li>
+                <li><a href="../html/shop.html">Sản phẩm</a></li>
+                <li><a href="../html/blog.html">Bài viết</a></li>
+                <li><a href="../html/contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="head3">
+            <ul>
+                <li><a href="#"><img src="../img/search.png" alt="Search"></a></li>
+                <li><a href="../html/cart.html"><img src="../img/shopping-cart.png" alt="Cart"></a></li>
+                <li><a href="../html/login.html"><img src="../img/user.png" alt="User"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="cart">
+        <h1>Giỏ Hàng Của Tôi</h1>
+        <table>
+            <tr>
+                <th>Ảnh</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá</th>
+                <th>Số Lượng</th>
+                <th>Thành Tiền</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><img src="../img/pie&tart-cart.jpg" alt="Set 6 Tart Mini"></td>
+                <td>Set 6 Tart Mini</td>
+                <td>200,000 VNĐ</td>
+                <td>
+                    <div class="pro-quantity-input">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td>200,000 VNĐ</td>
+                <td>x</td>
+            </tr>
+        </table>
+
+        <di class="cart-total">
+            <div class="order-notes">
+                <label for="notes">Ghi chú đơn hàng của tôi</label>
+                <textarea id="notes"></textarea>
+            </div>
+    
+            <div class="total">
+                <p>Tổng tiền: <span>200,000 VNĐ</span></p>
+                <a href="#" class="muaNgay">Thanh toán</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Liên hệ</h3>
+                <p>Email: sweetcakes2910@gmail.com</p>
+                <p>Điện thoại: +84 123 4567 789</p>
+            </div>
+            <div class="address-info">
+                <h3>Địa chỉ</h3>
+                <p>Tòa T, Công Viên Phần Mềm Quang Trung</p>
+                <p>Tô Ký, Trung Mỹ Tây, Q12</p>
+            </div>
+            <div class="opening-hours">
+                <h3>Giờ mở cửa</h3>
+                <p>Mỗi ngày: từ 08:00 đến 21:00</p>
+                <p>Web hoạt động 24/7</p>
+            </div>
+        </div>
+        <div class="footer-line">
+            <span><img src="./../img/cake.png" alt="" style="height: 2vw;"></span>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 Cakes, all rights reserved.</p>
+            <a href="../html/index.html"><img class="logo" src="../img/Logo Green.png" alt="Logo_Green"></a>
+            <div class="social-media">
+                <a href="#"><img src="../img/facebook.png" alt="Social Media 1"></a>
+                <a href="#"><img src="../img/tik-tok.png" alt="Social Media 2"></a>
+                <a href="#"><img src="../img/instagram.png" alt="Social Media 3"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

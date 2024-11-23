@@ -1,0 +1,292 @@
+/* --------------------------------------- Xác nhận đơn hàng -----------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+/* --------------------------------------- Header --------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    height: 6vw;
+    object-fit: cover;
+}
+
+.head1 {
+    height: 6vw;
+    overflow: hidden;
+}
+
+.head1 .logo {
+    width: auto;
+    max-height: 100%;
+}
+
+.head2 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.head2 ul li {
+    margin: 0 1vw;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: rgb(248, 248, 248);
+}
+
+.head2 ul li a:hover {
+    color: rgba(48, 48, 48, 1);
+}
+
+.head3 ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2vw;
+    padding: 0;
+    margin: 0;
+}
+
+.head3 ul li a img {
+    width: 1.6vw;
+    height: auto;
+    filter: invert(0%);
+    /* Mặc định là 0% (không thay đổi) */
+    transition: filter 0.3s ease;
+}
+
+.head3 ul li a:hover img {
+    filter: invert(100%);
+    /* Chuyển màu ảnh thành đen khi hover */
+}
+
+/* --------------------------------------- footer --------------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}
+
+/* ---------------------------------------- main ---------------------------------------- */
+
+main {
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-details-container {
+    text-align: center;
+}
+
+.order-details-container h2 {
+    color: rgb(107, 145, 96);
+}
+
+.order-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: left;
+}
+
+.customer-info .order {
+    color: rgb(102, 50, 92);
+}
+
+.customer-info p {
+    font-size: 20px;
+    color: rgb(107, 145, 96);
+}
+
+.customer-info-color {
+    color: rgba(48, 48, 48, 0.8);
+}
+
+.image-quantity {
+    position: relative;
+    width: 150px;
+    height: 100px;
+}
+
+.image-quantity p {
+    position: absolute;
+    border-radius: 50%;
+    top: -27px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(107, 145, 96);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-summary img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.161);
+    color: rgb(107, 145, 96);
+    padding-bottom: 10px;
+}
+
+.order-item-name {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.order-item-price {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.161);
+}
+
+.order-item-price-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-item-price-col p {
+    margin: 10px 0;
+}
+
+.order-item-price-cols {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.161);
+}
+
+.customer-info-col {
+    color: rgb(102, 50, 92);
+    font-size: 22px;
+}

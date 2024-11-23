@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCakes</title>
+    <link rel="stylesheet" href="../css/user_profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Imperial+Script&family=Marck+Script&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Send+Flowers&family=Solitreo&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="head1">
+            <a href="../html/index.html"><img class="logo" src="../img/Logo Green.png" alt="Logo SweetCakes"></a>
+        </div>
+        <div class="head2">
+            <ul>
+                <li><a href="../html/index.html">Trang chủ</a></li>
+                <li><a href="../html/about_us.html">Giới thiệu</a></li>
+                <li><a href="../html/shop.html">Sản phẩm</a></li>
+                <li><a href="../html/blog.html">Bài viết</a></li>
+                <li><a href="../html/contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="head3">
+            <ul>
+                <li><a href="#"><img src="../img/search.png" alt="Search"></a></li>
+                <li><a href="../html/cart.html"><img src="../img/shopping-cart.png" alt="Cart"></a></li>
+                <li><a href="../html/login.html"><img src="../img/user.png" alt="User"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="title">Thông tin tài khoản</div>
+        <div class="container">
+            <div class="box-left">
+                <div class="main-menu">
+                    <a href="#" class="menu-item">
+                        Tài khoản của tôi
+                        <span>&gt;</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        Lịch sử mua hàng
+                        <span>&gt;</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        Đổi mật khẩu
+                        <span>&gt;</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        Thông tin cá nhân
+                        <span>&gt;</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        Đăng xuất
+                        <span>&gt;</span>
+                    </a>
+                </div>
+            </div>
+            <div id="my-account" class="box-right">
+                <div class="profile">
+                    <div class="sub-title">Tài khoản của tôi</div>
+                    <div>
+                        <p>
+                            <span class="black-text">Tên tài khoản:</span>
+                            <span class="green-text">Hoàng Nho Thơm</span>
+                        </p>
+                        <p>
+                            <span class="black-text">Điện thoại:</span>
+                            <span class="green-text">0838934160</span>
+                        </p>
+                        <p>
+                            <span class="black-text">Email:</span>
+                            <span class="green-text">thomhnps36607@fpt.edu.vn</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="order-history" class="box-right" style="display: none;">
+                <div class="profile">
+                    <div class="sub-title">Lịch sử mua Hoàng</div>
+                    <table>
+                        <tr>
+                            <th>Đơn hàng</th>
+                            <th>Ngày đặt hàng</th>
+                            <th>Giao đến</th>
+                            <th>Tình trạng thanh toán</th>
+                            <th>Hành động</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>30/10/2024 22:32</td>
+                            <td>Quận 12</td>
+                            <td>Chưa thanh toán</td>
+                            <td><a href="#" style="color: #303030">Xem</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h1></h1>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="change-password" class="box-right" style="display: none;">
+                <div class="profile">
+                    <div class="sub-title">Đổi mật khẩu</div>
+                    <div class="information">
+                        <div class="content">
+                            <div class="label">Mật khẩu cũ:</div>
+                            <input type="password" id="oldPassword" class="name-box" placeholder="Nhập mật khẩu cũ">
+                        </div>
+
+                        <div class="content">
+                            <div class="label">Mật khẩu mới:</div>
+                            <input type="password" id="newPassword" class="name-box" placeholder="Nhập mật khẩu mới">
+                        </div>
+
+                        <div class="content">
+                            <div class="label">Nhập lại mật khẩu mới:</div>
+                            <input type="password" id="confirmPassword" class="name-box"
+                                placeholder="Nhập lại mật khẩu mới">
+                        </div>
+                    </div>
+                    <button id="updatePasswordBtn" class="buy-btn2">Cập nhật</button>
+                </div>
+            </div>
+            <div id="personal-info" class="box-right" style="display: none;">
+                <div class="profile">
+                    <div class="sub-title">Thông tin cá nhân</div>
+                    <div class="information">
+                        <div class="content">
+                            <div class="label">Họ và Tên:</div>
+                        </div>
+                        <div class="name-box">Hoàng Nho Thơm</div>
+
+                        <div class="content">
+                            <div class="label">Điện thoại:</div>
+                        </div>
+                        <div class="name-box">0838934160</div>
+
+                        <div class="content">
+                            <div class="label">Email:</div>
+                        </div>
+                        <div class="name-box">thomhnps36607@fpt.edu.vn</div>
+
+                        <div class="content">
+                            <div class="label">Địa chỉ:</div>
+                        </div>
+                        <div class="name-box">
+                            <p></p>
+                        </div>
+
+                        <div class="content">
+                            <div class="label">Sinh Nhật:</div>
+                        </div>
+                        <div class="name-box">
+                            <p></p>
+                        </div>
+                    </div>
+                    <a href="#" class="buy-btn">Cập nhật</a>
+                </div>
+            </div>
+
+            <!-- <div class="profile">
+
+                    <div class="sub-title">Đổi mật khẩu</div>
+                    <div class="information">
+                        <div class="content">
+                            <div class="label">Mật khẩu cũ:</div>
+                        </div>
+                        <div class="name-box">
+                            *************
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+
+                        <div class="content">
+                            <div class="label">Mật khẩu mới:</div>
+                        </div>
+                        <div class="name-box">
+                            *************
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                        
+                        <div class="content">
+                            <div class="label">Nhập lại mật khẩu mới:</div>
+                        </div>
+                        <div class="name-box">
+                            *************
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                    </div>
+                    <a href="#" class="buy-btn">Cập nhật</a>
+                </div> -->
+            <!-- <div class="profile">
+                    <div class="sub-title">Đổi mật khẩu</div>
+                    <div class="information">
+                        <div class="content">
+                            <div class="label">Mật khẩu cũ:</div>
+                            <input type="password" class="name-box" placeholder="Nhập mật khẩu cũ">
+                        </div>
+                
+                        <div class="content">
+                            <div class="label">Mật khẩu mới:</div>
+                            <input type="password" class="name-box" placeholder="Nhập mật khẩu mới">
+                        </div>
+                        
+                        <div class="content">
+                            <div class="label">Nhập lại mật khẩu mới:</div>
+                            <input type="password" class="name-box" placeholder="Nhập lại mật khẩu mới">
+                        </div>
+                    </div>
+                    <a href="#" class="buy-btn">Cập nhật</a>
+                </div> -->
+
+
+
+
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Liên hệ</h3>
+                <p>Email: sweetcakes2910@gmail.com</p>
+                <p>Điện thoại: +84 123 4567 789</p>
+            </div>
+            <div class="address-info">
+                <h3>Địa chỉ</h3>
+                <p>Tòa T, Công Viên Phần Mềm Quang Trung</p>
+                <p>Tô Ký, Trung Mỹ Tây, Q12</p>
+            </div>
+            <div class="opening-hours">
+                <h3>Giờ mở cửa</h3>
+                <p>Mỗi ngày: từ 08:00 đến 21:00</p>
+                <p>Web hoạt động 24/7</p>
+            </div>
+        </div>
+        <div class="footer-line">
+            <span><img src="./../img/cake.png" alt="" style="height: 2vw;"></span>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 Cakes, all rights reserved.</p>
+            <a href="../html/index.html"><img class="logo" src="../img/Logo Green.png" alt="Logo_Green"></a>
+            <div class="social-media">
+                <a href="#"><img src="../img/facebook.png" alt="Social Media 1"></a>
+                <a href="#"><img src="../img/tik-tok.png" alt="Social Media 2"></a>
+                <a href="#"><img src="../img/instagram.png" alt="Social Media 3"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="../js/index.js"></script> -->
+    <script>
+        document.getElementById("updatePasswordBtn").addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn reload trang
+
+            // Lấy giá trị từ các trường input
+            const oldPassword = document.getElementById("oldPassword").value.trim();
+            const newPassword = document.getElementById("newPassword").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+            // Kiểm tra trường hợp mật khẩu cũ để trống
+            if (!oldPassword) {
+                alert("Vui lòng nhập mật khẩu cũ!");
+                return;
+            }
+
+            // Kiểm tra mật khẩu mới
+            if (!newPassword) {
+                alert("Vui lòng nhập mật khẩu mới!");
+                return;
+            }
+            if (newPassword.length < 6) {
+                alert("Mật khẩu mới phải có ít nhất 6 ký tự!");
+                return;
+            }
+
+            // Kiểm tra xác nhận mật khẩu
+            if (newPassword !== confirmPassword) {
+                alert("Mật khẩu mới và xác nhận mật khẩu không khớp!");
+                return;
+            }
+
+            // Nếu tất cả hợp lệ
+            alert("Đổi mật khẩu thành công!");
+        });
+
+        // Lấy tất cả các mục trong menu và các phần nội dung
+        const menuItems = document.querySelectorAll('.menu-item');
+        const contentSections = document.querySelectorAll('.box-right');
+
+        // Ẩn tất cả nội dung
+        function hideAllSections() {
+            contentSections.forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+
+        // Hiển thị mặc định chỉ "Tài khoản của tôi" khi vào trang
+        hideAllSections();
+        document.getElementById('my-account').style.display = 'block';
+
+        // Thêm sự kiện click cho từng mục menu
+        menuItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                hideAllSections(); // Ẩn tất cả nội dung
+                contentSections[index].style.display = 'block'; // Hiển thị phần tương ứng
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

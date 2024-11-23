@@ -1,0 +1,579 @@
+/* --------------------------------------- Giới thiệu -----------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+/* --------------------------------------- Header --------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    height: 6vw;
+    object-fit: cover;
+}
+
+.head1 {
+    height: 6vw;
+    overflow: hidden;
+}
+
+.head1 .logo {
+    width: auto;
+    max-height: 100%;
+}
+
+.head2 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.head2 ul li {
+    margin: 0 1vw;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: rgb(248, 248, 248);
+}
+
+.head2 ul li a:hover {
+    color: rgba(48, 48, 48, 1);
+}
+
+.head3 ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2vw;
+    padding: 0;
+    margin: 0;
+}
+
+.head3 ul li a img {
+    width: 1.6vw;
+    height: auto;
+    filter: invert(0%);
+    /* Mặc định là 0% (không thay đổi) */
+    transition: filter 0.3s ease;
+}
+
+.head3 ul li a:hover img {
+    filter: invert(100%);
+    /* Chuyển màu ảnh thành đen khi hover */
+}
+
+/* --------------------------------------- footer --------------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}
+
+/* ------------------------------------------ main ------------------------------------------ */
+
+main>.ship {
+    font-size: 2.2vw;
+    font-weight: 600;
+    color: #6b9160;
+    height: 10rem;
+    background: url(../img/02.png) no-repeat center center; /* Đặt ảnh nền */
+    background-size: cover;   /* Lấp đầy khung mà không bị bóp méo */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------------- welcome ---------------------------------------- */
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.welcome-img {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.welcome-img img {
+    width: 26vw;
+    border-radius: 0.8rem;
+}
+
+.welcome-text {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+
+.welcome-text h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: #66325c;
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+}
+
+.welcome-text h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    /* flex-grow: 1; */
+    border-block-start: 1px solid rgb(#9b488b);
+}
+
+.welcome-text .welcome-p {
+    margin: 0;
+    /* padding-top: 0.6rem; */
+    font-size: 1.2vw;
+    color: #66325c;
+}
+
+.welcome-text p {
+    font-size: 1vw;
+}
+
+.welcome-text .buy-btn {
+    width: 10vw;
+    background-color: #e6badd;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin: 0 4rem;
+    text-align: center;
+}
+
+.welcome-text .buy-btn:hover {
+    background-color: #66325c;
+    color: rgb(255, 255, 255);
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.image img {
+    width: 26vw;
+    border-radius: 0.8rem;
+}
+
+.content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.content h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    /* flex-grow: 1; */
+    border-block-start: 1px solid rgb(107, 145, 96);
+}
+
+.content h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: #6b9160;
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+}
+
+.content h2 span {
+    color: #d3d3d3;
+}
+
+.content .welcome-p {
+    margin: 0;
+    /* padding-top: 0.6rem; */
+    font-size: 1.2vw;
+    color: #6b9160;
+}
+
+.content p {
+    font-size: 1vw;
+}
+
+.content .buy-btn {
+    width: 10vw;
+    background-color: #6b9160;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin: 0 4rem;
+    text-align: center;
+}
+
+.content .buy-btn:hover {
+    background-color: #c3e6ba;
+    color: rgba(48, 48, 48, 0.8);
+}
+
+/* -------------------------------------------- team-section -------------------------------------------------- */
+
+.team-section h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+    padding-top: 1vw;
+    justify-content: center;
+}
+
+.team-section h2::before {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 1px solid rgb(255, 255, 255);
+    border-block-start: 0;
+}
+
+.team-section h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    border-block-start: 1px solid rgb(255, 255, 255);
+}
+
+.team-section {
+    background-color: #f3d3e4;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.team-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.team-header p {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Wrapper và nút */
+.team-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.team-container {
+    overflow: hidden;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 15px;
+    width: 90%;
+}
+
+.team-member {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    /* text-align: center; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    color: #4caf50;
+    margin-bottom: 0.2rem;
+}
+
+.team-member .id {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+    font-weight: bold;
+    color: #5e9d5e;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .description {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Nút điều hướng */
+.prev-btn,
+.next-btn {
+    background-color: #fff;
+    border: none;
+    color: #888;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #ddd;
+}
+
+.prev-btn {
+    left: 0px;
+}
+
+.next-btn {
+    right: 0px;
+}
+
+/* -------------------------Form------------------------ */
+
+.team-QandA {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+}
+
+.team-QandA-Text {
+    text-align: center;
+}
+
+.co {
+    color: #6b9160;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.form-row .form-name,
+.form-row .form-email {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.form-text {
+    height: 150px;
+}
+
+.pro-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pro-row h4 {
+    font-weight: 500;
+}
+
+.pro-row .buy-btn {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    /* margin-top: 1.2rem; */
+    text-align: center;
+}
+  
+.pro-row .buy-btn:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
