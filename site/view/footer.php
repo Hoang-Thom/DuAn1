@@ -31,6 +31,7 @@
     </footer>
     <script src="../public/js/script.js"></script>
     <script src="../public/js/cart.js"></script>
+    <script src="../public/js/shop.js"></script>
     
 </body>
 </html>

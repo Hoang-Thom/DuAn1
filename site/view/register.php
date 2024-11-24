@@ -1,4 +1,4 @@
- <main class="main">
+    <main class="main-register">
         <div class="register-box">
             <h2>Đăng ký</h2>
             <form>

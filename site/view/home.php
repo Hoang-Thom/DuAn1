@@ -1,4 +1,4 @@
-    <main>
+    <main class="main-home">
         <div class="banner-container">
             <!-- Banner 1 -->
             <div class="banner-slide">

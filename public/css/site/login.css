@@ -1,18 +1,19 @@
 /* -------------------------------------- main ------------------------------------ */
 
-.main {
-    padding: 20px 0;
+.main-login {
+    display: flex;
+    justify-content: center;
 }
 
 .login-box {
     background-color: rgb(230, 186, 221);
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    min-width: 350px;
     /* Giới hạn chiều rộng khung */
-    margin: 0 auto;
+    margin: 50px 0;
     /* Căn giữa trên trang */
 }
 
