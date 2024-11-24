@@ -1,46 +1,38 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Baloo Bhaina 2", sans-serif;
-    line-height: 1.6vw;
-    background: rgb(248, 248, 248);
-    color: rgba(48, 48, 48, 1);
-}
-.container {
+
+.container-detail {
     display: flex;
     flex-direction: column;
     padding: 0 5rem;
     /* padding: 0 5rem; */
 }
 
-.product {
+.container-detail .product {
     display: flex;
     flex-direction: row;
     margin: 30px 0;
 }
 
-.pro-img {
+.container-detail .pro-img {
     display: flex;
     flex: 1;
     flex-direction: column;
     margin: 0 60px 0 0;
 }
 
-.product-info {
+.container-detail .product-info {
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 10px;
 }
 
-.pro-img-big img {
+.container-detail .pro-img-big img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.pro-img-mini {
+.container-detail .pro-img-mini {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -48,20 +40,20 @@ body {
     height: 8rem;
 }
 
-.pro-img-mini img {
+.container-detail .pro-img-mini img {
     width: 32%;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.product-info h2 {
+.container-detail .product-info h2 {
     margin: 5px 0 15px 0;
     color: rgb(107, 145, 96);
     line-height: 40px;
     font-size: 34px;
 }
 
-.product-info h4 {
+.container-detail .product-info h4 {
     margin: 0;
     color: rgb(107, 145, 96);
     line-height: 24px;
@@ -69,25 +61,25 @@ body {
     font-size: 24px;
 }
 
-.pro-des {
+.container-detail .pro-des {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
     border-block-start: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.pro-des p {
+.container-detail .pro-des p {
     font-size: 18px;
     line-height: 24px;
     margin: 10px 0 0 0;
 }
 
-.pro-descsiton {
+.container-detail .pro-descsiton {
     font-size: 18px;
     font-weight: 600;
 }
 
-.pro-qua {
+.container-detail .pro-qua {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -95,37 +87,37 @@ body {
     border-block-start: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.pro-quantity {
+.container-detail .pro-quantity {
     font-size: 18px;
     font-weight: 600;
 }
 
-.pro-quantity-input {
+.container-detail .pro-quantity-input {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 0 0 10px;
 }
 
-.pro-quantity-input p {
+.container-detail .pro-quantity-input p {
     margin: 0;
     padding: 6px 10px;
     background: rgba(48, 48, 48, 0.2);
 }
 
-.pro-quantity-input span {
+.container-detail .pro-quantity-input span {
     padding: 6px 10px;
     background: rgba(48, 48, 48, 0.1);
 }
 
-.pro-button {
+.container-detail .pro-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
 }
 
-.themGio {
+.container-detail .themGio {
     width: 15vw;
     background-color: rgb(102, 50, 92);
     color: rgb(255, 255, 255);
@@ -139,12 +131,12 @@ body {
     text-align: center;
 }
 
-.themGio:hover {
+.container-detail .themGio:hover {
     background-color: rgb(230, 186, 221);
     color: rgba(48, 48, 48, 0.8);
 }
 
-.muaNgay {
+.container-detail .muaNgay {
     width: 10vw;
     background-color: rgb(107, 145, 96);
     color: rgb(255, 255, 255);
@@ -158,17 +150,17 @@ body {
     text-align: center;
 }
 
-.muaNgay:hover {
+.container-detail .muaNgay:hover {
     background-color: rgb(195, 230, 186);
     color: rgba(48, 48, 48, 0.8);
 }
 
-.danhgia {
+.container-detail .danhgia {
     display: flex;
     flex-direction: column;
 }
 
-.danhgia-title {
+.container-detail .danhgia-title {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -176,25 +168,25 @@ body {
     border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.danhgia-content {
+.container-detail .danhgia-content {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
     border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.danhgia-content:last-child {
+.container-detail .danhgia-content:last-child {
     border-block-end: none;
 }
 
-.danhgia-name {
+.container-detail .danhgia-name {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 0 1rem;
 }
 
-.danhgia-name img {
+.container-detail .danhgia-name img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -202,22 +194,22 @@ body {
     object-fit: cover;
 }
 
-.danhgia-name h3 {
+.container-detail .danhgia-name h3 {
     margin: 0 0 0 1rem;
 }
 
-.danhgia-ims {
+.container-detail .danhgia-ims {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-bottom: 15px;
 }
 
-.danhgia-ims img {
+.container-detail .danhgia-ims img {
     height: 100px;
 }
 /* ---------------------------------------------------------------------------- */
-.cakes {
+.container-detail .cakes {
     width: 1440px;
     height: 390px;
     text-align: center;
@@ -226,7 +218,7 @@ body {
     font-weight: bold;
 }
 
-.underline-both-1 {
+.container-detail .underline-both-1 {
     display: flex;
     align-items: baseline;
     margin: 0;
@@ -237,7 +229,7 @@ body {
     color: #66325C;
 }
 
-.underline-both-1::after {
+.container-detail .underline-both-1::after {
     width: 4vw;
     display: block;
     content: "";
@@ -245,26 +237,26 @@ body {
     border-block-start: 1px solid #66325C;
 }
 
-.cakes {
+.container-detail .cakes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cakes>p {
+.container-detail .cakes>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-.cakes>.meu-cake {
+.container-detail .cakes>.meu-cake {
     width: 1400px;
     height: 410px;
     margin: 0px auto;
     position: relative;
 }
 
-.cakes>.meu-cake>.left,
+.container-detail>.cakes>.meu-cake>.left,
 .left-1,
 .left-2,
 .left-3 {
@@ -280,12 +272,12 @@ body {
     border: none;
 }
 
-.cakes>.meu-cake>.left,
+.container-detail>.cakes>.meu-cake>.left,
 .left-1 {
     color: #ffffff;
 }
 
-.cakes>.meu-cake>.right,
+.container-detail>.cakes>.meu-cake>.right,
 .right-1,
 .right-2,
 .right-3 {
@@ -301,18 +293,18 @@ body {
     border: none;
 }
 
-.left-1,
+.container-detail>.left-1,
 .right-1 {
     background-color: #66325C;
 }
 
-.meu-cake>.cake-4 {
+.container-detail>.meu-cake>.cake-4 {
     width: 1300px;
     height: 358px;
     margin: 0px auto;
 }
 
-.col-4,
+.container-detail>.col-4,
 .col-4-1 {
     width: calc(calc(100% - 32px)/4);
     height: 358px;
@@ -321,20 +313,20 @@ body {
     border-radius: 10px;
 }
 
-.col-4-1 {
+.container-detail>.col-4-1 {
     background-color: #E6BADD;
 }
 
-.mgr-10{
+.container-detail>.mgr-10{
     margin-right: 10px;
   }
 
-.img-cakes {
+  .container-detail>.img-cakes {
     width: 317px;
     height: 213px;
 }
 
-.img-cakes img {
+.container-detail>.img-cakes img {
     width: 100%;
     height: 100%;
     margin: 0px auto;
@@ -342,7 +334,7 @@ body {
     object-fit: cover ;
 }
 
-.price-cake {
+.container-detail>.price-cake {
     font-size: 20px;
     color: #303030;
     opacity: 80%;
@@ -350,7 +342,7 @@ body {
     font-weight: 600;
 }
 
-.name-cake {
+.container-detail>.name-cake {
     /* width: 100%; */
     height: 40px;
     font-size: 22px;
@@ -360,7 +352,7 @@ body {
     object-fit: cover;
 }
 
-.cake-4>.col-4>button {
+.container-detail>.cake-4>.col-4>button {
     font-size: 22px;
     background-color: #6B9160;
     color: #ffffff;
@@ -370,7 +362,7 @@ body {
     border: none;
 }
 
-.cake-4>.col-4-1>button {
+.container-detail>.cake-4>.col-4-1>button {
     font-size: 22px;
     background-color: #66325C;
     color: #ffffff;

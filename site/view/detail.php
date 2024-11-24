@@ -1,5 +1,5 @@
-<main>
-        <div class="container">
+    <main>
+        <div class="container-detail">
             <div class="product">
                 <div class="pro-img">
                     <div class="pro-img-big">
