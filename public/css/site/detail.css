@@ -4,7 +4,6 @@
 
 .container-detail {
 >>>>>>> 77ba3cb014739ac965ad1ce983d47c9bd15ee5d5
-    display: flex;
     flex-direction: column;
     padding: 0 5rem;
     /* padding: 0 5rem; */
@@ -16,7 +15,7 @@
     margin: 30px 0;
 }
 
-.container-detail .pro-img {
+.pro-img {
     display: flex;
     flex: 1;
     flex-direction: column;
