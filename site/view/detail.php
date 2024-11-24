@@ -51,7 +51,7 @@
                 </div>
                 <div class="danhgia-content">
                     <div class="danhgia-name">
-                        <img src="../public/img/tiramisu-10.jpg" alt="">
+                        <img src="../public/img/banner-3.jpg" alt="">
                         <h3>Tên khách hàng đánh giá</h3>
                     </div>
                     <div class="star">
@@ -70,7 +70,7 @@
 
                 <div class="danhgia-content">
                     <div class="danhgia-name">
-                        <img src="../public/img/tiramisu-10.jpg" alt="">
+                        <img src="../public/img/banner-3.jpg" alt="">
                         <h3>Tên khách hàng đánh giá</h3>
                     </div>
                     <div class="star">
