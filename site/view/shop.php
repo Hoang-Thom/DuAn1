@@ -45,77 +45,21 @@
             <div class="meu-cake">
                 <button class="left cakes-prev"><i class="fa-solid fa-angle-left" onclick="left"></i></button>
                 <div class="cake-4 cakes-list">
+                    <?php
+                        if(isset($productsCake)) { foreach($productsCake as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cakes-1.png" alt=""></div>
-                            <div class="price-cake">620 000 VNĐ</div>
-                            <div class="name-cake">Fresh Fruit Cake</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cakes-2.png" alt=""></div>
-                            <div class="price-cake">700 000 VNĐ</div>
-                            <div class="name-cake">Chocolate Mint Checkerboard Cake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cakes-3.png" alt=""></div>
-                            <div class="price-cake">800 000 VNĐ</div>
-                            <div class="name-cake">Violet Cake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-1.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Berry Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Cupcake canddy cream</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Chocolates Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cakes-2.png" alt=""></div>
-                            <div class="price-cake">700 000 VNĐ</div>
-                            <div class="name-cake">Chocolate Mint Checkerboard Cake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cakes-4.png" alt=""></div>
-                            <div class="price-cake">650 000 VNĐ</div>
-                            <div class="name-cake">Foreet Noire</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
+                    
                 </div>
                 <button class="right cakes-next"><i class="fa-solid fa-angle-right" onclick="right"></i></button>
 
@@ -127,77 +71,22 @@
             <div class="meu-cake">
                 <button class="left-1 pies-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 pies-list">
+                
+                    <?php
+                        if(isset($productsPie)) { foreach($productsPie as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-1.png" alt=""></div>
-                            <div class="price-cake">120 000 VNĐ</div>
-                            <div class="name-cake">Tart mini fruits</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Pie mini mix</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-3.png" alt=""></div>
-                            <div class="price-cake">500 000 VNĐ</div>
-                            <div class="name-cake">Tart strawberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-4.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Tart mango mix blueberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-1.png" alt=""></div>
-                            <div class="price-cake">120 000 VNĐ</div>
-                            <div class="name-cake">Tart mini fruits</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Pie mini mix</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-3.png" alt=""></div>
-                            <div class="price-cake">500 000 VNĐ</div>
-                            <div class="name-cake">Tart strawberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-3.png" alt=""></div>
-                            <div class="price-cake">500 000 VNĐ</div>
-                            <div class="name-cake">Tart strawberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right-1 pies-next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
@@ -208,77 +97,22 @@
             <div class="meu-cake">
                 <button class="left-2 bread-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 bread-list">
+                    
+                    <?php
+                        if(isset($productsBread)) { foreach($productsBread as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-1.png" alt=""></div>
-                            <div class="price-cake">220 000 VNĐ</div>
-                            <div class="name-cake">Banh mi grilled with garlic butter</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-2.png" alt=""></div>
-                            <div class="price-cake">80 000 VNĐ</div>
-                            <div class="name-cake">Chocolate cream puff choux</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Donuts mix</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-4.png" alt=""></div>
-                            <div class="price-cake">100 000 VNĐ</div>
-                            <div class="name-cake">Strawberry cheesecake buns</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-1.png" alt=""></div>
-                            <div class="price-cake">220 000 VNĐ</div>
-                            <div class="name-cake">Banh mi grilled with garlic butter</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-2.png" alt=""></div>
-                            <div class="price-cake">80 000 VNĐ</div>
-                            <div class="name-cake">Chocolate cream puff choux</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Donuts mix</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/bread-4.png" alt=""></div>
-                            <div class="price-cake">100 000 VNĐ</div>
-                            <div class="name-cake">Strawberry cheesecake buns</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right-2 bread-next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
@@ -289,77 +123,22 @@
             <div class="meu-cake">
                 <button class="left-1 tiramisu-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 tiramisu-list">
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-1.png" alt=""></div>
-                            <div class="price-cake">420 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu traditional</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                     
+                    <?php
+                        if(isset($productsTira)) { foreach($productsTira as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-2.png" alt=""></div>
-                            <div class="price-cake">480 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu strawberry</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-3.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu mango</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-4.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu blueberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-1.png" alt=""></div>
-                            <div class="price-cake">420 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu traditional</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-2.png" alt=""></div>
-                            <div class="price-cake">480 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu strawberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-3.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu mango</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-4.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu blueberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right-1 tiramisu-next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
@@ -370,77 +149,22 @@
             <div class="meu-cake">
                 <button class="left cupcakes-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 cupcakes-list">
+
+                    <?php
+                        if(isset($productsCup)) { foreach($productsCup as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-1.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Berry Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Cupcake canddy cream</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Chocolates Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-4.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Lemon Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-1.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Berry Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Cupcake canddy cream</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Chocolates Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-4.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Lemon Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right cupcakes-next"><i class="fa-solid fa-angle-right"></i></button>
 
@@ -452,77 +176,22 @@
             <div class="meu-cake">
                 <button class="left-3 pudding-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 pudding-list">
+                    
+                    <?php
+                        if(isset($productsPudding)) { foreach($productsPudding as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-1.png" alt=""></div>
-                            <div class="price-cake">500 000 VNĐ</div>
-                            <div class="name-cake">Lemon pudding</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-2.png" alt=""></div>
-                            <div class="price-cake">400 000 VNĐ</div>
-                            <div class="name-cake">Grapes pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-3.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Peach pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-4.png" alt=""></div>
-                            <div class="price-cake">630 000 VNĐ</div>
-                            <div class="name-cake">Strawberry pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>    
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-1.png" alt=""></div>
-                            <div class="price-cake">500 000 VNĐ</div>
-                            <div class="name-cake">Lemon pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-2.png" alt=""></div>
-                            <div class="price-cake">400 000 VNĐ</div>
-                            <div class="name-cake">Grapes pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-3.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Peach pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/pudding-4.png" alt=""></div>
-                            <div class="price-cake">630 000 VNĐ</div>
-                            <div class="name-cake">Strawberry pudding</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right-3 pudding-next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
@@ -533,77 +202,22 @@
             <div class="meu-cake">
                 <button class="left chees-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 chees-list">
-                <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-1.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Berry Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                     
+                    <?php
+                        if(isset($productsChees)) { foreach($productsChees as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Cupcake canddy cream</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Chocolates Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-4.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Lemon Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-1.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Berry Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Cupcake canddy cream</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-3.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Chocolates Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/cupcakes-4.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Lemon Cupcake</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right chees-next"><i class="fa-solid fa-angle-right"></i></button>
 
@@ -615,77 +229,22 @@
             <div class="meu-cake">
                 <button class="left-1 cookies-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="cake-4 cookies-list">
-                <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-1.png" alt=""></div>
-                            <div class="price-cake">420 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu traditional</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                     
+                <?php
+                        if(isset($productsCook)) { foreach($productsCook as $p){
+                    ?>    
+
                     <div class="cakes-item mgr-10">
                         <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-2.png" alt=""></div>
-                            <div class="price-cake">480 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu strawberry</div>
+                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-3.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu mango</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-4.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu blueberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-1.png" alt=""></div>
-                            <div class="price-cake">420 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu traditional</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-2.png" alt=""></div>
-                            <div class="price-cake">480 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu strawberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item mgr-10">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-3.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu mango</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-
-                    <div class="cakes-item">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/tiramisu-4.png" alt=""></div>
-                            <div class="price-cake">560 000 VNĐ</div>
-                            <div class="name-cake">Tiramisu blueberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
                 </div>
                 <button class="right-1 cookies-next"><i class="fa-solid fa-angle-right"></i></button>
             </div>

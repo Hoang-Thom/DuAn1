@@ -5,10 +5,14 @@
     // echo $page;
     switch($page){
         case 'home':
-            require_once('view/home.php');
+            require_once('controller/ProductController.php');
+            $productController = new ProductController();
+            $productController->renderHome();
             break;
         case 'shop':
-            require_once('view/shop.php');
+            require_once('controller/ProductController.php');
+            $productController = new ProductController();
+            $productController->renderShop();
             break;
         case 'detail':
             require_once('view/detail.php');

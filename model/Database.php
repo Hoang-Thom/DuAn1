@@ -21,7 +21,7 @@ class Database{
             // Tạo kết nối đến database theo phương thức PDO
             $this->conn = new PDO("mysql:host=$this->host;dbname=$this->database", $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Connect thành công";
+            // echo "Connect thành công";
         }catch(PDOException $e){
             echo "Connection failed: ".$e->getMessage();
         }
