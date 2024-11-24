@@ -3,7 +3,7 @@
             <div class="product">
                 <div class="pro-img">
                     <div class="pro-img-big">
-                        <img id="mainImage" src="../public/img/pie-1.png" alt>
+                        <img id="mainImage" src="../public/img/<?=$product['Anh_san_pham']?>" alt>
                     </div>
                     <div class="pro-img-mini">
                         <img onclick="changeImage(this)" src="../public/img/pie&tart-01.jpg" alt>
@@ -13,16 +13,12 @@
                 </div>
 
                 <div class="product-info">
-                    <h2>Set 6 Tart Mini</h2>
-                    <h4>200 000 VND</h4>
+                    <h2><?=$product['Ten_san_pham']?></h2>
+                    <h4><?=$product['Gia_san_pham']?> VND</h4>
                     <div class="pro-des">
                         <div class="pro-descsiton">Mô tả:</div>
                         <p>
-                            Bánh tart trứng, với lớp vỏ giòn tan và nhân trứng
-                            mịn màng. Được trang trí rực rỡ bằng trái cây tươi
-                            như kiwi, dâu tây và việt quất, cùng lớp kem tươi
-                            nhẹ nhàng.
-                            Bán theo set, 1 set 6 cái. Có nhận đặt theo yêu cầu.
+                            <?=$product['Mo_ta_san_pham']?>
                         </p>
                     </div>
                     <div class="pro-qua">

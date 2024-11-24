@@ -30,6 +30,11 @@
             $productsCook = $this->productModel->getProByCate(12);
             require_once('view/shop.php');
         }
+        // tạo trang chi tiết sản phẩm
+        public function renderDetail($id) {
+            $product= $this->productModel->getProductById($id);
+            require_once('view/detail.php');
+        }
     }
 
 

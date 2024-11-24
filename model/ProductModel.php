@@ -14,6 +14,11 @@
             return Database::getInstance()->getAll($sql);
         }
 
+        // lấy sản phẩm theo id
+        public function getProductById($id){
+            $sql = "SELECT * FROM sanpham WHERE id_sanpham = $id";
+            return Database::getInstance()->getOne($sql);
+        }
 
     }
 

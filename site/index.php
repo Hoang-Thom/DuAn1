@@ -15,7 +15,10 @@
             $productController->renderShop();
             break;
         case 'detail':
-            require_once('view/detail.php');
+            $id=$_GET['id'];
+            require_once('controller/ProductController.php');
+            $productController = new ProductController();
+            $productController->renderDetail($id);
             break;
         case 'cart':
             require_once('view/cart.php');

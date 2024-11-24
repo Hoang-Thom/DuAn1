@@ -93,7 +93,7 @@
                         if(isset($productsCate1)) { foreach($productsCate1 as $p){
                     ?>    
 
-                    <a href="?page=detail">
+                    <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="product">
                             <img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt="">
                             <p><?=$p['Gia_san_pham'] ?></p>
@@ -211,7 +211,7 @@
                     ?>    
 
                     <div class="menu-item">
-                        <a href="?page=detail">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                             <div class="menu-item-name">
                                 <h3><?=$p['Ten_san_pham'] ?></h3>
                                 <b></b>
