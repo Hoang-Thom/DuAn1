@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu đồ cột</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/admin-home.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-1">
+            <div class="logo-left"><img src="img/Logo Green New.png" alt=""></div>
+            <div class="login">
+                <div class="img-login"><img src="img/Ellipse 1.png" alt=""></div>
+                <div class="name-login">Tên admin</div>
+            </div>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li>
+                    <a href="trangchu.html">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="danhmuc.html">Danh mục</a>
+                </li>
+                <li>
+                    <a href="sanpham.html">Sản phẩm</a>
+                </li>
+                <li>
+                    <a href="donhang.html">Đơn hàng</a>
+                </li>
+                <li>
+                    <a href="taikhoan.html">Tài khoản</a>
+                </li>
+                <li>
+                    <a href="baiviet.html">Bài viết</a>
+                </li>
+                <li>
+                    <a href="binhluan.html">Bình luận</a>
+                </li>
+                <li>
+                    <a href="khuyenmai.html">Khuyến mãi</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="row1">
+            <div class="order">
+                <p>Đơn hàng</p>
+                <div class="quantity">
+                    <h1>100</h1>
+                </div>
+                <a href="donhang.html">xem chi tiết</a>
+            </div>
+            <div class="product">
+                <p>Sản phẩm</p>
+                <div class="quantity">
+                    <h1>100</h1>
+                </div>
+                <a href="sanpham.html">xem chi tiết</a>
+            </div>
+            <div class="blog">
+                <p>Bài viết</p>
+                <div class="quantity">
+                    <h1>100</h1>
+                </div>
+                <a href="baiviet.html">xem chi tiết</a>
+            </div>
+            <div class="user">
+                <p>Người dùng</p>
+                <div class="quantity">
+                    <h1>100</h1>
+                </div>
+                <a href="taikhoan.html">xem chi tiết</a>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="pro">
+                <h1>Sản phẩm bán chạy</h1>
+                <div class="chart">
+                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
+                    <p class="nm">Tên sản phẩm bán chạy</p>
+                    <p>15</p>
+                </div>
+                <div class="chart">
+                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
+                    <p class="nm">Tên sản phẩm bán chạy</p>
+                    <p>15</p>
+                </div>
+                <div class="chart">
+                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
+                    <p class="nm">Tên sản phẩm bán chạy</p>
+                    <p>15</p>
+                </div>
+            </div>
+            <!-- <h1>Biểu đồ cột - Trang Admin</h1> -->
+            <canvas width="700" height="300" id="barChart"></canvas>
+        </div>
+    </main>
+    <footer>
+        <div class=" footer-bottom ">
+            <p>2024 Cakes, all rights reserved.</p>
+            <img class="logo " src="img/Logo Green.png " alt="Logo_Green ">
+            <div class="social-media ">
+                <a href="# "><img src="img/facebook.png " alt="Social Media 1 "></a>
+                <a href="# "><img src="img/tik-tok.png " alt="Social Media 2 "></a>
+                <a href="# "><img src="img/instagram.png " alt="Social Media 3 "></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
