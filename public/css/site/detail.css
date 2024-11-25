@@ -18,7 +18,7 @@
     margin: 0 60px 0 0;
 }
 
-.container-detail .product-info {
+.container-detail form {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -98,15 +98,27 @@
     margin: 0 0 0 10px;
 }
 
-.container-detail .pro-quantity-input p {
-    margin: 0;
+.container-detail .pro-quantity-input .btn-decrease-detail,
+.container-detail .pro-quantity-input .btn-increase-detail {
+    /* margin: 0;
     padding: 6px 10px;
-    background: rgba(48, 48, 48, 0.2);
+    background: rgba(48, 48, 48, 0.2); */
+
+    padding: 8px 10px;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
 }
 
-.container-detail .pro-quantity-input span {
-    padding: 6px 10px;
-    background: rgba(48, 48, 48, 0.1);
+.container-detail .pro-quantity-input .quantity {
+    padding: 3px 6px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .container-detail .pro-button {
@@ -116,40 +128,42 @@
     gap: 15px;
 }
 
-.container-detail .themGio {
-    width: 15vw;
+.container-detail form .product-info .pro-button .themGio {
+    width: 20vw;
     background-color: rgb(102, 50, 92);
     color: rgb(255, 255, 255);
     font-weight: 500;
-    padding: 0.6rem 2rem 0.5rem;
+    /* padding: 0.6rem 2rem 0.5rem; */
     border-radius: 2rem;
     text-decoration: none;
     font-size: 1.6vw;
     transition: background-color 0.3s ease;
     margin-top: 1.2rem;
     text-align: center;
+    border: none;
 }
 
-.container-detail .themGio:hover {
+.container-detail form .product-info .pro-button .themGio:hover {
     background-color: rgb(230, 186, 221);
     color: rgba(48, 48, 48, 0.8);
 }
 
-.container-detail .muaNgay {
-    width: 10vw;
+.container-detail form .product-info .pro-button .muaNgay {
+    width: 15vw;
     background-color: rgb(107, 145, 96);
     color: rgb(255, 255, 255);
     font-weight: 500;
-    padding: 0.6rem 2rem 0.5rem;
+    /* padding: 0.6rem 2rem 0.5rem; */
     border-radius: 2rem;
     text-decoration: none;
     font-size: 1.6vw;
     transition: background-color 0.3s ease;
     margin-top: 1.2rem;
     text-align: center;
+    border: none;
 }
 
-.container-detail .muaNgay:hover {
+.container-detail form .product-info .pro-button .muaNgay:hover {
     background-color: rgb(195, 230, 186);
     color: rgba(48, 48, 48, 0.8);
 }

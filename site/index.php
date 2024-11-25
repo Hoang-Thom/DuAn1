@@ -1,5 +1,9 @@
 <?php
 
+    session_start();
+    // session_unset();
+
+    ob_start();
     require_once('view/header.php');
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
     // echo $page;
@@ -25,8 +29,40 @@
             $productController = new ProductController();
             $productController->renderDetail($id);
             break;
+        case 'addcart':
+            if (isset($_POST['id']) && isset($_POST['quantity'])) {
+                $id = $_POST['id'];
+                $quantity = $_POST['quantity'];
+
+                require_once('controller/CartController.php');
+                $cartController = new CartController();
+                $cartController->addCart($id, $quantity);
+            } else {
+                require_once('view/cart.php');
+            }
+            break;
         case 'cart':
-            require_once('view/cart.php');
+            require_once('controller/CartController.php');
+            $cartController = new CartController();
+            $cartController->renderCart();
+            break;
+        case 'increase':
+            $id=$_GET['id'];
+            require_once('controller/CartController.php');
+            $cartController = new CartController();
+            $cartController->increaseQuantity($id);
+            break;
+        case 'decrease':
+            $id=$_GET['id'];
+            require_once('controller/CartController.php');
+            $cartController = new CartController();
+            $cartController->decreaseQuantity($id);
+            break;
+        case 'delete':
+            $id=$_GET['id'];
+            require_once('controller/CartController.php');
+            $cartController = new CartController();
+            $cartController->deleteCart($id);
             break;
         case 'checkout':
             require_once('view/checkout.php');
@@ -67,4 +103,5 @@
             break;
     }
     require_once('view/footer.php');
+    ob_end_flush(); 
 ?>

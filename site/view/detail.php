@@ -12,28 +12,31 @@
                     </div>
                 </div>
 
-                <div class="product-info">
-                    <h2><?=$product['Ten_san_pham']?></h2>
-                    <h4><?=$product['Gia_san_pham']?> VND</h4>
-                    <div class="pro-des">
-                        <div class="pro-descsiton">Mô tả:</div>
-                        <p>
-                            <?=$product['Mo_ta_san_pham']?>
-                        </p>
-                    </div>
-                    <div class="pro-qua">
-                        <div class="pro-quantity">Số lượng:</div>
-                        <div class="pro-quantity-input">
-                            <p>-</p>
-                            <span>1</span>
-                            <p>+</p>
+                <form action="?page=addcart" method="post">
+                    <div class="product-info">
+                        <h2><?=$product['Ten_san_pham']?></h2>
+                        <h4><?= number_format($product['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></h4>
+                        <div class="pro-des">
+                            <div class="pro-descsiton">Mô tả:</div>
+                            <p>
+                                <?=$product['Mo_ta_san_pham']?>
+                            </p>
+                        </div>
+                        <input type="hidden" name="id" value="<?=$product['ID_sanpham']?>">
+                        <div class="pro-qua">
+                            <div class="pro-quantity">Số lượng:</div>
+                            <div class="pro-quantity-input">
+                                <button type="button" class="btn-decrease-detail">-</button>
+                                <input type="text" name="quantity" class="quantity" value="1" min="1" max="5">
+                                <button type="button" class="btn-increase-detail">+</button>
+                            </div>
+                        </div>
+                        <div class="pro-button">
+                            <button type="submit" class="muaNgay">Mua ngay</button>
+                            <button type="submit" class="themGio">Thêm vào giỏ hàng</button> 
                         </div>
                     </div>
-                    <div class="pro-button">
-                        <a href="" class="muaNgay">Mua ngay</a>
-                        <a href="../html/cart.html" class="themGio">Thêm vào giỏ hàng</a>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="danhgia">
                 <div class="danhgia-title">
@@ -97,7 +100,7 @@
                         <div class="col-4-1 mgr-10">
                             <a class="a" href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                                 <div class="img-cakes"><img src="../public/img/<?= $p['Anh_san_pham']?>" alt=""></div>
-                                <div class="price-cake"><?= $p['Gia_san_pham']?></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                                 <div class="name-cake"><?= $p['Ten_san_pham']?></div>
                                 <button>Thêm vào giỏ hàng</button>
                             </a>

@@ -31,11 +31,11 @@
                         if(isset($productsCake)) { foreach($productsCake as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>"  class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>"  class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -60,11 +60,11 @@
                         if(isset($productsPie)) { foreach($productsPie as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -88,11 +88,11 @@
                         if(isset($productsBread)) { foreach($productsBread as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -116,11 +116,11 @@
                         if(isset($productsTira)) { foreach($productsTira as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -144,11 +144,11 @@
                         if(isset($productsCup)) { foreach($productsCup as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -173,11 +173,11 @@
                         if(isset($productsPudding)) { foreach($productsPudding as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-2">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -201,11 +201,11 @@
                         if(isset($productsChees)) { foreach($productsChees as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
@@ -230,11 +230,11 @@
                         if(isset($productsCook)) { foreach($productsCook as $p){
                     ?>    
 
-                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
+                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>

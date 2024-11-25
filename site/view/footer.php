@@ -32,6 +32,7 @@
     <script src="../public/js/script.js" defer></script>
     <script src="../public/js/cart.js" defer></script>
     <script src="../public/js/shop.js" defer></script>
+    <script src="../public/js/detail.js" defer></script>
     
 </body>
 </html>

@@ -43,7 +43,7 @@ const categories = [
 
 categories.forEach(category => {
     let currentIndex = 0;
-    const items = document.querySelectorAll(category.itemList + ' .cakes-item');
+    const items = document.querySelectorAll(category.itemList + ' .item'); // Adjust for item class
     const visibleCount = 4;
 
     function updateDisplay() {
@@ -62,10 +62,17 @@ categories.forEach(category => {
         updateDisplay();
     }
 
-    document.querySelector(category.prevBtn).addEventListener('click', () => changeIndex(-1));
-    document.querySelector(category.nextBtn).addEventListener('click', () => changeIndex(1));
+    const prevButton = document.querySelector(category.prevBtn);
+    const nextButton = document.querySelector(category.nextBtn);
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', () => changeIndex(-1));
+    }
+    if (nextButton) {
+        nextButton.addEventListener('click', () => changeIndex(1));
+    }
 
-    // Hiển thị sản phẩm ban đầu
+    // Initial display
     updateDisplay();
 });
 

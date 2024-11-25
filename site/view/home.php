@@ -96,7 +96,7 @@
                     <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="product">
                             <div class="pro-ima"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <p><?=$p['Gia_san_pham'] ?></p>
+                            <p><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></p>
                             <h3><?=$p['Ten_san_pham'] ?></h3>
                             <a href="?page=cart" class="buy-btn">Thêm vào giỏ hàng</a>
                         </div>
@@ -108,8 +108,8 @@
                 </div>
             </div>
             <div class="products-navigation">
-                <button class="products-prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="products-next" onclick="changeSlide(1)">&#10095;</button>
+                <button class="products-prev">&#10094;</button>
+                <button class="products-next">&#10095;</button>
             </div>
         </section>
 
