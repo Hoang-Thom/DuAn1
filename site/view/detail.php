@@ -95,10 +95,12 @@
                         ?>
 
                         <div class="col-4-1 mgr-10">
-                            <div class="img-cakes"><img src="../public/img/<?= $p['Anh_san_pham']?>" alt=""></div>
-                            <div class="price-cake"><?= $p['Gia_san_pham']?></div>
-                            <div class="name-cake"><?= $p['Ten_san_pham']?></div>
-                            <button>Thêm vào giỏ hàng</button>
+                            <a class="a" href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
+                                <div class="img-cakes"><img src="../public/img/<?= $p['Anh_san_pham']?>" alt=""></div>
+                                <div class="price-cake"><?= $p['Gia_san_pham']?></div>
+                                <div class="name-cake"><?= $p['Ten_san_pham']?></div>
+                                <button>Thêm vào giỏ hàng</button>
+                            </a>
                         </div>
 
                         <?php } ?>

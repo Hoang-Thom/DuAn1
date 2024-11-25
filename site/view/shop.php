@@ -1,38 +1,18 @@
     <main class="main-shop">
         <div class="title-catagory">Các Loại Bánh Của Chúng Tôi</div>
         <div class="catagory">
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-1.png" alt=""></div>
-                <div class="name-catagory">Cakes</div>
+
+            <?php
+                if(isset($categories)) { foreach($categories as $p){
+            ?> 
+
+            <div class="col-8 mgr-5">
+                <div class="image-catagory"><img src="../public/img/<?=$p['Anh_danh_muc'] ?>" alt=""></div>
+                <div class="name-catagory"><?=$p['Ten_danh_muc'] ?></div>
             </div>
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-2.png" alt=""></div>
-                <div class="name-catagory">Pie & Tart</div>
-            </div>
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-3.png" alt=""></div>
-                <div class="name-catagory">Bread</div>
-            </div>
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-4.png" alt=""></div>
-                <div class="name-catagory">Tiramisu</div>
-            </div>
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-5.png" alt=""></div>
-                <div class="name-catagory">Cupcakes</div>
-            </div>
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-6.png" alt=""></div>
-                <div class="name-catagory">Pudding</div>
-            </div>
-            <div class="col-8 mgr-10">
-                <div class="image-catagory"><img src="../public/img/catagory-7.png" alt=""></div>
-                <div class="name-catagory">Cheesecakes</div>
-            </div>
-            <div class="col-8">
-                <div class="image-catagory"><img src="../public/img/catagory-8.png" alt=""></div>
-                <div class="name-catagory">Cookies</div>
-            </div>
+
+            <?php }} ?>
+
         </div>
         <div class="ship">
             <div class="text">Nhận Hàng hoặc Giao Hàng Trong Ngày</div>
@@ -50,12 +30,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -77,12 +59,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -103,12 +87,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -129,12 +115,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -155,12 +143,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -182,12 +172,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-2">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -208,12 +200,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>
@@ -235,12 +229,14 @@
                     ?>    
 
                     <div class="cakes-item mgr-10">
+                        <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <div class="price-cake"><?=$p['Gia_san_pham'] ?></div>
                             <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
+                        </a>
                     </div>
 
                     <?php }} ?>

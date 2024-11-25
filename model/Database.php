@@ -38,13 +38,19 @@ class Database{
         //Lấy tất cả dữ liệu
         return $stmt->fetchAll();
     }
-
     public function getOne($sql){
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         //Lấy 1 dữ liệu
         return $stmt->fetch();
     }
+    // đếm số lượng dữ liệu
+    // public function getPro_Quantity($sql){
+    //     $stmt = $this->conn->prepare($sql);
+    //     $stmt->execute();
+    //     //Lấy tất cả dữ liệu
+    //     return count($stmt->fetchAll());
+    // }
 } 
 
 ?>

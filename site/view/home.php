@@ -86,7 +86,7 @@
         <section class="products">
             <div class="products-container">
                 <h2>Sản Phẩm Của Chúng Tôi</h2>
-                <p class="products-p">Bánh kem danh mục cakes</p>
+                <p class="products-p">Sản phẩm mới nhất của chúng tôi</p>
                 <div class="product-list">
 
                     <?php
@@ -95,7 +95,7 @@
 
                     <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="product">
-                            <img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt="">
+                            <div class="pro-ima"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
                             <p><?=$p['Gia_san_pham'] ?></p>
                             <h3><?=$p['Ten_san_pham'] ?></h3>
                             <a href="?page=cart" class="buy-btn">Thêm vào giỏ hàng</a>
