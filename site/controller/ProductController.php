@@ -21,7 +21,7 @@
             require_once('view/home.php');
         }
         // tạo trang sản phẩm
-        public function renderShop() {
+        public function renderShop($id) {
             // $products = $this->productModel->getAllProduct();  lấy tất cả sản phẩm
             $productsCake = $this->productModel->getProByCate(5);
             $productsPie = $this->productModel->getProByCate(6);

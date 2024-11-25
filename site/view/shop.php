@@ -7,8 +7,10 @@
             ?> 
 
             <div class="col-8 mgr-5">
+                <a href="?page=shop&id=<?=$p['ID_danhmuc'] ?>">
                 <div class="image-catagory"><img src="../public/img/<?=$p['Anh_danh_muc'] ?>" alt=""></div>
                 <div class="name-catagory"><?=$p['Ten_danh_muc'] ?></div>
+                </a>
             </div>
 
             <?php }} ?>
@@ -29,7 +31,7 @@
                         if(isset($productsCake)) { foreach($productsCake as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>"  class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -58,7 +60,7 @@
                         if(isset($productsPie)) { foreach($productsPie as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -86,7 +88,7 @@
                         if(isset($productsBread)) { foreach($productsBread as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -114,7 +116,7 @@
                         if(isset($productsTira)) { foreach($productsTira as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -142,7 +144,7 @@
                         if(isset($productsCup)) { foreach($productsCup as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -171,7 +173,7 @@
                         if(isset($productsPudding)) { foreach($productsPudding as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-2">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -199,7 +201,7 @@
                         if(isset($productsChees)) { foreach($productsChees as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
@@ -228,7 +230,7 @@
                         if(isset($productsCook)) { foreach($productsCook as $p){
                     ?>    
 
-                    <div class="cakes-item mgr-10">
+                    <div id="<?=$p['ID_danhmuc']?>" class="cakes-item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="col-4-1">
                             <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>

@@ -10,9 +10,14 @@
             $productController->renderHome();
             break;
         case 'shop':
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+            } else {
+                $id = null; // Gán giá trị mặc định nếu không có id
+            }
             require_once('controller/ProductController.php');
             $productController = new ProductController();
-            $productController->renderShop();
+            $productController->renderShop($id);
             break;
         case 'detail':
             $id=$_GET['id'];

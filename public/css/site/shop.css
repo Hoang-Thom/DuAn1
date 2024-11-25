@@ -37,20 +37,24 @@
     float: left;
 }
 
-.main-shop>.catagory>.col-8>.image-catagory {
+.main-shop>.catagory>.col-8>a {
+    text-decoration: none;
+}
+
+.main-shop>.catagory>.col-8>a>.image-catagory {
     width: 99%;
     height: 155px;
     border-radius: 10px;
 }
 
-.col-8>.image-catagory>img:hover {
+.main-shop>.catagory>.col-8>a>.image-catagory>img:hover {
     transform: scale(1.05);
     /* Phóng to ảnh lên 20% */
     transition: transform 0.3s ease;
     /* Hiệu ứng mượt mà khi phóng to */
 }
 
-.main-shop>.catagory>.col-8>.name-catagory {
+.main-shop>.catagory>.col-8>a>.name-catagory {
     font-size: 24px;
     font-weight: bold;
     color: #6b9160;
