@@ -14,7 +14,7 @@
         // tạo trang chủ
         public function renderHome() {
             $productsCate1= $this->productModel->getProByCate(5);
-            $productsCate2= $this->productModel->getProByCate(6);
+            $productsCate2= $this->productModel->getProByCateLIMIT5(6);
             require_once('view/home.php');
         }
         // tạo trang sản phẩm
@@ -33,8 +33,13 @@
         // tạo trang chi tiết sản phẩm
         public function renderDetail($id) {
             $product= $this->productModel->getProductById($id);
+            $relateProduct= $this->productModel-> getRelateProduct($id);
+            // print_r($relateProduct);
             require_once('view/detail.php');
         }
+        
+
+
     }
 
 

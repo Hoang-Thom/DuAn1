@@ -236,12 +236,12 @@
     border-block-start: 1px solid #66325C;
 }
 
-/* 
-.cakes {
+
+.container-detail>.cakes {
     display: flex;
     flex-direction: column;
     align-items: center;
-} */
+}
 
 .container-detail>.cakes>.meu-cake {
     width: 1400px;
@@ -285,7 +285,8 @@
 }
 
 .container-detail>.cakes>.meu-cake>.cake-4>.col-4-1 {
-    width: calc(calc(100% - 32px)/4);
+    /* width: calc(calc(100% - 20px)/4); */
+    width: 24%;
     height: 358px;
     text-align: center;
     float: left;

@@ -49,7 +49,7 @@
                     </form>
                 </li>
                 <li><a href="?page=cart"><img src="../public/img/shopping-cart.png" alt="Cart"></a></li>
-                <li><a href="?page=login"><img src="../public/img/user.png" alt="User"></a></li>
+                <li><a href="?page=loginpage"><img src="../public/img/user.png" alt="User"></a></li>
             </ul>
         </div>
     </header>

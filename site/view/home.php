@@ -11,7 +11,7 @@
                         <h2>KHUYẾN MÃI BÁNH NGỌT</h2>
                         <p>SweetCakes dành tặng bạn những chiếc bánh ngọt ngào, thơm ngon với mức giá
                             ưu đãi hấp dẫn.</p>
-                        <a href="#" class="buy-btn">Mua ngay</a>
+                        <a href="?page=shop" class="buy-btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <h2>KHUYẾN MÃI BÁNH NGỌT</h2>
                         <p>Hãy cùng SweetCakes tạo nên những khoảnh khắc ngọt ngào và hạnh phúc bên những chiếc bánh
                             thơm ngon.</p>
-                        <a href="#" class="buy-btn">Mua ngay</a>
+                        <a href="?page=shop" class="buy-btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <p class="banner-p">Tháng sinh nhật</p>
                         <h2>KHUYẾN MÃI BÁNH NGỌT</h2>
                         <p>SweetCakes - Nơi bạn tìm thấy những chiếc bánh ngọt ngào, thơm ngon và đẹp mắt nhất.</p>
-                        <a href="#" class="buy-btn">Mua ngay</a>
+                        <a href="?page=shop" class="buy-btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                         <p class="banner-p">Tháng sinh nhật</p>
                         <h2>KHUYẾN MÃI BÁNH NGỌT</h2>
                         <p>SweetCakes - Lựa chọn hoàn hảo cho mọi dịp.</p>
-                        <a href="#" class="buy-btn">Mua ngay</a>
+                        <a href="?page=shop" class="buy-btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     đặc biệt hơn, SweetCakes mang đến những chiếc bánh kem không chỉ ngon miệng mà còn đẹp mắt, như
                     những viên kẹo ngọt ngào. Mỗi chiếc bánh kem của SweetCakes đều được làm từ những nguyên liệu tươi
                     ngon nhất, kết hợp với sự sáng tạo không giới hạn.</p>
-                <a href="../html/blog.html" class="buy-btn">Xem thêm</a>
+                <a href="?page=blog" class="buy-btn">Xem thêm</a>
             </div>
             <div class="welcome-img">
                 <img src="../public/img/welcome.jpg" alt="Welcome Image">
@@ -206,7 +206,7 @@
             </div>
             <div class="menu-items">
                 <h2>Thực đơn</h2>
-                <?php
+                    <?php
                         if(isset($productsCate2)) { foreach($productsCate2 as $p){
                     ?>    
 

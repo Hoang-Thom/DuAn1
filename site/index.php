@@ -32,11 +32,27 @@
         case 'blog':
             require_once('view/blog.php');
             break;
+        case 'loginpage':
+            require_once('controller/UserController.php');
+            $userController = new UserController();
+            $userController->renderLogin();
+            break;
         case 'login':
-            require_once('view/login.php');
+            $data=$_POST;
+            require_once("controller/UserController.php");
+            $userController = new UserController();
+            $userController->login($data);
+            break;
+        case 'registerpage':
+            require_once('controller/UserController.php');
+            $userController = new UserController();
+            $userController->renderRegister();
             break;
         case 'register':
-            require_once('view/register.php');
+            $data=$_POST;
+            require_once('controller/UserController.php');
+            $userController = new UserController();
+            $userController->register($data);
             break;
         case 'forget':    
             require_once('view/forget.php');    

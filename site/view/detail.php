@@ -90,30 +90,18 @@
                 <div class="meu-cake">
                     <button class="left-1"><i class="fa-solid fa-angle-left"></i></button>
                     <div class="cake-4">
+                        <?php
+                            foreach($relateProduct as $p){
+                        ?>
+
                         <div class="col-4-1 mgr-10">
-                            <div class="img-cakes"><img src="../public/img/pie-1.png" alt=""></div>
-                            <div class="price-cake">120 000 VNĐ</div>
-                            <div class="name-cake">Tart mini fruits</div>
+                            <div class="img-cakes"><img src="../public/img/<?= $p['Anh_san_pham']?>" alt=""></div>
+                            <div class="price-cake"><?= $p['Gia_san_pham']?></div>
+                            <div class="name-cake"><?= $p['Ten_san_pham']?></div>
                             <button>Thêm vào giỏ hàng</button>
                         </div>
-                        <div class="col-4-1 mgr-10">
-                            <div class="img-cakes"><img src="../public/img/pie-2.png" alt=""></div>
-                            <div class="price-cake">20 000 VNĐ</div>
-                            <div class="name-cake">Pie mini mix</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                        <div class="col-4-1 mgr-10">
-                            <div class="img-cakes"><img src="../public/img/pie-3.png" alt=""></div>
-                            <div class="price-cake">500 000 VNĐ</div>
-                            <div class="name-cake">Tart strawberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/pie-4.png" alt=""></div>
-                            <div class="price-cake">50 000 VNĐ</div>
-                            <div class="name-cake">Tart mango mix blueberry</div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+
+                        <?php } ?>
                     </div>
                     <button class="right-1"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
