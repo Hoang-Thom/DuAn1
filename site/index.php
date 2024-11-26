@@ -104,7 +104,11 @@
             break;  
         case 'User_profile':    
             require_once('view/User_profile.php');    
-            break;               
+            break;       
+        case 'search':
+            
+            require_once('view/search.php');
+            break;
         default: 
             echo "Trang không tồn tại";
             break;

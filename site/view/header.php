@@ -20,6 +20,7 @@ ob_start(); // Bắt đầu buffer output
     <link rel="stylesheet" href="../public/css/site/pay.css">
     <link rel="stylesheet" href="../public/css/site/detail.css">
     <link rel="stylesheet" href="../public/css/site/User_profile.css">
+    <link rel="stylesheet" href="../public/css/site/sreach.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,9 +49,11 @@ ob_start(); // Bắt đầu buffer output
         <div class="head3">
             <ul>
                 <li>
-                    <form action="">
-                        <input type="text" placeholder="Tìm kiếm">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form action="index.php?page=sreach" method="get">
+                        <input type="text" name="search" placeholder="Tìm kiếm" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </li>
                 <li>
