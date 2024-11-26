@@ -1,0 +1,10 @@
+diff a/public/css/site/detail.css b/public/css/site/detail.css	(rejected hunks)
+@@ -18,7 +18,7 @@
+     margin: 0 60px 0 0;
+ }
+ 
+-.container-detail .product-info {
++.container-detail form {
+     display: flex;
+     flex: 1;
+     flex-direction: column;
