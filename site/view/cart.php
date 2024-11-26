@@ -1,4 +1,4 @@
-<section class="cart">
+    <section class="cart">
         <h1>Giỏ Hàng Của Tôi</h1>
         <table>
             <tr>
@@ -9,20 +9,36 @@
                 <th>Thành Tiền</th>
                 <th></th>
             </tr>
-            <tr>
-                <td><img src="../public/img/pie&tart-01.jpg" alt="Set 6 Tart Mini"></td>
-                <td>Set 6 Tart Mini</td>
-                <td>200,000 VNĐ</td>
-                <td>
-                    <div class="pro-quantity-input">
-                        <button class="btn-decrease">-</button>
-                        <input type="text" class="quantity-input" value="1" min="1" max="5">
-                        <button class="btn-increase">+</button>
-                    </div>
-                </td>
-                <td>200,000 VNĐ</td>
-                <td>x</td>
-            </tr>
+
+            <?php 
+                $total = 0;
+                foreach($_SESSION['cart'] as $p) { 
+                    $itemTotal = $p['quantity'] * $p['Gia_san_pham']; // Tính thành tiền cho từng sản phẩm
+                    $total += $itemTotal; // Cộng vào tổng tiền
+            ?>
+                <tr>
+                    <td><img src="../public/img/<?=$p['Anh_san_pham']?>" alt="Set 6 Tart Mini"></td>
+                    <td><?=$p['Ten_san_pham']?></td>
+                    <td><?=number_format($p['Gia_san_pham'], 0, ',', '.')?></td>
+                    <td>
+                        <div class="pro-quantity-input">
+                            <a href="?page=decrease&id=<?=$p['ID_sanpham']?>"><button class="btn-decrease">-</button></a>
+                            <input type="text" class="quantity-input" value="<?=$p['quantity']?>" min="1" max="5">
+                            <a href="?page=increase&id=<?=$p['ID_sanpham']?>"><button class="btn-increase">+</button></a>
+                        </div>
+                    </td>
+                    <td>
+                        <?= number_format($itemTotal, 0, ',', '.') . ' VNĐ'?>
+                    </td>
+                    <td>
+                        <a href="?page=delete&id=<?=$p['ID_sanpham']?>" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')">
+                            <button class="btn-delete">xóa</button>
+                        </a>
+                    </td>
+                    
+                </tr>
+            <?php }?>
+            
         </table>
 
         <di class="cart-total">
@@ -32,7 +48,11 @@
             </div>
     
             <div class="total">
-                <p>Tổng tiền: <span>200,000 VNĐ</span></p>
+                <p>Tổng tiền: 
+                    <span>
+                        <?=number_format($total, 0, ',', '.') . ' VNĐ'?>
+                    </span>
+                </p>
                 <a href="?page=checkout" class="muaNgay">Thanh toán</a>
             </div>
         </div>

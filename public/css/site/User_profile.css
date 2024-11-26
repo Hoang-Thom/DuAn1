@@ -1,0 +1,200 @@
+main>.title {
+    font-size: 38px;
+    line-height: 38px;
+    color: #6B9160;
+    margin: 20px 0;
+}
+
+main>.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-right{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.box-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 30px;
+    background-color: rgba(217, 217, 217, 0.6);
+    min-height: 500px;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 1rem 1rem 0 0.5rem;
+}
+
+.menu-item {
+    width: 100%;
+    color: rgb(48, 48, 48);
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu-item span {
+    color: rgba(48, 48, 48, 0.8);
+}
+
+main>.container>.box-right>.profile {
+    margin: 0 0 30px;
+}
+
+main>.container>.box-right>.profile>.sub-title{
+    font-size: 32px;
+    color: #66325C;
+    margin: 0 0 20px;
+}
+
+main>.container>.box-right>.profile>div>p{
+    margin: 20px 0;
+}
+
+main>.container>.box-right>.profile>div>p>.black-text{
+    color: #303030;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+main>.container>.box-right>.profile>div>p>.green-text{
+    color: #6B9160;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+main>.container>.box-right>.profile>table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+main>.container>.box-right>.profile>table>tr,th, td {
+    border: 1px solid #d9d9d9; 
+    padding: 10px;
+    text-align: center;
+    color: #303030; 
+}
+
+main>.container>.box-right>.profile>table>tr, th {
+    font-weight: bold;
+    color: #303030;
+}
+
+main>.container>.box-right>.profile>table>tr, th, td a {
+    color: #303030; 
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 40px;
+}
+
+/* .information.content {
+    margin: 10px 0;
+} */
+
+.information>.content>.label {
+    color: rgb(48, 48, 48);
+    font-size: 24px;
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+.information>.name-box {
+    padding: 10px 20px;
+    background-color: rgba(100, 100, 100, 0.1); 
+    border-radius: 5px;
+    color: #6B9160; 
+    font-size: 18px;
+}
+
+.information>.name-box>.fa-solid {
+    float: right;
+    color: rgba(48, 48, 48, 0.5);
+}
+
+main>.container>.box-right>.profile>.buy-btn {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    float: right;
+    text-align: center;
+}
+
+main>.container>.box-right>.profile>.buy-btn:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
+main>.container>.box-right>.profile>.buy-btn2 {
+    width: 14vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    float: right;
+    text-align: center;
+    outline: none;
+    border: 0px;
+}
+main>.container>.box-right>.profile>button:focus{
+    outline: none
+}
+main>.container>.box-right>.profile>.buy-btn2:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
+/* CSS cho các trường input */
+.name-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #303030;
+}
+
+.name-box:focus {
+    outline: none;
+    border-color: #6B9160;
+    box-shadow: 0 0 5px rgba(107, 145, 96, 0.5);
+}
+
+

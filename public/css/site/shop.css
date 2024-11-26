@@ -1,4 +1,3 @@
-
 .main-shop {
     /* width: 1440px; */
     height: 4380px;
@@ -6,7 +5,7 @@
 }
 
 .main-shop>.title-catagory {
-    color: #6B9160;
+    color: #6b9160;
     font-size: 32px;
     font-weight: 600;
     display: flex;
@@ -33,41 +32,49 @@
 }
 
 .main-shop>.catagory>.col-8 {
-    width: calc(calc(100% - 70px)/8);
+    width: calc(calc(100% - 70px) / 8);
     height: 195px;
     float: left;
 }
 
-.main-shop>.catagory>.col-8>.image-catagory {
+.main-shop>.catagory>.col-8>a {
+    text-decoration: none;
+}
+
+.main-shop>.catagory>.col-8>a>.image-catagory {
     width: 99%;
     height: 155px;
     border-radius: 10px;
 }
 
-.main-shop>.col-8>.image-catagory>img:hover {
+.main-shop>.catagory>.col-8>a>.image-catagory>img:hover {
     transform: scale(1.05);
     /* Phóng to ảnh lên 20% */
     transition: transform 0.3s ease;
     /* Hiệu ứng mượt mà khi phóng to */
 }
 
-.main-shop>.catagory>.col-8>.name-catagory {
+.main-shop>.catagory>.col-8>a>.name-catagory {
     font-size: 24px;
     font-weight: bold;
-    color: #6B9160;
+    color: #6b9160;
     text-align: center;
     margin: 15px 0px;
 }
 
-.main-shop>.mgr-10 {
+.mgr-10 {
     margin-right: 10px;
+}
+
+.mgr-5 {
+    margin-right: 5px;
 }
 
 .main-shop>.ship {
     /* width: 1440px; */
     height: 178px;
     font-size: 40px;
-    color: #66325C;
+    color: #66325c;
     font-weight: bold;
     text-align: center;
     background-image: url(/DuAn1/public/img/ship.png);
@@ -84,12 +91,74 @@
     height: auto;
 }
 
+.cakes-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.pies-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.bread-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.tiramisu-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.cupcakes-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.pudding-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.chees-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.cookies-list {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn các sản phẩm ngoài vùng nhìn /
+    width: 100%; / Chiếm toàn bộ chiều rộng */
+}
+
+.cakes-item {
+    min-width: 20%;
+    /* Mỗi sản phẩm chiếm 25% chiều rộng (4 sản phẩm) /
+    box-sizing: border-box; / Tính toán kích thước bao gồm padding và border */
+}
+
 .main-shop>.cakes {
     /* width: 1440px; */
     height: 491px;
     text-align: center;
     font-size: 48px;
-    color: #6B9160;
+    color: #6b9160;
     font-weight: bold;
 }
 
@@ -100,7 +169,7 @@
     font-size: 48px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #C3E6BA;
+    background-color: #c3e6ba;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,13 +182,13 @@
     font-size: 48px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #E6BADD;
+    background-color: #e6badd;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-shop>.underline-both-0 {
+.underline-both-0 {
     display: flex;
     align-items: baseline;
     margin: 0;
@@ -129,26 +198,25 @@
     padding-top: 1vw;
 }
 
-.main-shop>.underline-both-0::before {
+.underline-both-0::before {
     width: 4vw;
     display: block;
     content: "";
-    border-block-end: 1px solid #66325C;
+    border-block-end: 1px solid #66325c;
     border-block-start: 0;
 }
 
-.main-shop>.underline-both-0::after {
+.underline-both-0::after {
     width: 4vw;
     display: block;
     content: "";
     border-block-end: 0;
-    border-block-start: 1px solid #66325C;
+    border-block-start: 1px solid #66325c;
 }
-
 
 /* underline-both */
 
-.main-shop>.underline-both {
+.underline-both {
     display: flex;
     align-items: baseline;
     margin: 0;
@@ -158,26 +226,25 @@
     padding-top: 1vw;
 }
 
-.main-shop>.underline-both::before {
+.underline-both::before {
     width: 4vw;
     display: block;
     content: "";
-    border-block-end: 1px solid #6B9160;
+    border-block-end: 1px solid #6b9160;
     border-block-start: 0;
 }
 
-.main-shop>.underline-both::after {
+.underline-both::after {
     width: 4vw;
     display: block;
     content: "";
     border-block-end: 0;
-    border-block-start: 1px solid #6B9160;
+    border-block-start: 1px solid #6b9160;
 }
-
 
 /* underline-both-1 */
 
-.main-shop>.underline-both-1 {
+.underline-both-1 {
     display: flex;
     align-items: baseline;
     margin: 0;
@@ -185,29 +252,28 @@
     line-height: 2.4vw;
     font-weight: 600;
     padding-top: 1vw;
-    color: #66325C;
+    color: #66325c;
 }
 
-.main-shop>.underline-both-1::before {
+.underline-both-1::before {
     width: 4vw;
     display: block;
     content: "";
-    border-block-end: 1px solid #66325C;
+    border-block-end: 1px solid #66325c;
     border-block-start: 0;
 }
 
-.main-shop>.underline-both-1::after {
+.underline-both-1::after {
     width: 4vw;
     display: block;
     content: "";
     border-block-end: 0;
-    border-block-start: 1px solid #66325C;
+    border-block-start: 1px solid #66325c;
 }
-
 
 /* underline-both-2 */
 
-.main-shop>.underline-both-2 {
+.underline-both-2 {
     display: flex;
     align-items: baseline;
     margin: 0;
@@ -218,7 +284,7 @@
     color: #ffffff;
 }
 
-.main-shop>.underline-both-2::before {
+.underline-both-2::before {
     width: 4vw;
     display: block;
     content: "";
@@ -226,7 +292,7 @@
     border-block-start: 0;
 }
 
-.main-shop>.underline-both-2::after {
+.underline-both-2::after {
     width: 4vw;
     display: block;
     content: "";
@@ -234,88 +300,35 @@
     border-block-start: 1px solid #ffffff;
 }
 
-.main-shop>.main-shop>.cakes {
+.main-shop>.cakes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-shop>.main-shop>.cakes>p {
+.main-shop>.cakes>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-.main-shop>.main-shop>.cakes-1>p {
+.main-shop>.cakes-1>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-.main-shop>.main-shop>.cakes-2>p {
+.main-shop>.cakes-2>p {
     text-align: center;
     color: #303030;
     font-size: 20px;
 }
 
-.main-shop>.main-shop>.cakes>.meu-cake {
+.main-shop>.cakes>.meu-cake {
     width: 1236px;
     height: 410px;
     margin: 0px auto;
     position: relative;
-}
-
-.main-shop>.cakes-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.pies-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.bread-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.tiramisu-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.cupcakes-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.pudding-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.chees-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.cookies-list {
-    display: flex;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng nhìn */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-}
-
-.main-shop>.cakes-item {
-    min-width: 20%; /* Mỗi sản phẩm chiếm 25% chiều rộng (4 sản phẩm) */
-    box-sizing: border-box; /* Tính toán kích thước bao gồm padding và border */
 }
 
 .main-shop>.cakes-1>.meu-cake {
@@ -354,12 +367,12 @@
 }
 
 .main-shop>.cakes-1>.meu-cake>.left-2 {
-    color: #6B9160;
+    color: #6b9160;
     border: 1px solid #303030;
 }
 
 .main-shop>.cakes-2>.meu-cake>.left-3 {
-    color: #66325C;
+    color: #66325c;
     border: 1px solid #303030;
 }
 
@@ -380,45 +393,45 @@
 }
 
 .main-shop>.cakes-1>.meu-cake>.right-2 {
-    color: #6B9160;
+    color: #6b9160;
     border: 1px solid #303030;
 }
 
 .main-shop>.cakes-2>.meu-cake>.right-3 {
-    color: #66325C;
+    color: #66325c;
     border: 1px solid #303030;
 }
 
-.main-shop>.left-1,
+.left-1,
 .right-1 {
-    background-color: #66325C;
+    background-color: #66325c;
 }
 
-.main-shop>.left,
+.left,
 .right {
-    background-color: #6B9160;
+    background-color: #6b9160;
 }
 
-.main-shop>.left-2,
+.left-2,
 .right-2 {
-    background-color: #C3E6BA;
+    background-color: #c3e6ba;
 }
 
-.main-shop>.left-3,
+.left-3,
 .right-3 {
-    background-color: #E6BADD;
+    background-color: #e6badd;
 }
 
-.main-shop>.meu-cake>.cake-4 {
+.meu-cake>.cake-4 {
     width: 1140px;
     height: 358px;
     margin: 0px auto;
 }
 
-.main-shop>.col-4,
+.col-4,
 .col-4-1,
 .col-4-2 {
-    /* width: calc(calc(100% - 30px)/4); */
+    /* width: calc(calc(100% - 30px) / 4); */
     width: 100%;
     height: 358px;
     text-align: center;
@@ -426,29 +439,32 @@
     border-radius: 10px;
 }
 
-.main-shop>.col-4-1 {
-    background-color: #E6BADD;
+.col-4-1 {
+    background-color: #e6badd;
 }
 
-.main-shop>.col-4 {
-    background-color: #C3E6BA;
+.col-4 {
+    background-color: #c3e6ba;
 }
 
-.main-shop>.img-cakes {
+.img-cakes {
     /* width: 277px; */
     height: 217px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.main-shop>.img-cakes img {
+.img-cakes img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.main-shop>.price-cake {
+.price-cake {
     font-size: 20px;
     color: #303030;
     opacity: 80%;
@@ -456,7 +472,7 @@
     font-weight: 600;
 }
 
-.main-shop>.name-cake {
+.name-cake {
     /* width: 100%; */
     height: 40px;
     font-size: 22px;
@@ -466,9 +482,10 @@
     object-fit: cover;
 }
 
-.main-shop>.cake-4>.cakes-item>.col-4>button {
+
+.main-shop .cakes-item .col-4>button {
     font-size: 22px;
-    background-color: #6B9160;
+    background-color: #6b9160;
     color: #ffffff;
     width: 230px;
     height: 45px;
@@ -476,9 +493,9 @@
     border: none;
 }
 
-.main-shop>.cake-4>.cakes-item>.col-4-1>button {
+.main-shop .cakes-item .col-4-1>button {
     font-size: 22px;
-    background-color: #66325C;
+    background-color: #66325c;
     color: #ffffff;
     width: 230px;
     height: 45px;
@@ -486,9 +503,9 @@
     border: none;
 }
 
-.main-shop>.cake-4>.cakes-item>.col-4-2>button {
+.main-shop .cakes-item .col-4-2>button {
     font-size: 22px;
-    background-color: #66325C;
+    background-color: #66325c;
     color: #ffffff;
     width: 230px;
     height: 45px;

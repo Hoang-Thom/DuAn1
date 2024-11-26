@@ -1,4 +1,4 @@
-<main>
+    <main>
         <div class="order-details-container">
             <h2>Xác nhận đơn hàng thành công</h2>
             <p>Ngày đặt hàng: 30/10/2024 22:32</p>

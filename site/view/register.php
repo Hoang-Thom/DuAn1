@@ -1,11 +1,11 @@
     <main class="main-register">
         <div class="register-box">
             <h2>Đăng ký</h2>
-            <form>
-                <input type="text" placeholder="Tên" required>
-                <input type="text" placeholder="Điện thoại" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mật khẩu" required>
+            <form action="index.php?page=register" method="post">
+                <input type="text"name="Ten_nguoidung" placeholder="Tên" required>
+                <input type="text" name="So_dien_thoai" placeholder="Điện thoại" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <input type="password" name="Mat_khau" placeholder="Mật khẩu" required>
                 <button type="submit">Đăng ký</button>
             </form>
         </div>
