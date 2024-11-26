@@ -1,58 +1,54 @@
-.container-detail {
+.container {
     display: flex;
     flex-direction: column;
     padding: 0 5rem;
     /* padding: 0 5rem; */
 }
 
-.container-detail .product {
+.product {
     display: flex;
     flex-direction: row;
     margin: 30px 0;
 }
 
-.container-detail .pro-img {
+.pro-img {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: 0 60px 0 0;
 }
 
-.container-detail form {
+.product-info {
     display: flex;
     flex: 1;
     flex-direction: column;
+    margin: 0 0 0 40px;
     gap: 10px;
 }
 
-.container-detail .pro-img-big img {
+.pro-img-big img {
     width: 100%;
-    object-fit: cover;
     border-radius: 10px;
 }
 
-.container-detail .pro-img-mini {
+.pro-img-mini {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    width: 100%;
-    height: 8rem;
 }
 
-.container-detail .pro-img-mini img {
+.pro-img-mini img {
     width: 32%;
     border-radius: 10px;
-    object-fit: cover;
 }
 
-.container-detail .product-info h2 {
-    margin: 5px 0 15px 0;
+.product-info h2 {
+    margin: 0 0 20px 0;
     color: rgb(107, 145, 96);
-    line-height: 40px;
+    line-height: 34px;
     font-size: 34px;
 }
 
-.container-detail .product-info h4 {
+.product-info h4 {
     margin: 0;
     color: rgb(107, 145, 96);
     line-height: 24px;
@@ -60,25 +56,25 @@
     font-size: 24px;
 }
 
-.container-detail .pro-des {
+.pro-des {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
     border-block-start: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.container-detail .pro-des p {
+.pro-des p {
     font-size: 18px;
     line-height: 24px;
     margin: 10px 0 0 0;
 }
 
-.container-detail .pro-descsiton {
+.pro-descsiton {
     font-size: 18px;
     font-weight: 600;
 }
 
-.container-detail .pro-qua {
+.pro-qua {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,94 +82,81 @@
     border-block-start: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.container-detail .pro-quantity {
+.pro-quantity {
     font-size: 18px;
     font-weight: 600;
 }
 
-.container-detail .pro-quantity-input {
+.pro-quantity-input {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 0 0 10px;
 }
 
-.container-detail .pro-quantity-input .btn-decrease-detail,
-.container-detail .pro-quantity-input .btn-increase-detail {
-    /* margin: 0;
+.pro-quantity-input p {
+    margin: 0;
     padding: 6px 10px;
-    background: rgba(48, 48, 48, 0.2); */
-
-    padding: 8px 10px;
-    background-color: rgb(107, 145, 96);
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
+    background: rgba(48, 48, 48, 0.2);
 }
 
-.container-detail .pro-quantity-input .quantity {
-    padding: 3px 6px;
-    border: 1px solid #ddd;
-    margin: 0 5px;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    box-sizing: border-box;
+.pro-quantity-input span {
+    padding: 6px 10px;
+    background: rgba(48, 48, 48, 0.1);
 }
 
-.container-detail .pro-button {
+.pro-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
 }
 
-.container-detail form .product-info .pro-button .themGio {
-    width: 20vw;
+.themGio {
+    width: 15vw;
     background-color: rgb(102, 50, 92);
     color: rgb(255, 255, 255);
     font-weight: 500;
-    /* padding: 0.6rem 2rem 0.5rem; */
+    padding: 0.6rem 2rem 0.5rem;
     border-radius: 2rem;
     text-decoration: none;
     font-size: 1.6vw;
     transition: background-color 0.3s ease;
     margin-top: 1.2rem;
     text-align: center;
-    border: none;
 }
 
-.container-detail form .product-info .pro-button .themGio:hover {
+.themGio:hover {
     background-color: rgb(230, 186, 221);
     color: rgba(48, 48, 48, 0.8);
 }
 
-.container-detail form .product-info .pro-button .muaNgay {
-    width: 15vw;
+
+.muaNgay {
+    width: 10vw;
     background-color: rgb(107, 145, 96);
     color: rgb(255, 255, 255);
     font-weight: 500;
-    /* padding: 0.6rem 2rem 0.5rem; */
+    padding: 0.6rem 2rem 0.5rem;
     border-radius: 2rem;
     text-decoration: none;
     font-size: 1.6vw;
     transition: background-color 0.3s ease;
     margin-top: 1.2rem;
     text-align: center;
-    border: none;
 }
 
-.container-detail form .product-info .pro-button .muaNgay:hover {
+.muaNgay:hover {
     background-color: rgb(195, 230, 186);
     color: rgba(48, 48, 48, 0.8);
 }
 
-.container-detail .danhgia {
+.danhgia {
     display: flex;
     flex-direction: column;
 }
 
-.container-detail .danhgia-title {
+.danhgia-title {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -181,49 +164,40 @@
     border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.container-detail .danhgia-content {
+.danhgia-content {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
     border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.container-detail .danhgia-content:last-child {
-    border-block-end: none;
-}
-
-.container-detail .danhgia-name {
+.danhgia-name {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0 0 1rem;
 }
 
-.container-detail .danhgia-name img {
+.danhgia-name img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     margin: 0 0 0 0;
-    object-fit: cover;
 }
 
-.container-detail .danhgia-name h3 {
-    margin: 0 0 0 1rem;
-}
-
-.container-detail .danhgia-ims {
+.danhgia-ims {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-bottom: 15px;
 }
 
-.container-detail .danhgia-ims img {
+.danhgia-ims img {
     height: 100px;
 }
-/* ---------------------------------------------------------------------------- */
-.container-detail .cakes {
-    width: 1440px;
+
+/* --------------------------------------------------------- */
+.cakes {
+    width: 1440 px;
     height: 390px;
     text-align: center;
     font-size: 48px;
@@ -231,18 +205,19 @@
     font-weight: bold;
 }
 
-.container-detail>.underline {
+.underline-both-1 {
     display: flex;
     align-items: baseline;
-    margin: 0 0 1rem 0;
+    margin: 0;
+    text-align: left;
     font-size: 2.4vw;
-    line-height: 2.4vw;
+    line-height: 7vw;
     font-weight: 600;
     padding-top: 1vw;
     color: #66325C;
 }
 
-.container-detail>.underline::after {
+.underline-both-1::after {
     width: 4vw;
     display: block;
     content: "";
@@ -250,21 +225,29 @@
     border-block-start: 1px solid #66325C;
 }
 
-
-.container-detail>.cakes {
+.cakes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container-detail>.cakes>.meu-cake {
+.cakes>p {
+    text-align: center;
+    color: #303030;
+    font-size: 20px;
+}
+
+.cakes>.meu-cake {
     width: 1400px;
     height: 410px;
     margin: 0px auto;
     position: relative;
 }
 
-.container-detail>.cakes>.meu-cake>.left-1{
+.cakes>.meu-cake>.left,
+.left-1,
+.left-2,
+.left-3 {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -275,10 +258,17 @@
     left: 0%;
     bottom: 50%;
     border: none;
-    background-color: #66325C;
 }
 
-.container-detail>.cakes>.meu-cake>.right-1{
+.cakes>.meu-cake>.left,
+.left-1 {
+    color: #ffffff;
+}
+
+.cakes>.meu-cake>.right,
+.right-1,
+.right-2,
+.right-3 {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -289,61 +279,59 @@
     right: 0%;
     bottom: 50%;
     border: none;
+}
+
+.left-1,
+.right-1 {
     background-color: #66325C;
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4 {
+.meu-cake>.cake-4 {
     width: 1300px;
     height: 358px;
     margin: 0px auto;
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1 {
-    /* width: calc(calc(100% - 20px)/4); */
-    width: 24%;
+.col-4,
+.col-4-1 {
+    width: calc(calc(100% - 32px)/4);
     height: 358px;
     text-align: center;
     float: left;
     border-radius: 10px;
-    background-color: #E6BADD;
-    text-decoration: none;
 }
 
-/* .col-4-1 {
+.col-4-1 {
     background-color: #E6BADD;
-} */
+}
 
-.container-detail>.cakes>.meu-cake>.cake-4>.mgr-10{
+.mgr-10 {
     margin-right: 10px;
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1>.a {
-    text-decoration: none;
-}
-
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1>.a>.img-cakes {
-    /* width: 317px; */
+.img-cakes {
+    width: 317px;
     height: 213px;
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1>.a>.img-cakes img {
+.img-cakes img {
     width: 100%;
     height: 100%;
     margin: 0px auto;
     border-radius: 10px 10px 0 0;
-    object-fit: cover ;
+    object-fit: cover;
+
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1>.a>.price-cake {
+.price-cake {
     font-size: 20px;
     color: #303030;
     opacity: 80%;
     margin: 5px;
     font-weight: 600;
-    text-decoration: none;
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1>.a>.name-cake {
+.name-cake {
     /* width: 100%; */
     height: 40px;
     font-size: 22px;
@@ -351,10 +339,19 @@
     font-weight: bold;
     margin: 10px;
     object-fit: cover;
-    text-decoration: none;
 }
 
-.container-detail>.cakes>.meu-cake>.cake-4>.col-4-1>.a>button {
+.cake-4>.col-4>button {
+    font-size: 22px;
+    background-color: #6B9160;
+    color: #ffffff;
+    width: 230px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+}
+
+.cake-4>.col-4-1>button {
     font-size: 22px;
     background-color: #66325C;
     color: #ffffff;
