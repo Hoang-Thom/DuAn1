@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 <div class="container">
-=======
-    <main>
         <div class="container-detail">
->>>>>>> 77ba3cb014739ac965ad1ce983d47c9bd15ee5d5
             <div class="product">
                 <div class="pro-img">
                     <div class="pro-img-big">
