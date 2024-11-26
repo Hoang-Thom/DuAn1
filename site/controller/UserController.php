@@ -15,18 +15,22 @@ class UserController {
         require_once('view/login.php');
     }
     public function login($data){
-        // print_r($data);
+        // Lấy thông tin người dùng từ cơ sở dữ liệu
         $user = $this->userModel->getUser($data);
-        // print_r($user);
+        
         if($user){
             echo "Đăng nhập thành công";
-            $_SESSION['user']=$user;
-            if($user['Vai_Tro']==1){
-                header('location: index.php');
-            }else{
+            $_SESSION['user'] = $user;
+    
+            // Kiểm tra vai trò của người dùng
+            if($user['Vai_Tro'] == 1){
+                // Vai trò là quản trị viên
                 header('location: ../admin/index.php');
+            } else {
+                // Vai trò là người dùng
+                header('location: index.php');
             }
-        }else{
+        } else {
             echo "Đăng nhập thất bại";
         }
     }
@@ -34,14 +38,17 @@ class UserController {
         require_once('view/register.php');
     }
     public function register($data){
-        require_once('view/register.php');
         // print_r($data);
-        $result = $this->userModel->addUser($data);
-        if($result){
-            header('location: index.php?page=loginpage');
-        }else{
-            echo "Đăng ký thất bại";
+        if($data) {
+            //var_dump($data);exit;
+            $result = $this->userModel->addUser($data);
+            if($result){
+                header('location: index.php?page=loginpage');
+            }else{
+                echo "Đăng ký thất bại";
+            }
         }
+        require_once('view/register.php');
     }
 }
 
