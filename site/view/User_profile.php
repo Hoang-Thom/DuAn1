@@ -1,7 +1,7 @@
-    <main>
-        <div class="title">Thông tin tài khoản</div>
+    <main class="main-userProfile">
         <div class="container">
             <div class="box-left">
+                <div class="title">Thông tin tài khoản</div>
                 <div class="main-menu">
                     <a href="#" class="menu-item">
                         Tài khoản của tôi
@@ -19,10 +19,14 @@
                         Thông tin cá nhân
                         <span>&gt;</span>
                     </a>
-                    <a href="#" class="menu-item">
-                        Đăng xuất
-                        <span>&gt;</span>
-                    </a>
+
+                    <?php if(isset($_SESSION['user'])) { ?>
+                        <a href="?page=logout" class="menu-item">
+                            Đăng xuất
+                            <span>&gt;</span>
+                        </a>
+                    <?php } ?>
+                    
                 </div>
             </div>
             <div id="my-account" class="box-right">
@@ -31,15 +35,27 @@
                     <div>
                         <p>
                             <span class="black-text">Tên tài khoản:</span>
-                            <span class="green-text">Hoàng Nho Thơm</span>
+                            <span class="green-text">
+                                <?php if(isset($_SESSION['user'])) { ?>
+                                    <?= $_SESSION['user']['Ten_nguoidung']?>
+                                <?php } ?>
+                            </span>
                         </p>
                         <p>
                             <span class="black-text">Điện thoại:</span>
-                            <span class="green-text">0838934160</span>
+                            <span class="green-text">
+                                <?php if(isset($_SESSION['user'])) { ?>
+                                    <?= $_SESSION['user']['So_dien_thoai']?>
+                                <?php } ?>
+                            </span>
                         </p>
                         <p>
                             <span class="black-text">Email:</span>
-                            <span class="green-text">thomhnps36607@fpt.edu.vn</span>
+                            <span class="green-text">
+                                <?php if(isset($_SESSION['user'])) { ?>
+                                    <?= $_SESSION['user']['Email']?>
+                                <?php } ?>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -94,7 +110,7 @@
                                 placeholder="Nhập lại mật khẩu mới">
                         </div>
                     </div>
-                    <button id="updatePasswordBtn" class="buy-btn2">Cập nhật</button>
+                    <button id="updatePasswordBtn" class="buy-btn">Cập nhật</button>
                 </div>
             </div>
             <div id="personal-info" class="box-right" style="display: none;">
@@ -130,7 +146,8 @@
                             <p></p>
                         </div>
                     </div>
-                    <a href="#" class="buy-btn">Cập nhật</a>
+                    <button id="updateinfo" class="buy-btn">Cập nhật</button>
+                    <!-- <a href="#" class="buy-btn">Cập nhật</a> -->
                 </div>
             </div>
 

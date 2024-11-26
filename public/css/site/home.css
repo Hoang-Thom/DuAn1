@@ -129,6 +129,11 @@ header {
     /* Chuyển màu ảnh thành đen khi hover */
 }
 
+.head3 ul li a.user-name {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 /* --------------------------------------- footer --------------------------------------- */
 
 footer {

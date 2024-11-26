@@ -84,6 +84,10 @@
             $userController = new UserController();
             $userController->login($data);
             break;
+        case 'logout':
+            session_destroy();
+            header('Location: index.php');
+            break;
         case 'registerpage':
             require_once('controller/UserController.php');
             $userController = new UserController();
@@ -97,7 +101,10 @@
             break;
         case 'forget':    
             require_once('view/forget.php');    
-            break;                 
+            break;  
+        case 'User_profile':    
+            require_once('view/User_profile.php');    
+            break;               
         default: 
             echo "Trang không tồn tại";
             break;

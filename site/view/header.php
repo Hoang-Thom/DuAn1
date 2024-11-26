@@ -19,7 +19,7 @@ ob_start(); // Bắt đầu buffer output
     <link rel="stylesheet" href="../public/css/site/checkout.css">
     <link rel="stylesheet" href="../public/css/site/pay.css">
     <link rel="stylesheet" href="../public/css/site/detail.css">
-
+    <link rel="stylesheet" href="../public/css/site/User_profile.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +69,13 @@ ob_start(); // Bắt đầu buffer output
                         </span>
                     </a>
                 </li>
-                <li><a href="?page=loginpage"><img src="../public/img/user.png" alt="User"></a></li>
+                <li>
+                    <?php if(isset($_SESSION['user'])) { ?>
+                        <a class="user-name" href="?page=User_profile"><?= $_SESSION['user']['Ten_nguoidung']?></a>
+                    <?php }else { ?>
+                    <a href="?page=loginpage"><img src="../public/img/user.png" alt="User"></a>
+                    <?php } ?>
+                </li>
             </ul>
         </div>
     </header>
