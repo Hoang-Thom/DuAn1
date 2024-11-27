@@ -6,6 +6,7 @@
                 <input type="text" name="So_dien_thoai" placeholder="Điện thoại" required>
                 <input type="email" name="Email" placeholder="Email" required>
                 <input type="password" name="Mat_khau" placeholder="Mật khẩu" required>
+                <input type="text" name="Dia_chi" placeholder="Địa chỉ" required>
                 <button type="submit">Đăng ký</button>
             </form>
         </div>

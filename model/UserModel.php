@@ -8,7 +8,7 @@
             return Database::getInstance()->getOne($sql);
         }
         public function addUser($data){
-            $sql="INSERT INTO nguoidung(Ten_nguoidung,So_dien_thoai,Email,Mat_khau) VALUE(?,?,?,?)";
+            $sql="INSERT INTO nguoidung(Ten_nguoidung,So_dien_thoai,Email,Mat_khau,Dia_chi) VALUE(?,?,?,?,?)";
             $params=array_values($data);
             return Database::getInstance()->execute($sql,$params);
         }

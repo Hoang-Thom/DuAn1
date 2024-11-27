@@ -93,60 +93,69 @@
             <div id="change-password" class="box-right" style="display: none;">
                 <div class="profile">
                     <div class="sub-title">Đổi mật khẩu</div>
-                    <div class="information">
-                        <div class="content">
-                            <div class="label">Mật khẩu cũ:</div>
-                            <input type="password" id="oldPassword" class="name-box" placeholder="Nhập mật khẩu cũ">
-                        </div>
+                        <form class="form" action="" method="post">
+                            <div class="information">
+                                <div class="content">
+                                    <div class="label">Mật khẩu cũ:</div>
+                                    <input type="password" id="oldPassword" class="name-box" placeholder="Nhập mật khẩu cũ">
+                                </div>
 
-                        <div class="content">
-                            <div class="label">Mật khẩu mới:</div>
-                            <input type="password" id="newPassword" class="name-box" placeholder="Nhập mật khẩu mới">
-                        </div>
+                                <div class="content">
+                                    <div class="label">Mật khẩu mới:</div>
+                                    <input type="password" id="newPassword" class="name-box" placeholder="Nhập mật khẩu mới">
+                                </div>
 
-                        <div class="content">
-                            <div class="label">Nhập lại mật khẩu mới:</div>
-                            <input type="password" id="confirmPassword" class="name-box"
-                                placeholder="Nhập lại mật khẩu mới">
-                        </div>
-                    </div>
-                    <button id="updatePasswordBtn" class="buy-btn">Cập nhật</button>
+                                <div class="content">
+                                    <div class="label">Nhập lại mật khẩu mới:</div>
+                                    <input type="password" id="confirmPassword" class="name-box"
+                                        placeholder="Nhập lại mật khẩu mới">
+                                </div>
+                            </div>
+                            <button id="updatePasswordBtn" class="buy-btn">Cập nhật</button>
+                        </form>
                 </div>
             </div>
+            <?php
+                if(isset($_SESSION['user'])) {
+                    $name = $_SESSION['user']['Ten_nguoidung'];
+                    $email = $_SESSION['user']['Email'];
+                    $phone = $_SESSION['user']['So_dien_thoai'];
+                    $address = $_SESSION['user']['Dia_chi'];
+                } else{
+                    $name = '';
+                    $email = '';
+                    $phone = '';
+                    $address = '';
+                }
+            ?>
             <div id="personal-info" class="box-right" style="display: none;">
                 <div class="profile">
                     <div class="sub-title">Thông tin cá nhân</div>
-                    <div class="information">
-                        <div class="content">
-                            <div class="label">Họ và Tên:</div>
-                        </div>
-                        <div class="name-box">Hoàng Nho Thơm</div>
+                    <form class="form" action="" method="post">
+                        <div class="information">
+                            <div class="content">
+                                <div class="label">Họ và Tên:</div>
+                                <input type="text" name="Ten_nguoidung" class="name-box" value="<?= $name ?>" placeholder="Nhập họ và tên">
+                            </div>
 
-                        <div class="content">
-                            <div class="label">Điện thoại:</div>
-                        </div>
-                        <div class="name-box">0838934160</div>
+                            <div class="content">
+                                <div class="label">Điện thoại:</div>
+                                <input type="text" name="So_dien_thoai" class="name-box" value="<?= $phone ?>" placeholder="Nhập số điện thoại">
+                            </div>
+                            
+                            <div class="content">
+                                <div class="label">Email:</div>
+                                <input type="text" name="Email" class="name-box" value="<?= $email ?>" placeholder="Nhập email">
+                            </div>
 
-                        <div class="content">
-                            <div class="label">Email:</div>
+                            <div class="content">
+                                <div class="label">Địa chỉ:</div>
+                                <input type="text" name="Dia_chi" class="name-box" value="<?= $address ?>" placeholder="Nhập địa chỉ">
+                            </div>
+                            
                         </div>
-                        <div class="name-box">thomhnps36607@fpt.edu.vn</div>
-
-                        <div class="content">
-                            <div class="label">Địa chỉ:</div>
-                        </div>
-                        <div class="name-box">
-                            <p></p>
-                        </div>
-
-                        <div class="content">
-                            <div class="label">Sinh Nhật:</div>
-                        </div>
-                        <div class="name-box">
-                            <p></p>
-                        </div>
-                    </div>
-                    <button id="updateinfo" class="buy-btn">Cập nhật</button>
+                        <button type="submit" id="updateinfo" class="buy-btn">Cập nhật</button>
+                    </form>
                     <!-- <a href="#" class="buy-btn">Cập nhật</a> -->
                 </div>
             </div>
