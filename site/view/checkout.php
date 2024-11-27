@@ -38,7 +38,7 @@
         </div>
         <div class="info-pro">
             <section class="cart">
-                <h1>Giỏ Hàng Của Tôi</h1>
+                <h1>Đơn Hàng Của Tôi</h1>
                 <table>
                     <tr>
                         <th>Ảnh</th>

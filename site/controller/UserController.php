@@ -47,9 +47,11 @@ class UserController {
             $result = $this->userModel->addUser($data);
             if($result){
                 header('location: index.php?page=loginpage');
+            }else{
+                echo "Đăng ký thất bại";
             }
         }
-
+        require_once('view/register.php');
     }
 }
 
