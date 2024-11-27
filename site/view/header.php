@@ -49,7 +49,7 @@ ob_start(); // Bắt đầu buffer output
         <div class="head3">
             <ul>
                 <li>
-                    <form action="index.php?page=sreach" method="get">
+                    <form action="index.php?page=search" method="post">
                         <input type="text" name="search" placeholder="Tìm kiếm" required>
                         <button type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>

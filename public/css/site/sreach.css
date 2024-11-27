@@ -17,49 +17,47 @@
 }
 
 .sreach-product .products-container .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.sreach-product .products-container .product-list a {
-    text-decoration: none;
-    text-align: center;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(5, 1fr); /* Thiết lập 5 cột */
+    gap: 15px;
 }
 
 .sreach-product .products-container .product-list .product {
-    width: calc(25% - 10px); /* 4 cột, trừ đi khoảng cách */
-    margin-bottom: 20px; /* Khoảng cách giữa các hàng */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.sreach-product .products-container .product-list .product .pro-ima {
+.sreach-product .products-container .product-list .product a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.sreach-product .products-container .product-list .product a .pro-ima {
     width: 100%;
     height: 14vw;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+} 
 
-.sreach-product .products-container .product-list .product img {
+.sreach-product .products-container .product-list .product a .pro-ima img {
     width: 100%;
     object-fit: cover;
 }
 
-.sreach-product .products-container .product-list .product h3 {
+.sreach-product .products-container .product-list .product a h3 {
     font-size: 1.4vw;
     font-weight: 500;
     margin: 0.8vw 0;
     color: rgb(102, 50, 92);
 }
 
-.sreach-product .products-container .product-list .product p {
+.sreach-product .products-container .product-list .product a p {
     font-size: 1.2vw;
     font-weight: 200;
     margin: 0.4vw 0 0;
@@ -82,10 +80,4 @@
 
 .sreach-product .products-container .product-list .product .buy-btn:hover {
     background-color: rgb(102, 50, 92);
-}
-
-.products-navigation {
-    margin-top: 1rem;
-    display: flex;
-    position: relative;
 }

@@ -106,8 +106,14 @@
             require_once('view/User_profile.php');    
             break;       
         case 'search':
-            
-            require_once('view/search.php');
+            if(isset($_POST['search'])&&($_POST['search']!="")){
+                $search = $_POST['search'];
+            }else{
+                $search = "";
+            }
+            require_once('controller/ProductController.php');
+            $productController = new ProductController();
+            $productController->renderSearch($search);
             break;
         default: 
             echo "Trang không tồn tại";
