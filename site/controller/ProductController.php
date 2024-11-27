@@ -4,6 +4,7 @@
         // thuộc tính
         private $productModel;
         private $categoryModel;
+        private $blogModel;
 
         // khởi tạo
         public function __construct() {
@@ -11,6 +12,8 @@
             $this->productModel = new ProductModel();
             require_once('../model/CategoryModel.php');
             $this->categoryModel = new CategoryModel();
+            require_once('../model/BlogModel.php');
+            $this->blogModel = new BlogModel();
         }
 
         // phương thức
@@ -18,6 +21,8 @@
         public function renderHome() {
             $productsCate1= $this->productModel->getProNew();
             $productsCate2= $this->productModel->getProByCateLIMIT5(6);
+            $blog4 = $this->blogModel->getLatestBlog();
+            $blog1 = $this->blogModel->getOldestBlog();
             require_once('view/home.php');
         }
         // tạo trang sản phẩm

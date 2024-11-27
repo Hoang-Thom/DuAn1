@@ -80,7 +80,11 @@
             require_once('view/pay.php');
             break;
         case 'blog':
-            require_once('view/blog.php');
+            $id=$_GET['id'];
+            require_once('controller/BlogController.php');
+            $blogController = new BlogController();
+            $blogController->renderBlog($id);
+            // require_once('view/blog.php');
             break;
         case 'loginpage':
             require_once('controller/UserController.php');
