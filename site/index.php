@@ -68,6 +68,15 @@
             require_once('view/checkout.php');
             break;
         case 'pay':
+            // if(isset($_POST['thanhtoan'])&&($_POST['thanhtoan'])){
+            //     $name = $_POST['name'];
+            //     $email = $_POST['email'];
+            //     $phone = $_POST['phone'];
+            //     $address = $_POST['address'];
+            //     $ngaydathang=date('h:i:sa d/m/Y');
+            //     $total = $_POST['total'];
+                
+            // }
             require_once('view/pay.php');
             break;
         case 'blog':
@@ -114,6 +123,9 @@
             require_once('controller/ProductController.php');
             $productController = new ProductController();
             $productController->renderSearch($search);
+            break;
+        case 'editUser':
+            
             break;
         default: 
             echo "Trang không tồn tại";
