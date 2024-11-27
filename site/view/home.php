@@ -67,21 +67,23 @@
             <button class="banner-next" onclick="changeSlide(1)">&#10095;</button>
         </div>
 
+        <?php
+            if(isset($blog1)) {
+        ?>
+
         <section class="welcome">
             <div class="welcome-text">
                 <h2>Chào mừng đến với SweetCakes</h2>
                 <p class="welcome-p">Trải nghiệm mua sản phẩm tại cửa hàng</p>
-                <p>Khi nhắc đến những buổi tiệc sinh nhật, lễ kỷ niệm hay đơn giản chỉ là những khoảnh khắc vui vẻ bên
-                    gia đình và bạn bè, bánh kem luôn là món không thể thiếu. Và để làm cho những khoảnh khắc ấy trở nên
-                    đặc biệt hơn, SweetCakes mang đến những chiếc bánh kem không chỉ ngon miệng mà còn đẹp mắt, như
-                    những viên kẹo ngọt ngào. Mỗi chiếc bánh kem của SweetCakes đều được làm từ những nguyên liệu tươi
-                    ngon nhất, kết hợp với sự sáng tạo không giới hạn.</p>
-                <a href="?page=blog" class="buy-btn">Xem thêm</a>
+                <p><?= $blog1['Noi_dung'] ?></p>
+                <a href="?page=blog&id=<?=$blog1['ID_baiviet'] ?>" class="buy-btn">Xem thêm</a>
             </div>
             <div class="welcome-img">
                 <img src="../public/img/welcome.jpg" alt="Welcome Image">
             </div>
         </section>
+
+        <?php } ?>
 
         <section class="products">
             <div class="products-container">
@@ -229,49 +231,24 @@
         <section class="blog-posts">
             <h2>Bài viết</h2>
             <div class="post-list">
-                <div class="post">
-                    <a href="../html/blog.html">
-                        <img src="../public/img/daylambanhkem.jpg" alt="Blog Post Image">
-                        <h3>Các buổi workshop làm bánh được tổ chức định kỳ, thu hút sự tham gia của nhiều người yêu thích ẩm thực.</h3>
-                        <div class="post-meta">
-                            <p>Viết bởi chúng tôi</p>
-                            <p class="date">02/11/2024</p>
-                        </div>
-                    </a>
-                </div>
                 
+                <?php
+                    if(isset($blog4)) { foreach($blog4 as $p){
+                ?>
+
                 <div class="post">
-                    <a href="../html/blog.html">
-                        <img src="../public/img/phanbietcacloaibanh.jpeg" alt="Blog Post Image">
-                        <h3>Khi nói đến các loại bánh, có rất nhiều loại khác nhau với hương vị và cách chế biến riêng. Dưới đây là cách phân biệt một số loại bánh phổ biến mà bạn có thể gặp.</h3>
+                    <a href="?page=blog&id=<?=$p['ID_baiviet'] ?>">
+                        <img src="../public/img/<?=$p['Hinh_anh'] ?>" alt="Blog Post Image">
+                        <h3><?=$p['Tieu_de'] ?></h3>
                         <div class="post-meta">
                             <p>Viết bởi chúng tôi</p>
-                            <p class="date">01/11/2024</p>
+                            <p class="date"><?=$p['Ngay_viet'] ?></p>
                         </div>
                     </a>
                 </div>
 
-                <div class="post">
-                    <a href="../html/blog.html">
-                        <img src="../public/img/quytrinhlambanh.jpg" alt="Blog Post Image">
-                        <h3>Làm bánh kem không chỉ đơn thuần là một nghệ thuật, mà còn là một khoa học. Dưới đây là quy trình chi tiết mà chúng tôi thực hiện để tạo ra những chiếc bánh kem thơm ngon và đẹp mắt.</h3>
-                        <div class="post-meta">
-                            <p>Viết bởi chúng tôi</p>
-                            <p class="date">30/10/2024</p>
-                        </div>
-                    </a>
-                </div>
+                <?php }} ?>
 
-                <div class="post">
-                    <a href="../html/blog.html">
-                        <img src="../public/img/welcome.jpg" alt="Blog Post Image">
-                        <h3>Chúng tôi, những người sáng lập, luôn tin rằng bánh kem không chỉ là món ăn mà còn là một tác phẩm nghệ thuật, mang đến niềm vui và hạnh phúc cho mọi người.</h3>
-                        <div class="post-meta">
-                            <p>Viết bởi chúng tôi</p>
-                            <p class="date">29/10/2024</p>
-                        </div>
-                    </a>
-                </div>
             </div>
         </section>
     </main>
