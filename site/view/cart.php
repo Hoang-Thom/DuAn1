@@ -54,7 +54,7 @@
                         <?=number_format($total, 0, ',', '.') . ' VNĐ'?>
                     </span>
                 </p>
-                <a href="?page=checkout" class="muaNgay">Thanh toán</a>
+                <a href="?page=checkout" class="muaNgay">Đặt hàng</a>
             </div>
         </div>
     </section>

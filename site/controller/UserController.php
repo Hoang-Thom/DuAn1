@@ -16,6 +16,8 @@ class UserController {
     }
     public function login($data){
         // Lấy thông tin người dùng từ cơ sở dữ liệu
+        $message = ""; // Khởi tạo biến thông báo
+
         $user = $this->userModel->getUser($data);
         
         if($user){
@@ -31,8 +33,9 @@ class UserController {
                 header('location: index.php');
             }
         } else {
-            echo "Đăng nhập thất bại";
+            $message = "Đăng nhập thất bại";
         }
+        require_once('view/login.php');
     }
     public function renderRegister() {
         require_once('view/register.php');
@@ -44,11 +47,9 @@ class UserController {
             $result = $this->userModel->addUser($data);
             if($result){
                 header('location: index.php?page=loginpage');
-            }else{
-                echo "Đăng ký thất bại";
             }
         }
-        require_once('view/register.php');
+
     }
 }
 
