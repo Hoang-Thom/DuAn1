@@ -70,6 +70,8 @@ header {
     border-radius: 0.4rem;
     padding: 0.1rem;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .head3  ul li form input {

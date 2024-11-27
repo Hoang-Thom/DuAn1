@@ -44,6 +44,15 @@
             return Database::getInstance()->getAll($sql);
         }
 
+        // tìm kiếm sản phẩm
+        public function getProBySreach($search){
+            $sql = "SELECT * FROM sanpham WHERE 1";
+            if($search!=""){
+                $sql .= " AND Ten_san_pham LIKE '%".$search."%' ";
+            }
+            return Database::getInstance()->getAll($sql);
+        }
+
     }
 
 

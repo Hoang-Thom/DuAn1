@@ -42,6 +42,13 @@
             // print_r($relateProduct);
             require_once('view/detail.php');
         }
+        // tạo trang hiển thị sản phẩm tìm kiếm
+        public function renderSearch($search) {
+            // Lấy thông tin tên sản phẩm từ cơ sở dữ liệu
+            $productSearch = $this->productModel->getProBySreach($search);
+            // print_r($search);
+            require_once('view/search.php');
+        }
         
 
 
