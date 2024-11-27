@@ -49,3 +49,6 @@
     box-sizing: border-box;
     /* transition: all 0.3s ease; */
 }
+.forgot-password-box-user{
+    color: red;
+}
