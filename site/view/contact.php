@@ -45,16 +45,60 @@
             <h3>Hỏi & Đáp</h3>
             <h1>Gửi Email cho chúng tôi</h1>
         </div>
-        <div class="form">
-            <div class="form-row">
-                <input class="form-name" type="text" id="" placeholder="Tên" onblur="">
-                <input class="form-email" type="text" id="" placeholder="Email" onblur="">
+
+        <?php
+        $name = htmlspecialchars($_POST['name'] ?? "");
+        $mail = htmlspecialchars($_POST['email'] ?? "");
+        $sub = htmlspecialchars($_POST['subject'] ?? "");
+        $Message = htmlspecialchars($_POST['Message'] ?? "");
+
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            if (empty($name) || empty($mail) || empty($sub) || empty($Message)) {
+                echo "Vui lòng nhập đủ tin!";
+            } else {
+                try {
+                    senmail($Message, $sub, $mail, $name);
+                    echo "Thành công";
+                } catch (Exception $e) {
+                    echo "Có lỗi xảy ra khi gửi email: " . $e->getMessage();
+                }
+            }
+        }
+        ?>
+
+        <!-- Your form
+        <div class="col-md-6 contact-right-content">
+            <form method="post">
+                <label>Tên:</label>
+                <input type="text" name="name" placeholder="Tên" required value="">
+
+                <label>Email:</label>
+                <input type="email" class="email" name="email" placeholder="Email" required value="" >
+
+                <label>Điện thoại:</label>
+                <input type="tel" name="subject" placeholder="Điện thoại" required value="">
+
+                <label>Lời nhắn:</label>
+                <textarea name="Message" placeholder="Lời nhắn" required></textarea>
+
+                <div class="read mt-3">
+                    <input type="submit" value="Gửi" >
+                </div>
+            </form>
+        </div> -->
+
+        <form class="form-contact" method="post">
+            <div class="form-cont">
+                <div class="form-row">
+                    <input class="form-name" type="text" name="name" placeholder="Tên" required>
+                    <input class="form-email" type="text" name="email" placeholder="Email" required>
+                </div>
+                <input type="text" name="subject" placeholder="Điện thoại" required>
+                <input class="form-text" type="text" name="Message" placeholder="Lời nhắn" required>
             </div>
-            <input type="text" id="" placeholder="Điện thoại" onblur="">
-            <input class="form-text" type="text" id="" placeholder="Lời nhắn" onblur="">
-        </div>
-        <div class="pro-row">
-            <h4>Chúng tôi sẽ trả lời câu hỏi của bạn trong thời gian sớm nhất</h4>
-            <a href="#" class="gui">Gửi</a>
-        </div>
+            <div class="pro-row">
+                <h4>Chúng tôi sẽ trả lời câu hỏi của bạn trong thời gian sớm nhất</h4>
+                <input type="submit" class="gui" value="Gửi">
+            </div>
+        </form>
     </main>
