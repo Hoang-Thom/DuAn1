@@ -5,11 +5,11 @@
                     <div class="pro-img-big">
                         <img id="mainImage" src="../public/img/<?=$product['Anh_san_pham']?>" alt>
                     </div>
-                    <div class="pro-img-mini">
+                    <!-- <div class="pro-img-mini">
                         <img onclick="changeImage(this)" src="../public/img/pie&tart-01.jpg" alt>
                         <img onclick="changeImage(this)" src="../public/img/pie&tart-01.jpg" alt>
                         <img onclick="changeImage(this)" src="../public/img/pie&tart-01.jpg" alt>
-                    </div>
+                    </div> -->
                 </div>
 
                 <form action="?page=addcart" method="post">
@@ -39,59 +39,42 @@
                 </form>
             </div>
             <div class="danhgia">
-                <div class="danhgia-title">
-                    <h1>Khách hàng đánh giá</h1>
-                    <div class="star">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                    </div>
+                <h1 class="danhgia-h1">Khách hàng đánh giá</h1>
+                
+                <?php foreach ($comments as $c): ?>
+                <div class="showdanhgia">
+                    <h3 class="danhgianame"><?= $c['Ten_nguoidung'] ?></h3>
+                    <div class="danhgiadate"><?= $c['Ngay_viet'] ?></div>
+                    <h4><?= $c['Noi_dung'] ?></h4>
+                    <div class="showHinh"><img src="../public/img/<?= $c['Hinh_anh'] ?>" alt=""></div>
                 </div>
-                <div class="danhgia-content">
-                    <div class="danhgia-name">
-                        <img src="../public/img/tiramisu-10.jpg" alt="">
-                        <h3>Tên khách hàng đánh giá</h3>
-                    </div>
-                    <div class="star">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                    </div>
-                    <h4>Bánh ngon trang trí đẹp mắt giao hàng nhanh chóng bảo quản bánh tốt, khi giao đến bánh vẫn đẹp.</h4>
-                    <div class="danhgia-ims">
-                        <img src="../public/img/pie&tart-04.jpg" alt>
-                        <img src="../public/img/pie&tart-05.jpg" alt>
-                    </div>
+                <?php endforeach; ?>
+
+                
+                <div class="guidanhgia">
+                    <form class="formdanhgia" action="?page=detail&id=<?=$product['ID_sanpham']?>" method="post" enctype="multipart/form-data">
+                        <label for="">Bình luận của bạn:</label>
+                        <input class="nameKH" type="text" name="ID_nguoidung" placeholder="Tên của bạn" value="<?= $isLoggedIn ? htmlspecialchars($_SESSION['user']['Ten_nguoidung']) : '' ?>">
+                        <textarea class="binhluan" name="Noi_dung" placeholder="Nội dung bình luận"></textarea>
+                        <input type="hidden" name="ID_sanpham"  value="<?= $product['ID_sanpham'] ?>">
+                        <input type="file" name="Hinh_anh">
+                        <div class="guidg"><button type="submit">Gửi bình luận</button></div>
+                    </form>
                 </div>
 
-                <div class="danhgia-content">
-                    <div class="danhgia-name">
-                        <img src="../public/img/tiramisu-10.jpg" alt="">
-                        <h3>Tên khách hàng đánh giá</h3>
+                <?php if (isset($_SESSION['message'])): ?>
+                    <div class="alert alert-warning">
+                        <?= htmlspecialchars($_SESSION['message']) ?>
                     </div>
-                    <div class="star">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                    </div>
-                    <h4>Bánh ngon trang trí đẹp mắt giao hàng nhanh chóng bảo quản bánh tốt, khi giao đến bánh vẫn đẹp.</h4>
-                    <div class="danhgia-ims">
-                        <img src="../public/img/pie&tart-01.jpg" alt>
-                        <img src="../public/img/pie&tart-02.jpg" alt>
-                    </div>
-                </div>
+                    <?php unset($_SESSION['message']); // Xóa thông báo sau khi hiển thị ?>
+                <?php endif; ?>
+
             </div>
 
             <div class="underline">Sản phẩm tương tự</div>
             <div class="cakes">
                 <div class="meu-cake">
-                    <button class="left-1"><i class="fa-solid fa-angle-left"></i></button>
+                    <!-- <button class="left-1"><i class="fa-solid fa-angle-left"></i></button> -->
                     <div class="cake-4">
                         <?php
                             foreach($relateProduct as $p){
@@ -108,7 +91,7 @@
 
                         <?php } ?>
                     </div>
-                    <button class="right-1"><i class="fa-solid fa-angle-right"></i></button>
+                    <!-- <button class="right-1"><i class="fa-solid fa-angle-right"></i></button> -->
                 </div>
             </div>
         </div>

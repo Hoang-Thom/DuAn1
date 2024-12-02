@@ -6,7 +6,7 @@ ob_start();
 
         // khởi tạo
         public function __construct() {
-            require_once('../model/ProductModel.php');
+            require_once('../site/model/ProductModel.php');
             $this->productModel = new ProductModel();
         }
 

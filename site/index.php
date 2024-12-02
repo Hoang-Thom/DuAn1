@@ -25,9 +25,10 @@
             break;
         case 'detail':
             $id=$_GET['id'];
+            $data=isset($_POST) ? $_POST:'';
             require_once('controller/ProductController.php');
             $productController = new ProductController();
-            $productController->renderDetail($id);
+            $productController->renderDetail($id, $data);
             break;
         case 'addcart':
             if (isset($_POST['id']) && isset($_POST['quantity'])) {
@@ -80,11 +81,17 @@
             require_once('view/pay.php');
             break;
         case 'blog':
-            $id=$_GET['id'];
+            $id=$_GET['id'] ?? null;
             require_once('controller/BlogController.php');
             $blogController = new BlogController();
             $blogController->renderBlog($id);
             // require_once('view/blog.php');
+            break;
+        case 'about_us':
+            require_once('controller/BlogController.php');
+            $blogController = new BlogController();
+            $blogController->renderAboutUs();
+            require_once('view/about_us.php');
             break;
         case 'loginpage':
             require_once('controller/UserController.php');
@@ -117,7 +124,10 @@
             break;  
         case 'User_profile':    
             require_once('view/User_profile.php');    
-            break;       
+            break;
+        case 'contact':    
+            require_once('view/contact.php');    
+            break;        
         case 'search':
             if(isset($_POST['search'])&&($_POST['search']!="")){
                 $search = $_POST['search'];

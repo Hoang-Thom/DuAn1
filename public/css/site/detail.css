@@ -13,25 +13,32 @@
 
 .container-detail .pro-img {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     flex-direction: column;
     margin: 0 60px 0 0;
 }
 
-.container-detail form {
+.container-detail .product form {
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 10px;
 }
 
+.container-detail .pro-img-big {
+    width: 35vw;
+    height: 30vw;
+    overflow: hidden;
+}
+
 .container-detail .pro-img-big img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.container-detail .pro-img-mini {
+/* .container-detail .pro-img-mini {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -43,7 +50,7 @@
     width: 32%;
     border-radius: 10px;
     object-fit: cover;
-}
+} */
 
 .container-detail .product-info h2 {
     margin: 5px 0 15px 0;
@@ -173,54 +180,115 @@
     flex-direction: column;
 }
 
-.container-detail .danhgia-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.container-detail .danhgia .danhgia-h1 {
+    font-size: 2.2vw;
+    font-weight: 600;
+    margin: 1vw 0;
+    padding: 0 0 1vw 0;
+    box-sizing: border-box;
     border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.container-detail .danhgia-content {
+.container-detail .danhgia .showdanhgia {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
     border-block-end: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
 }
 
-.container-detail .danhgia-content:last-child {
-    border-block-end: none;
+.container-detail .danhgia .showdanhgia .danhgianame {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin: 0;
 }
 
-.container-detail .danhgia-name {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 0 1rem;
+.container-detail .danhgia .showdanhgia .danhgiadate {
+    font-size: 1vw;
 }
 
-.container-detail .danhgia-name img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin: 0 0 0 0;
+.container-detail .danhgia .showdanhgia h4 {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin: 1vw 0;
+}
+
+.container-detail .danhgia .showdanhgia .showHinh {
+    width: 10vw;
+    height: 7vw;
+    overflow: hidden;
+    border-radius: 0.5vw;
+}
+
+.container-detail .danhgia .showdanhgia .showHinh img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.container-detail .danhgia-name h3 {
-    margin: 0 0 0 1rem;
+.container-detail .danhgia .guidanhgia {
+    padding: 3vw 0;
 }
 
-.container-detail .danhgia-ims {
+.container-detail .danhgia .guidanhgia .formdanhgia {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 1vw;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+    padding: 2vw 1vw;
+    border-radius: 0.3vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container-detail .danhgia-ims img {
-    height: 100px;
+.container-detail .danhgia .guidanhgia .formdanhgia label {
+    font-size: 2.2vw;
+    font-weight: 600;
 }
+
+.container-detail .danhgia .guidanhgia .formdanhgia .nameKH {
+    height: 2vw;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.2vw;
+    border-radius: 0.3vw;
+}
+
+.container-detail .danhgia .guidanhgia .formdanhgia .binhluan {
+    height: 10vw;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.2vw;
+    border-radius: 0.3vw;
+}
+
+.container-detail .danhgia .guidanhgia .formdanhgia .nameKH:focus,
+.container-detail .danhgia .guidanhgia .formdanhgia .binhluan:focus {
+    outline: none;
+}
+
+.container-detail .danhgia .guidanhgia .formdanhgia .guidg {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-detail .danhgia .guidanhgia .formdanhgia button {
+    width: 15vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    border: none;
+    right: 0;
+}
+
+.container-detail .danhgia .guidanhgia .formdanhgia button:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}
+
 /* ---------------------------------------------------------------------------- */
 .container-detail .cakes {
     width: 1440px;
@@ -242,15 +310,6 @@
     color: #66325C;
 }
 
-.container-detail>.underline::after {
-    width: 4vw;
-    display: block;
-    content: "";
-    border-block-end: 0;
-    border-block-start: 1px solid #66325C;
-}
-
-
 .container-detail>.cakes {
     display: flex;
     flex-direction: column;
@@ -264,7 +323,7 @@
     position: relative;
 }
 
-.container-detail>.cakes>.meu-cake>.left-1{
+/* .container-detail>.cakes>.meu-cake>.left-1{
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -290,7 +349,7 @@
     bottom: 50%;
     border: none;
     background-color: #66325C;
-}
+} */
 
 .container-detail>.cakes>.meu-cake>.cake-4 {
     width: 1300px;

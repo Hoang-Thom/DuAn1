@@ -1,0 +1,376 @@
+/* ------------------------------------------ main ------------------------------------------ */
+
+.about_us-main>.ship {
+    font-size: 2.2vw;
+    font-weight: 600;
+    color: #6b9160;
+    height: 10rem;
+    background: url(/DuAn1/public/img/02.png) no-repeat center center; /* Đặt ảnh nền */
+    background-size: cover;   /* Lấp đầy khung mà không bị bóp méo */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------------- welcome ---------------------------------------- */
+
+.about_us-main>.welcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.about_us-main>.welcome>.welcome-img {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.about_us-main>.welcome>.welcome-img>.welcome-img img {
+    width: 26vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+
+.about_us-main>.welcome>.welcome-text {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+
+.about_us-main>.welcome>.welcome-text>h3 {
+    /* display: flex;
+    align-items: baseline; */
+    margin: 0;
+    color: #66325c;
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+}
+
+.about_us-main>.welcome>.welcome-text>.welcome-p {
+    margin: 0;
+    /* padding-top: 0.6rem; */
+    font-size: 1.2vw;
+    color: #66325c;
+}
+
+.about_us-main>.welcome>.welcome-text>p {
+    font-size: 1vw;
+}
+
+.about_us-main>.welcome>.welcome-text>.buy-btn {
+    width: 10vw;
+    background-color: #e6badd;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin: 0 4rem;
+    text-align: center;
+}
+
+.about_us-main>.welcome>.welcome-text>.buy-btn:hover {
+    background-color: #66325c;
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------------------------------ welcome2 ------------------------------------------- */
+
+.about_us-main>.welcome2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.about_us-main>.welcome2>.welcome-img {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.about_us-main>.welcome2>.welcome-img>.welcome-img img {
+    width: 26vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+
+.about_us-main>.welcome2>.welcome-text {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+
+.about_us-main>.welcome2>.welcome-text>h3 {
+    /* display: flex;
+    align-items: baseline; */
+    margin: 0;
+    color: rgb(107, 145, 96);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+}
+
+.about_us-main>.welcome2>.welcome-text>.welcome-p {
+    margin: 0;
+    /* padding-top: 0.6rem; */
+    font-size: 1.2vw;
+    color: rgb(107, 145, 96);
+}
+
+.about_us-main>.welcome2>.welcome-text>p {
+    font-size: 1vw;
+}
+
+.about_us-main>.welcome2>.welcome-text>.buy-btn {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    margin: 0 4rem;
+    text-align: center;
+}
+
+.about_us-main>.welcome2>.welcome-text>.buy-btn:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgb(255, 255, 255);
+}
+
+/* -------------------------------------------- team-section -------------------------------------------------- */
+
+.team-section {
+    background-color: #E6BADD;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.team-section h2 {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 2.4vw;
+    line-height: 2.4vw;
+    font-weight: 600;
+    padding-top: 1vw;
+    justify-content: center;
+}
+
+.team-section h2::before {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 1px solid rgb(255, 255, 255);
+    border-block-start: 0;
+}
+
+.team-section h2::after {
+    width: 4vw;
+    display: block;
+    content: "";
+    border-block-end: 0;
+    border-block-start: 1px solid rgb(255, 255, 255);
+}
+
+.team-section .team-header p {
+    font-size: 1.2rem;
+    color: #303030;
+    margin: 0;
+}
+
+/* Wrapper và nút */
+.team-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.team-container {
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+.team-member {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 1rem;
+    /* text-align: center; */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    margin: 20px 0 20px 20px;
+    min-width: 26%;
+}
+
+.team-member-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    color: #6B9160;
+    margin-bottom: 0.2rem;
+}
+
+.team-member .id {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+    font-weight: bold;
+    color: #5e9d5e;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .description {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Nút điều hướng */
+.about_us-main>.team-section>.team-wrapper>.team-container>.prev-team,
+.about_us-main>.team-section>.team-wrapper>.team-container>.next-team {
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transition: background-color 0.3s ease;
+    color: rgb(255, 255, 255);
+    background-color: unset;
+    border: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.about_us-main>.team-section>.team-wrapper>.team-container>.prev-team {
+    left: 0px;
+}
+
+.about_us-main>.team-section>.team-wrapper>.team-container>.next-team {
+    right: 0px;
+}
+
+/* -------------------------Form------------------------ */
+
+.about_us-main>.team-QandA {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+}
+
+.about_us-main>.team-QandA>.team-QandA-Text {
+    text-align: center;
+}
+
+.about_us-main>.team-QandA>.team-QandA-Text.co {
+    color: #6b9160;
+}
+
+.about_us-main>.team-QandA>.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_us-main>.team-QandA>.form>.form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.about_us-main>.team-QandA>.form>.form-row>.form-name,
+.about_us-main>.team-QandA>.form>.form-row>.form-email {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.about_us-main>.team-QandA>.form>input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.about_us-main>.team-QandA>.form>.form-text {
+    height: 150px;
+}
+
+.about_us-main>.team-QandA>.pro-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_us-main>.team-QandA>.pro-row>h4 {
+    font-weight: 500;
+}
+
+.about_us-main>.team-QandA>.pro-row>.buy-btn {
+    width: 10vw;
+    background-color: rgb(107, 145, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0.6rem 2rem 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: background-color 0.3s ease;
+    /* margin-top: 1.2rem; */
+    text-align: center;
+}
+  
+.about_us-main>.team-QandA>.pro-row>.buy-btn:hover {
+    background-color: rgb(195, 230, 186);
+    color: rgba(48, 48, 48, 0.8);
+}

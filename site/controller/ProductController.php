@@ -8,11 +8,11 @@
 
         // khởi tạo
         public function __construct() {
-            require_once('../model/ProductModel.php');
+            require_once('../site/model/ProductModel.php');
             $this->productModel = new ProductModel();
-            require_once('../model/CategoryModel.php');
+            require_once('../site/model/CategoryModel.php');
             $this->categoryModel = new CategoryModel();
-            require_once('../model/BlogModel.php');
+            require_once('../site/model/BlogModel.php');
             $this->blogModel = new BlogModel();
         }
 
@@ -23,6 +23,7 @@
             $productsCate2= $this->productModel->getProByCateLIMIT5(6);
             $blog4 = $this->blogModel->getLatestBlog();
             $blog1 = $this->blogModel->getOldestBlog();
+            // $product = $this->productModel->getProductById($id);
             require_once('view/home.php');
         }
         // tạo trang sản phẩm
@@ -41,10 +42,65 @@
             require_once('view/shop.php');
         }
         // tạo trang chi tiết sản phẩm
-        public function renderDetail($id) {
+        public function renderDetail($id,$data) {
             $product= $this->productModel->getProductById($id);
             $relateProduct= $this->productModel-> getRelateProduct($id);
-            // print_r($relateProduct);
+            $comments = $this->productModel->getCommentByProductId($id);
+            $isLoggedIn = isset($_SESSION['user']);
+            
+            if (!empty($data)) {
+                if (!$isLoggedIn) {
+                    // Người dùng chưa đăng nhập
+                    $_SESSION['message'] = "Vui lòng đăng nhập để gửi bình luận.";
+                    header("Location: index.php?page=detail&id=$id");
+                    exit;
+                }
+        
+                // Nếu đã đăng nhập, xử lý bình luận
+                $data['ID_nguoidung'] = $_SESSION['user']['ID_nguoidung'];
+
+                // Kiểm tra nội dung bình luận
+                if (empty($data['Noi_dung'])) {
+                    $_SESSION['message'] = "Nội dung bình luận không được để trống.";
+                    header("Location: index.php?page=detail&id=$id");
+                    exit;
+                }
+
+                // Thêm ID_sanpham vào mảng dữ liệu
+                $data['ID_sanpham'] = $id;
+
+                // Khởi tạo giá trị Hinh_anh là NULL
+                $data['Hinh_anh'] = null;
+
+                if (!empty($_FILES['Hinh_anh']['name'])) {
+                    $fileTmpPath = $_FILES['Hinh_anh']['tmp_name'];
+                    $fileName = basename($_FILES['Hinh_anh']['name']);
+                    $targetDir = "../public/img/";
+                    $targetFilePath = $targetDir . $fileName;
+                
+                    // Kiểm tra nếu tệp đã được tải lên
+                    if (is_uploaded_file($fileTmpPath)) {
+                        // Di chuyển tệp vào thư mục đích
+                        if (move_uploaded_file($fileTmpPath, $targetFilePath)) {
+                            $data['Hinh_anh'] = $fileName;
+                        } else {
+                            $_SESSION['message'] = "Không thể tải lên hình ảnh.";
+                            header("Location: index.php?page=detail&id=$id");
+                            exit;
+                        }
+                    } else {
+                        $_SESSION['message'] = "Tệp không được tải lên.";
+                        header("Location: index.php?page=detail&id=$id");
+                        exit;
+                    }
+                }
+        
+                // Thêm bình luận vào cơ sở dữ liệu
+                $this->productModel->addComment($data);
+                header("Location: index.php?page=detail&id=$id");
+                exit();
+            }
+            
             require_once('view/detail.php');
         }
         // tạo trang hiển thị sản phẩm tìm kiếm

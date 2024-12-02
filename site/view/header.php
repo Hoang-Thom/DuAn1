@@ -21,6 +21,8 @@ ob_start(); // Bắt đầu buffer output
     <link rel="stylesheet" href="../public/css/site/detail.css">
     <link rel="stylesheet" href="../public/css/site/User_profile.css">
     <link rel="stylesheet" href="../public/css/site/sreach.css">
+    <link rel="stylesheet" href="../public/css/site/about_us.css">
+    <link rel="stylesheet" href="../public/css/site/contact.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,9 +42,9 @@ ob_start(); // Bắt đầu buffer output
         <div class="head2">
             <ul>
                 <li><a href="?page=home">Trang chủ</a></li>
-                <li><a href="?page=about">Giới thiệu</a></li>
+                <li><a href="?page=about_us">Giới thiệu</a></li>
                 <li><a href="?page=shop">Sản phẩm</a></li>
-                <li><a href="?page=blog">Bài viết</a></li>
+                <li><a href="?page=blog&id=9">Bài viết</a></li>
                 <li><a href="?page=contact">Liên hệ</a></li>
             </ul>
         </div>

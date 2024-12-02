@@ -93,14 +93,21 @@
 
                     <?php
                         if(isset($productsCate1)) { foreach($productsCate1 as $p){
-                    ?>    
+                    ?>
 
-                    <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
+                    <a class="producta" href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
                         <div class="product">
-                            <div class="pro-ima"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <p><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></p>
-                            <h3><?=$p['Ten_san_pham'] ?></h3>
-                            <a href="?page=cart" class="buy-btn">Thêm vào giỏ hàng</a>
+                                <div class="pro-ima"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <p><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></p>
+                                <h3><?=$p['Ten_san_pham'] ?></h3>
+                            <form class="form" action="?page=addcart" method="post">
+                                <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="buy-btn">Thêm vào giỏ hàng</button> 
+                            </form>
                         </div>
                     </a>
 
@@ -231,13 +238,12 @@
         <section class="blog-posts">
             <h2>Bài viết</h2>
             <div class="post-list">
-                
-                <?php
-                    if(isset($blog4)) { foreach($blog4 as $p){
-                ?>
 
+            <?php
+                if(isset($blog4)) { foreach($blog4 as $p){
+            ?>
                 <div class="post">
-                    <a href="?page=blog&id=<?=$p['ID_baiviet'] ?>">
+                <a href="?page=blog&id=<?=$p['ID_baiviet'] ?>">
                         <img src="../public/img/<?=$p['Hinh_anh'] ?>" alt="Blog Post Image">
                         <h3><?=$p['Tieu_de'] ?></h3>
                         <div class="post-meta">
@@ -246,9 +252,9 @@
                         </div>
                     </a>
                 </div>
-
-                <?php }} ?>
-
+                
+            <?php }} ?>
+                
             </div>
         </section>
     </main>

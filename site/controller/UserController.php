@@ -6,7 +6,7 @@ class UserController {
     
     // Khởi tạo
     public function __construct() {
-        require_once('../model/UserModel.php');
+        require_once('../site/model/UserModel.php');
         $this->userModel = new UserModel();
     }
     
@@ -25,7 +25,7 @@ class UserController {
             $_SESSION['user'] = $user;
     
             // Kiểm tra vai trò của người dùng
-            if($user['Vai_Tro'] == 1){
+            if($user['Vai_tro'] == 1){
                 // Vai trò là quản trị viên
                 header('location: ../admin/index.php');
             } else {
@@ -40,15 +40,14 @@ class UserController {
     public function renderRegister() {
         require_once('view/register.php');
     }
-    public function register($data){
-        // print_r($data);
-        if($data) {
-            //var_dump($data);exit;
+    public function register($data) {
+        $message2 = "";
+        if ($data) {
             $result = $this->userModel->addUser($data);
-            if($result){
+            if ($result) {
                 header('location: index.php?page=loginpage');
-            }else{
-                echo "Đăng ký thất bại";
+            } else {
+                $message2 =  "Đăng ký thất bại: Email đã tồn tại."; 
             }
         }
         require_once('view/register.php');

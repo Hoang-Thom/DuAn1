@@ -29,10 +29,11 @@
             </div>
         </div>
     </footer>
-    <script src="../public/js/script.js" defer></script>
+    <script src="../public/js/home.js" defer></script>
     <script src="../public/js/cart.js" defer></script>
     <script src="../public/js/shop.js" defer></script>
     <script src="../public/js/detail.js" defer></script>
+    <script src="../public/js/about_us.js" defer></script>
     <script src="../public/js/user_profile.js" defer></script>
 </body>
 </html>

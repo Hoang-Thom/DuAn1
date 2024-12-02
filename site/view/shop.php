@@ -33,12 +33,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>"  class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -62,12 +69,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4-1">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -90,12 +104,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -118,12 +139,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4-1">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -146,12 +174,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -175,12 +210,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4-2">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4-2">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -203,12 +245,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
@@ -232,12 +281,19 @@
 
                     <div id="<?=$p['ID_danhmuc']?>" class="cakes-item item mgr-10">
                         <a href="?page=detail&id=<?=$p['ID_sanpham'] ?>">
-                        <div class="col-4-1">
-                            <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
-                            <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
-                            <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
-                            <button>Thêm vào giỏ hàng</button>
-                        </div>
+                            <div class="col-4-1">
+                                <div class="img-cakes"><img src="../public/img/<?=$p['Anh_san_pham'] ?>" alt=""></div>
+                                <div class="price-cake"><?= number_format($p['Gia_san_pham'], 0, ',', '.') . ' VNĐ'; ?></div>
+                                <div class="name-cake"><?=$p['Ten_san_pham'] ?></div>
+                                <form class="form" action="?page=addcart" method="post">
+                                    <input type="hidden" name="id" value="<?=$p['ID_sanpham']?>">
+                                    <input type="hidden" name="Ten_san_pham" value="<?=$p['Ten_san_pham'] ?>">
+                                    <input type="hidden" name="Gia_san_pham" value="<?=$p['Gia_san_pham'] ?>">
+                                    <input type="hidden" name="Anh_san_pham" value="<?=$p['Anh_san_pham'] ?>">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <button type="submit">Thêm vào giỏ hàng</button> 
+                                </form>
+                            </div>
                         </a>
                     </div>
 
