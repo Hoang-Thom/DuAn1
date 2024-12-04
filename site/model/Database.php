@@ -50,6 +50,10 @@ class Database{
     //     //Lấy tất cả dữ liệu
     //     return count($stmt->fetchAll());
     // }
+
+    public function getLastInsertId() {
+        return $this->conn->lastInsertId();
+    }
 } 
 
 ?>

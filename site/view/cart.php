@@ -1,3 +1,7 @@
+<?php
+    $isLoggedIn = isset($_SESSION['user']); // Kiểm tra nếu người dùng đã đăng nhập
+    // var_dump($_SESSION);
+?>
     <section class="cart">
         <h1>Giỏ Hàng Của Tôi</h1>
         <table>
@@ -54,7 +58,19 @@
                         <?=number_format($total, 0, ',', '.') . ' VNĐ'?>
                     </span>
                 </p>
-                <a href="?page=checkout" class="muaNgay">Đặt hàng</a>
+                <a href="#"  onclick="checkLogin()" class="muaNgay">Đặt hàng</a>
             </div>
         </div>
     </section>
+
+    <script>
+        var isLoggedIn = <?= json_encode($isLoggedIn) ?>; // Chuyển giá trị PHP sang JavaScript
+
+        function checkLogin() {
+            if (!isLoggedIn) {
+                alert("Bạn phải đăng nhập để mua hàng.");
+            } else {
+                window.location.href = "?page=checkout";
+            }
+        }
+    </script>

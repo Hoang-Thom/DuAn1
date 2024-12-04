@@ -68,7 +68,11 @@ switch ($page) {
         $cartController->deleteCart($id);
         break;
     case 'checkout':
-        require_once('view/checkout.php');
+        require_once('controller/CheckoutController.php');
+        $checkoutController = new CheckoutController();
+
+        // Gọi phương thức để hiển thị biểu mẫu thanh toán
+        $checkoutController->renderCheckout();
         break;
     case 'pay':
         // if(isset($_POST['thanhtoan'])&&($_POST['thanhtoan'])){

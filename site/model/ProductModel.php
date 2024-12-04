@@ -57,7 +57,7 @@
         public function addComment($data){
             $sql ="INSERT INTO binhluan (ID_nguoidung, Noi_dung, ID_sanpham, Hinh_anh) VALUES (?,?,?,?)";
             $params=array_values($data);
-            var_dump($params); 
+            // var_dump($params); 
             return Database::getInstance()->execute($sql,$params);
         }
 

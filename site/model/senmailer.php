@@ -3,9 +3,9 @@
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 // Yêu cầu các tệp cần thiết từ PHPMailer
-require 'D:\xampp\htdocs\DuAn1\PHPMailer-master\src\Exception.php';
-require 'D:\xampp\htdocs\DuAn1\PHPMailer-master\src\PHPMailer.php';
-require 'D:\xampp\htdocs\DuAn1\PHPMailer-master\src\SMTP.php';
+require 'C:\xampp\htdocs\DuAn1\PHPMailer-master\src\Exception.php';
+require 'C:\xampp\htdocs\DuAn1\PHPMailer-master\src\PHPMailer.php';
+require 'C:\xampp\htdocs\DuAn1\PHPMailer-master\src\SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
