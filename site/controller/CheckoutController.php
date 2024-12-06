@@ -57,18 +57,12 @@ class CheckoutController {
 
     // Xác nhận đơn hàng
     public function renderPay($id) {
-        // $donHang = $this->getAlldonhang($id);
-        // if($donHang){
-        //     $_SESSION['donhang'] = $donHang;
-        // }
         $orderdetail = $this->checkoutModel->getOrderDetail($id);
         $order = $this->checkoutModel->getOrder($id);
         
         // print_r($orderdetail);
         // print_r($order);
-        require_once('view/pay.php');
-
-        
+        require_once('view/pay.php');    
     }
 }
 
