@@ -10,10 +10,14 @@
         }
 
         // tạo trang danh muc
-        public function renderCTDH() {
-            $CTDHs=$this->CTDHModel ->getAllCTDH();
+        public function renderCTDH($id) {
+            $CTDHs=$this->CTDHModel ->getAllCTDH($id);
+            $donhang=$this->CTDHModel ->getdonhang($id);
             require_once('view/CTDH.php');
         }
+
+        
+        
 
         
     }

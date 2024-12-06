@@ -4,7 +4,7 @@
     class AccountModel {
         // lấy tất cả
         public function getAllAccount(){
-            $sql = "SELECT * FROM nguoidung";
+            $sql = "SELECT * FROM nguoidung ORDER BY ID_nguoidung DESC";
             return Database::getInstance()->getAll($sql);
         }
 

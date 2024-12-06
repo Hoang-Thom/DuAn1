@@ -4,7 +4,7 @@
     class ProductModel {
         // lấy tất cả
         public function getAllProduct(){
-            $sql = "SELECT pr.*, dm.Ten_danh_muc FROM sanpham AS pr INNER JOIN danhmuc AS dm ON pr.ID_danhmuc = dm.ID_danhmuc";
+            $sql = "SELECT pr.*, dm.Ten_danh_muc FROM sanpham AS pr INNER JOIN danhmuc AS dm ON pr.ID_danhmuc = dm.ID_danhmuc ORDER BY ID_sanpham DESC";
             return Database::getInstance()->getAll($sql);
         }
         //lay so luong san pham

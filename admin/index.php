@@ -1,4 +1,8 @@
 <?php
+
+    session_start();
+    ob_start();
+    
     require_once ('view/header.php');
     //home
     require_once('controller/HomeController.php');
@@ -30,9 +34,17 @@
 
     $page=$_GET ['page'] ?? 'home';
     switch ($page){
+        case 'logout':
+            session_destroy();
+            header('Location: ../index.php');
+            break;
         case "home":
             $HomeController->renderHome();
             //require_once('view/home.php');
+            break;
+        case 'logout':
+            session_destroy();
+            require_once('../site/index.php');
             break;
         // them sua xoa danh muc
         case "Category":
@@ -112,9 +124,12 @@
             $OderController->renderOder();
             break;
         case "CTDH":
-            $CTDHController->renderCTDH();
+            $id=$_GET['id'];
+            $CTDHController->renderCTDH($id);
             require_once ('view/CTDH.php');
             break;
+        
+            
         //them sua xoa tai khoan
         case "Account":
             $AccountController->renderAccount();
@@ -187,10 +202,7 @@
             $id=$_GET['id'];
             $SaleController->deleteSale($id);
             break;
-        case "CTDH":
-            $CTDHController->renderCTDH();
-            break;
-            default: 
+        
         echo "Trang không tồn tại";
         break;
     }

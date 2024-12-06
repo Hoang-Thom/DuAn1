@@ -13,7 +13,8 @@ class CommentModel{
         $sql = "SELECT bl.*, nd.Ten_nguoidung, sp.Ten_san_pham
             FROM binhluan AS bl 
             INNER JOIN nguoidung AS nd ON bl.ID_nguoidung = nd.ID_nguoidung
-            INNER JOIN sanpham AS sp ON bl.ID_sanpham = sp.ID_sanpham";
+            INNER JOIN sanpham AS sp ON bl.ID_sanpham = sp.ID_sanpham
+            ORDER BY ID_binhluan DESC";
         return Database::getInstance()->getAll($sql);
     }
 

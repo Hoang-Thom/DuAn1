@@ -3,7 +3,7 @@ require_once ('Database.php');
 class CategoryModel{
     //lay tat ca dannh muc
     public function getAllCategory(){
-        $sql="SELECT *FROM danhmuc";
+        $sql="SELECT *FROM danhmuc ORDER BY ID_danhmuc DESC";
         return Database::getInstance()->getAll($sql);
         $Pros = $db->getAll($sql);
     }

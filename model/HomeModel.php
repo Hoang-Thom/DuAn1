@@ -20,6 +20,7 @@
             $sql = "SELECT COUNT(`ID_nguoidung`) AS total_nguoidung FROM nguoidung";
             return Database::getInstance()->getOne($sql);
         }
+        
 
         public function getSumMoney(){
             $sql = "SELECT sum(Tong_tien) AS Sum_Money FROM don_hang";
@@ -38,6 +39,21 @@
                     GROUP BY c.ID_danhmuc; ";
             return Database::getInstance()->getAll($sql);
         }
+        
+        public function getBestProduct() {
+            $sql = "SELECT 
+                        p.ID_sanpham, 
+                        p.Ten_san_pham, 
+                        p.Anh_san_pham, 
+                        SUM(od.So_luong) AS Tong_so_luong
+                    FROM donhang_ch od
+                    JOIN sanpham p ON od.ID_sanpham = p.ID_sanpham
+                    GROUP BY p.ID_sanpham
+                    ORDER BY Tong_so_luong DESC
+                    LIMIT 4";
+            return Database::getInstance()->getAll($sql);
+        }
+        
     }
 
 

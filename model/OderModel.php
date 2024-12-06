@@ -9,7 +9,8 @@
             $sql = "SELECT dh.*, nd.Ten_nguoidung, km.Ma_giam  
             FROM don_hang  AS dh 
             INNER JOIN nguoidung AS nd ON dh.ID_nguoi_dung = nd.ID_nguoidung
-            INNER JOIN khuyen_mai AS km ON dh.ID_khuyenmai = km.ID_khuyenmai";
+            INNER JOIN khuyen_mai AS km ON dh.ID_khuyenmai = km.ID_khuyenmai
+            ORDER BY ID_donhang DESC";
             return Database::getInstance()->getAll($sql);
         }
 

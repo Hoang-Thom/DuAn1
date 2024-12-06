@@ -19,6 +19,7 @@
             $Products=$this->HomeModel->getAllProduct();
             //print_r($Products);
             $countProByCate = $this->HomeModel->getCountProByCate();
+            $Best = $this -> HomeModel -> getBestProduct();
             require_once('view/home.php');
 
         }

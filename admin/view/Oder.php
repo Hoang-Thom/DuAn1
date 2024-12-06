@@ -58,7 +58,7 @@
                                 }?>
                              
                                 <input type="hidden" name="ID_donhang" value="<?=$value['ID_donhang']?>">
-                                <button class="xem-1"><a href="?page=CTDH">Xem</a></button>
+                                <button class="xem-1"><a href="?page=CTDH&id=<?=$value['ID_donhang']?>">Xem</a></button>
                             </form>
                             </td>
                         </tr>

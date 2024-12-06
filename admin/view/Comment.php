@@ -21,7 +21,7 @@
                         <td class="img-dm"><?=$value['Ten_san_pham']?></td>
                         <td><?=$value['Ngay_viet']?></td>
                         <td class="img-bl"><?=$value['Ten_nguoidung']?></td>
-                        <td><textarea name="" cols="50" rows="7" id=""><?=$value['Noi_dung']?></textarea></td>
+                        <td><?=$value['Noi_dung']?></td>
                         <td><img src="../public/img/<?=$value['Hinh_anh']?>" alt=""></td>
                         <td class="test ">
                         <a href="?page=deleteComment&id=<?=$value['ID_binhluan']?>"><button class="xem">Xóa</button></a> 

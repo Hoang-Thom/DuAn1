@@ -10,7 +10,6 @@
                         <th>Tiêu đề</th>
                         <th>Ngày viết</th>
                         <th>Ảnh</th>
-                        <th>Nội dung</th>
                         <th>Người viết</th>
                         <th>Chức năng</th>
                     </tr>
@@ -22,7 +21,6 @@
                         <td><?=$value['Tieu_de']?></td>
                         <td style="width: 100px;"><?=$value['Ngay_viet']?></td>
                         <td class="img-dm"><img src="../public/img/<?=$value['Hinh_anh']?>" alt=""></td>
-                        <td><textarea name="" id="" cols="50" rows="15"><?=$value['Noi_dung']?></textarea></td>
                         <td><?=$value['Ten_nguoidung']?></td>
                         <td class="test ">
                         <a href="?page=deleteArticle&id=<?=$value['ID_baiviet']?>"><button class="delete-1 ">Xóa</button></a> 

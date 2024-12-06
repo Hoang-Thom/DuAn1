@@ -3,7 +3,7 @@ require_once ('Database.php');
 class SaleModel{
     //lay tat ca dannh muc
     public function getAllSale(){
-        $sql="SELECT *FROM khuyen_mai";
+        $sql="SELECT *FROM khuyen_mai ORDER BY ID_khuyenmai DESC";
         return Database::getInstance()->getAll($sql);
     }
 

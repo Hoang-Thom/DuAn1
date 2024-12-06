@@ -32,11 +32,10 @@ header>.header-1>.logo-left img {
 }
 
 header>.header-1>.login {
-    width: 153px;
+    width: 250px;
     height: 40px;
     float: right;
     margin: 30px 0px;
-    border-right: 1px solid #ffffff;
 }
 
 header>.header-1>.login>.img-login {
@@ -44,6 +43,11 @@ header>.header-1>.login>.img-login {
     height: 38px;
     border-radius: 20px;
     float: left;
+}
+
+header>.header-1>.login>.img-login>form {
+    text-align: center;
+    display: flex;
 }
 
 header>.header-1>.login>.img-login img {

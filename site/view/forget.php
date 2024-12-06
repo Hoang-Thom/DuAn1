@@ -26,9 +26,9 @@
 
 <?php
  function Guimail($matkhau , $Email ){
-    require "../PHPMailer-master/src/PHPMailer.php"; 
-    require "../PHPMailer-master/src/SMTP.php"; 
-    require '../PHPMailer-master/src/Exception.php'; 
+    require_once "../PHPMailer-master/src/PHPMailer.php"; 
+    require_once "../PHPMailer-master/src/SMTP.php"; 
+    require_once '../PHPMailer-master/src/Exception.php'; 
     $mail = new 
     \PHPMailer\PHPMailer\PHPMailer(true); 
     try {

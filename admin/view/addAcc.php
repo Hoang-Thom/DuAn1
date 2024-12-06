@@ -3,7 +3,7 @@ require_once('../model/AccountModel.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tenNguoiDung = $_POST['tennguoidung'];
-    $soDienThoai = $_POST['sodienthoai'];
+    $soDienThoai = $_POST['sodienthoai'] ?? '';
     $matKhau = $_POST['matkhau'];
     $email = $_POST['email'];
     $vaiTro = $_POST['Vai_tro'];
@@ -18,10 +18,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($account['Ten_nguoidung'] === $tenNguoiDung) {
             $errors['tennguoidung'] = "Tên người dùng đã tồn tại. Vui lòng nhập lại.";
         }
+
         if ($account['So_dien_thoai'] === $soDienThoai) {
-            $errors['sodienthoai'] = "Số điện thoại đã tồn tại. Vui lòng nhập 
-            lại.";
+            $errors['sodienthoai'] = "Số điện thoại đã tồn tại. Vui lòng nhập lại.";
+        } elseif (strlen($soDienThoai) < 10 || strlen($soDienThoai) > 10 || $soDienThoai[0] !== '0') {
+            $errors['sodienthoai'] = "Số điện thoại phải đủ 10 chữ số và bắt đầu từ 0. Vui lòng nhập lại.";
         }
+        if (!is_numeric($soDienThoai)) {
+            $errors['sodienthoai'] = "Số điện thoại phải là số. Vui lòng nhập lại.";
+        }
+        
+
         if ($account['Email'] === $email) {
             $errors['email'] = "Email đã tồn tại. Vui lòng nhập lại.";
         }
@@ -93,7 +100,7 @@ $errors = $errors ?? [];
                 </p>
             <?php endif; ?>
 
-            <input type="number" value="1" name="Vai_tro" required>
+            <input hi type="number" hidden value="1" name="Vai_tro" required>
 
             <button type="submit">Thêm</button>
         </form>

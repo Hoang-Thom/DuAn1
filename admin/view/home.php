@@ -38,27 +38,14 @@
         </div>
         <div class="row2">
             <div class="pro">
-                <h1>Sản phẩm bán chạy</h1>
+                <h1>Top 4 sản phẩm bán chạy</h1>
+                <?php foreach($Best as $key=>$value) { ?>
                 <div class="chart">
-                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
-                    <p class="nm">Tên sản phẩm bán chạy</p>
-                    <p>15</p>
+                    <img src="../public/img/<?= $value['Anh_san_pham']; ?>" alt="">
+                    <p class="nm"><?= $value['Ten_san_pham']; ?></p>
+                    <p class="mm"><?= $value['Tong_so_luong']; ?></p>
                 </div>
-                <div class="chart">
-                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
-                    <p class="nm">Tên sản phẩm bán chạy</p>
-                    <p>15</p>
-                </div>
-                <div class="chart">
-                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
-                    <p class="nm">Tên sản phẩm bán chạy</p>
-                    <p>15</p>
-                </div>
-                <div class="chart">
-                    <img src="https://i.pinimg.com/736x/ac/03/75/ac0375194401a724466b2ff24942330f.jpg" alt="">
-                    <p class="nm">Tên sản phẩm bán chạy</p>
-                    <p>15</p>
-                </div>
+                <?php } ?>
             </div>
            
             <!-- <h1>Biểu đồ cột - Trang Admin</h1> -->
@@ -91,8 +78,8 @@
                 </script>
         
         </div>
-        <div id="myChart" style="width:100%; min-height:500px;"></div>
-            <!-- njjdnvjhdn j -->
+        <div id="myChart" style="width:100%; min-height:1000px;"></div>
+            <!-- bieu do cot -->
 
             <script>
                 google.charts.load('current', {'packages':['corechart']});

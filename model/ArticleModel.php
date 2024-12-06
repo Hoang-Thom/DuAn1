@@ -6,7 +6,7 @@
         public function getAllArticle(){
             //$sql = "SELECT pr.*, dm.Ten_danh_muc FROM sanpham AS pr INNER JOIN danhmuc AS dm ON pr.ID_danhmuc = dm.ID_danhmuc;";
 
-            $sql = "SELECT art.*, acc.Ten_nguoidung FROM baiviet AS art INNER JOIN nguoidung AS acc ON art.ID_nguoi_dung = acc.ID_nguoidung";
+            $sql = "SELECT art.*, acc.Ten_nguoidung FROM baiviet AS art INNER JOIN nguoidung AS acc ON art.ID_nguoi_dung = acc.ID_nguoidung ORDER BY ID_baiviet DESC";
             //$sql="SELECT * FROM baiviet";
             return Database::getInstance()->getAll($sql);
         }
@@ -18,7 +18,7 @@
         }
         //them bai viet
         public function addArticle($data){
-            $sql="INSERT INTO baiviet(Tieu_de,Ngay_viet,Noi_dung,ID_nguoi_dung,Hinh_anh) VALUES (?,?,?,?,?)";
+            $sql="INSERT INTO baiviet(Tieu_de,Ngay_viet,ID_nguoi_dung,Hinh_anh) VALUES (?,?,?,?)";
             $params=array_values($data);
             return Database::getInstance()->execute($sql,$params);
         }

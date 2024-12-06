@@ -18,8 +18,15 @@
         <div class="header-1">
             <div class="logo-left"><img src="../public/img/Logo Green New.png" alt=""></div>
             <div class="login">
-                <div class="img-login"><img src="../public/img/Ellipse 1.png" alt=""></div>
-                <div class="name-login">Tên admin</div>
+                <div class="name-login"><?php if(isset($_SESSION['user'])) { ?>
+                        <?= $_SESSION['user']['Ten_nguoidung']?>
+                    <?php }?>
+                </div>
+                <form action="" method="get">
+                        <a href="?page=logout" class="menu-item">
+                            Đăng xuất
+                        </a>
+                </form>
             </div>
         </div>
         <hr>
