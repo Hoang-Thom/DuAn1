@@ -74,16 +74,12 @@ switch ($page) {
         $checkoutController->renderCheckout();
         break;
     case 'pay':
-        // if(isset($_POST['thanhtoan'])&&($_POST['thanhtoan'])){
-        //     $name = $_POST['name'];
-        //     $email = $_POST['email'];
-        //     $phone = $_POST['phone'];
-        //     $address = $_POST['address'];
-        //     $ngaydathang=date('h:i:sa d/m/Y');
-        //     $total = $_POST['total'];
-
-        // }
-        require_once('view/pay.php');
+        if(isset($_GET['orderID'])&& is_numeric($_GET['orderID']) &&($_GET['orderID']>0)) {
+            $id=$_GET['orderID'];
+            require_once('controller/CheckoutController.php');
+            $checkoutController = new CheckoutController();
+            $checkoutController->renderPay($id);
+        }
         break;
     case 'blog':
         $id = $_GET['id'] ?? null;

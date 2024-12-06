@@ -44,15 +44,31 @@ class CheckoutController {
                 }
             } else {
                 // Bước 2: Thêm đơn hàng vào cơ sở dữ liệu
-                $this->checkoutModel->addOrder($data);
+                $orderId=$this->checkoutModel->addOrder($data);
 
                 // Chuyển hướng đến trang xác nhận
-                header("Location: ?page=pay");
+                header("Location: ?page=pay&orderID=".$orderId);
                 exit;
             }
         } else {
             include('view/checkout.php');
         }
+    }
+
+    // Xác nhận đơn hàng
+    public function renderPay($id) {
+        // $donHang = $this->getAlldonhang($id);
+        // if($donHang){
+        //     $_SESSION['donhang'] = $donHang;
+        // }
+        $orderdetail = $this->checkoutModel->getOrderDetail($id);
+        $order = $this->checkoutModel->getOrder($id);
+        
+        // print_r($orderdetail);
+        print_r($order);
+        require_once('view/pay.php');
+
+        
     }
 }
 

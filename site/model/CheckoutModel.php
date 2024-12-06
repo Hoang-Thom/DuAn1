@@ -42,8 +42,21 @@
                 // Huỷ giỏ hàng
                 unset($_SESSION['cart']);
             }
+            return $orderId;
         }
 
+        // // Hàm lấy thông tin đơn hàng
+        public function getOrderDetail($id){
+            $sql = "SELECT * FROM donhang_ch INNER JOIN sanpham ON donhang_ch.ID_sanpham = sanpham.ID_sanpham WHERE ID_donhang= $id";
+            return Database::getInstance()->getAll($sql);
+        }
+
+        public function getOrder($id){
+            $sql = "SELECT * FROM don_hang INNER JOIN khuyen_mai ON don_hang.ID_khuyenmai = khuyen_mai.ID_khuyenmai WHERE ID_donhang = $id";
+            return Database::getInstance()->getOne($sql);
+        }
+
+         
     }
 
 ?>
