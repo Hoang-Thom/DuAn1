@@ -20,7 +20,7 @@
             return Database::getInstance()->getAll($sql);
         }
 
-        // lấy 5 sản phẩm theo danh mục
+        // lấy 6 sản phẩm theo danh mục
         public function getProByCateLIMIT5($id){
             $sql = "SELECT * FROM sanpham WHERE id_danhmuc = $id LIMIT 6";
             return Database::getInstance()->getAll($sql);

@@ -46,11 +46,8 @@
             
         </table>
 
-        <di class="cart-total">
-            <div class="order-notes">
-                <label for="notes">Ghi chú đơn hàng của tôi</label>
-                <textarea id="notes"></textarea>
-            </div>
+        <div class="cart-total">
+            
     
             <div class="total">
                 <p>Tổng tiền: 

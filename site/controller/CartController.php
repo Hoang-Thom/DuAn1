@@ -31,12 +31,12 @@ ob_start();
                 $_SESSION['cart'][$id] = $product; // Thêm sản phẩm vào giỏ hàng
             }
 
-            // Kiểm tra giỏ hàng sau khi thêm sản phẩm
-            print_r("<pre>");
-            print_r($_SESSION['cart']);
-            print_r("</pre>");
+            // // Kiểm tra giỏ hàng sau khi thêm sản phẩm
+            // print_r("<pre>");
+            // print_r($_SESSION['cart']);
+            // print_r("</pre>");
             // Chuyển đến trang giỏ hàng
-            header("Location: index.php");
+            header("Location: index.php?page=cart");
         }
         public function renderCart() {
             require_once('view/cart.php');
