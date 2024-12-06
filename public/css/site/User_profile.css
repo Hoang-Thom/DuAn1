@@ -130,7 +130,7 @@
 }
 
 .main-userProfile>.container>.box-right>.profile>.form>.information>.content>.name-box:focus {
-    outline: none
+    outline: none;
 }
 
 .main-userProfile>.container>.box-right>.profile>.form>.information>.content>.name-box>.fa-solid {
@@ -165,70 +165,3 @@
     outline: none
 }
 
-/* //// */
-.profile .sub-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #82398a;
-    margin-bottom: 20px;
-}
-
-.information {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
-.content label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.content input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
-.content input:focus {
-    border-color: #6aa34f;
-    outline: none;
-    box-shadow: 0 0 5px rgba(106, 163, 79, 0.5);
-}
-
-/* Nút cập nhật */
-.buy-btn {
-    background-color: rgb(107, 145, 96);
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    padding: 0.6rem 2rem 0.5rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-size: 1.6vw;
-    transition: background-color 0.3s ease;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-    float: right;
-    text-align: center;
-    border: none;
-    box-sizing: border-box;
-}
-
-.buy-btn:hover {
-    background-color: #5c9344;
-}
-
-/* Độ rộng input tối ưu */
-.information input {
-    width: 100%;
-    max-width: 500px;
-}

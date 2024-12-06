@@ -47,7 +47,10 @@
 
         // // Hàm lấy thông tin đơn hàng
         public function getOrderDetail($id){
-            $sql = "SELECT * FROM donhang_ch INNER JOIN sanpham ON donhang_ch.ID_sanpham = sanpham.ID_sanpham WHERE ID_donhang= $id";
+            $sql = "SELECT donhang_ch.*, sanpham.*, donhang_ch.So_luong AS So_luong_donhang, sanpham.So_luong AS So_luong_sanpham 
+                    FROM donhang_ch 
+                    INNER JOIN sanpham ON donhang_ch.ID_sanpham = sanpham.ID_sanpham 
+                    WHERE donhang_ch.ID_donhang = $id";
             return Database::getInstance()->getAll($sql);
         }
 

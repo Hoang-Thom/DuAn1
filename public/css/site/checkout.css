@@ -1,34 +1,38 @@
 .checkout-container {
+  padding: 0 5rem 1rem;
+}
+
+.checkout-container form.form-check {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.info-order {
+.checkout-container .form-check .info-order {
   display: flex;
   flex-direction: column;
 }
 
-.info-order-1 {
+.checkout-container .form-check .info-order .info-order-1 {
   display: flex;
   flex-direction: column;
 }
 
-.info-order-1 h1 {
+.checkout-container .form-check .info-order .info-order-1 h1 {
   color: rgb(107, 145, 96);
   margin: 2rem 0 1rem;
 }
 
-.info-order-1 p {
+.checkout-container .form-check .info-order .info-order-1 p {
   margin: 0;
 }
 
-.info-order-1 p a {
+.checkout-container .form-check .info-order .info-order-1 p a {
   text-decoration: none;
   color: rgb(107, 145, 96);
 }
 
-.info-order-1 form input {
+.checkout-container .form-check .info-order .info-order-1 .check-info input {
   width: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
@@ -37,82 +41,80 @@
   margin: 0 0 1rem;
 }
 
-.info-order-1 form .form-info {
+.checkout-container .form-check .info-order .info-order-1 .check-info input:focus {
+  outline: none;
+}
+
+.checkout-container .form-check .info-order .info-order-1 .check-info .form-info {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.info-order-1 form .form-info input {
+.checkout-container .form-check .info-order .info-order-1 .check-info .form-info input {
   width: 100%;
 }
 
-.info-order-1 form textarea {
-  width: 100%;
-  height: 5rem;
-  padding: 0.5rem;
-  box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.2rem;
-}
-
-.info-order-2 {
+.checkout-container .form-check .info-order .info-order-2 {
   display: flex;
   flex-direction: column;
   margin: 0 0 2rem;
 }
 
-.info-order-2 h1 {
+.checkout-container .form-check .info-order .info-order-2 h1 {
   margin: 2rem 0 1rem;
   color: rgb(107, 145, 96);
 }
 
-.info-order-2 .info-order-check {
+.checkout-container .form-check .info-order .info-order-2  .info-order-check {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
-.checkout-container .info-pro {
+.checkout-container .form-check .info-pro {
   display: flex;
   flex-direction: column;
 }
 
-.checkout-container .info-pro .cart {
+.checkout-container .form-check .info-pro .cart {
+  display: flex;
+  flex-direction: column;
   padding: 0;
 }
 
-.checkout-container .info-pro .cart h1 {
+.checkout-container .form-check .info-pro .cart h1 {
   color: rgb(107, 145, 96);
-  font-size: 30px;
+  font-size: 2vw;
+  margin: 2rem 0 1rem;
 }
 
-.checkout-container .info-pro .cart table {
+.checkout-container .form-check .info-pro .cart table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.checkout-container .info-pro .cart table th,
-.checkout-container .info-pro .cart table td {
+.checkout-container .form-check .info-pro .cart table th,
+.checkout-container .form-check .info-pro .cart table td {
   padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
 }
 
-.checkout-container .info-pro .cart table img {
+.checkout-container .form-check .info-pro .cart table img {
   width: 150px;
   height: 100px;
   border-radius: 5px;
   object-fit: cover;
 }
 
-.checkout-container .info-pro .cart .pro-quantity-input {
+.checkout-container .form-check .info-pro .cart table tr td .pro-quantity-input {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.checkout-container .info-pro .cart .pro-quantity-input .quantity-input {
+.checkout-container .form-check .info-pro .cart table tr td .pro-quantity-input .quantity-input {
   padding: 3px 6px;
   border: 1px solid #ddd;
   margin: 0 5px;
@@ -122,51 +124,99 @@
   box-sizing: border-box;
 }
 
-.checkout-container .info-pro .cart .pro-quantity-input .btn-decrease,
-.checkout-container .info-pro .cart .pro-quantity-input .btn-increase {
-  padding: 8px 10px;
-  background-color: rgb(107, 145, 96);
-  color: rgb(255, 255, 255);
-  border: none;
-  cursor: pointer;
+.checkout-container .form-check .info-pro .cart .row-tamtinh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.checkout-container .info-pro .cart a .btn-delete {
-  padding: 10px 16px;
-  background-color: rgb(107, 145, 96);
-  color: rgb(255, 255, 255);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.checkout-container .form-check .info-pro .cart .tamtinh-p {
+  margin: 1vw 0;
+  font-size: 1.4vw;
 }
 
+.checkout-container .form-check .info-pro .cart span{
+  font-size: 1.4vw;
+  color: rgb(107, 145, 96);
+  margin: 1vw 0;
+  font-weight: 600;
+}
 
-/* --------------------------------------------------------------------------------- */
+.checkout-container .form-check .info-pro .cart .rowCheck {
+  margin: 0;
+}
 
-.checkout-container .info-pro .cart .cart-total {
+.checkout-container .form-check .info-pro .cart .rowCheck .check-giam {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-container .form-check .info-pro .cart .rowCheck .magiam-form {
+  font-size: 1.4vw;
+}
+
+.checkout-container .form-check .info-pro .cart .rowCheck .row-giam {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.checkout-container .form-check .info-pro .cart .rowCheck .row-giam .inputma {
+  width: 60%;
+  height: 3vw;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+}
+
+.checkout-container .form-check .info-pro .cart .rowCheck .row-giam .inputma:focus {
+  outline: none;
+}
+
+.checkout-container .form-check .info-pro .cart .rowCheck .row-giam .inputbt {
+  background-color: rgb(107, 145, 96);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 0.6rem 2rem 0.5rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  font-size: 1.6vw;
+  transition: background-color 0.3s ease;
+  float: right;
+  text-align: center;
+  border: none;
+  box-sizing: border-box;
+  width: 35%;
+  /* height: 2vw; */
+}
+
+.checkout-container .form-check .info-pro .cart .cart-total {
   display: flex;
   justify-content: flex-end;
 }
 
-.checkout-container .info-pro .cart .cart-total .total {
+.checkout-container .form-check .info-pro .cart .cart-total .total {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.checkout-container .info-pro .cart .cart-total .total p {
+.checkout-container .form-check .info-pro .cart .cart-total .total p {
   font-size: 1.2rem;
   font-weight: 500;
   color: rgba(48, 48, 48, 1);
 }
 
-.checkout-container .info-pro .cart .cart-total .total p span {
+.checkout-container .form-check .info-pro .cart .cart-total .total p span {
   font-size: 1.4rem;
   font-weight: 600;
   color: rgb(107, 145, 96);
 }
 
-.checkout-container .info-pro .cart .cart-total .total .muaNgay {
+.checkout-container .form-check .info-pro .cart .cart-total .total .muaNgay {
   width: 15vw;
   background-color: rgb(107, 145, 96);
   color: rgb(255, 255, 255);
@@ -180,7 +230,7 @@
   border: none;
 }
 
-.checkout-container .info-pro .cart .cart-total .total .muaNgay:hover {
+.checkout-container .form-check .info-pro .cart .cart-total .total .muaNgay:hover {
   background-color: rgb(195, 230, 186);
   color: rgba(48, 48, 48, 0.8);
 }

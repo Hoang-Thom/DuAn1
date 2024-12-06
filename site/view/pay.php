@@ -20,7 +20,7 @@
                         <div class="order-item">
                             <div class="order-item-name">
                                 <div class="image-quantity">
-                                    <p>1</p><img src="../public/img/<?=$o['Anh_san_pham']?>" alt="Set 6 Tart Mini">
+                                    <p><?=$o['So_luong_donhang']?></p><img src="../public/img/<?=$o['Anh_san_pham']?>" alt="Set 6 Tart Mini">
                                 </div>
                                 <p><?=$o['Ten_san_pham']?></p>
                             </div>
@@ -31,12 +31,8 @@
 
                     <div class="order-item-price">
                         <div class="order-item-price-col">
-                            <strong>Tạm tính:</strong>
-                            <p>200,000 VNĐ</p>
-                        </div>
-                        <div class="order-item-price-col">
                             <strong>Mã giảm giá:</strong>
-                            <p> <?= $order['Ma_giam'] ?></p>
+                            <p> <?= $order['Phan_tram_giam']. '%'?></p>
                         </div>
                         <div class="order-item-price-col">
                             <strong>Phí vận chuyển:</strong>

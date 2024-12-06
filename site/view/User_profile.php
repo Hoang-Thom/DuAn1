@@ -1,13 +1,4 @@
-<main class="main-userProfile">
-    <?php
-    // Kiểm tra giá trị session
-    if (!isset($_SESSION['user']['Ten_nguoidung'])) {
-        echo "Bạn cần đăng nhập.";
-            exit;
-        } else {
-            echo "Chào Mừng: " . $_SESSION['user']['Ten_nguoidung'];
-        }
-    ?>
+    <main class="main-userProfile">
         <div class="container">
             <div class="box-left">
                 <div class="title">Thông tin tài khoản</div>
@@ -105,106 +96,105 @@
                         <form class="form" action="" method="post">
                             <div class="information">
                                 <div class="content">
-                                    <div class="label">Mật khẩu cũ:</div>
+                                    <label class="label">Mật khẩu cũ:</label>
                                     <input type="password" id="oldPassword" class="name-box" placeholder="Nhập mật khẩu cũ">
                                 </div>
 
                                 <div class="content">
-                                    <div class="label">Mật khẩu mới:</div>
+                                    <label class="label">Mật khẩu mới:</label>
                                     <input type="password" id="newPassword" class="name-box" placeholder="Nhập mật khẩu mới">
                                 </div>
 
                                 <div class="content">
-                                    <div class="label">Nhập lại mật khẩu mới:</div>
-                                    <input type="password" id="confirmPassword" class="name-box"
-                                        placeholder="Nhập lại mật khẩu mới">
+                                    <label class="label">Nhập lại mật khẩu mới:</label>
+                                    <input type="password" id="confirmPassword" class="name-box" placeholder="Nhập lại mật khẩu mới">
                                 </div>
                             </div>
-                            <button id="updatePasswordBtn" class="buy-btn">Cập nhật</button>
+                            <button type="submit" id="updatePasswordBtn" class="buy-btn">Cập nhật</button>
                         </form>
+                    </div>
                 </div>
-            </div>
+
             
-    <?php
-    // Kiểm tra nếu người dùng chưa đăng nhập
-    if (!isset($_SESSION['user']) || empty($_SESSION['user']['ID_nguoidung'])) {
-        echo "Bạn cần đăng nhập trước.";
-        exit;
-    }
-    
-    // Lấy thông tin người dùng từ session
-    $user = $_SESSION['user'];
+            <?php
+                // Kiểm tra nếu người dùng chưa đăng nhập
+                if (!isset($_SESSION['user']) || empty($_SESSION['user']['ID_nguoidung'])) {
+                    echo "Bạn cần đăng nhập trước.";
+                    exit;
+                }
+                
+                // Lấy thông tin người dùng từ session
+                $user = $_SESSION['user'];
 
-    // Xử lý khi cập nhật thông tin
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
-        // Lấy dữ liệu từ form
-        $name = $_POST['name'] ?? '';
-        $phone = $_POST['phone'] ?? '';
-        $email = $_POST['email'] ?? '';
-        $address = $_POST['address'] ?? '';
+                // Xử lý khi cập nhật thông tin
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
+                    // Lấy dữ liệu từ form
+                    $name = $_POST['name'] ?? '';
+                    $phone = $_POST['phone'] ?? '';
+                    $email = $_POST['email'] ?? '';
+                    $address = $_POST['address'] ?? '';
 
-    // Lấy ID người dùng từ session
-    $userId = $user['ID_nguoidung'];
+                // Lấy ID người dùng từ session
+                $userId = $user['ID_nguoidung'];
 
-    // Kết nối database
-    $conn = new mysqli("localhost", "root", "", "cake"); // Thay "cake" bằng tên database của bạn
-        if ($conn->connect_error) {
-            die("Kết nối thất bại: " . $conn->connect_error);
-        }
+                // Kết nối database
+                $conn = new mysqli("localhost", "root", "", "cake"); // Thay "cake" bằng tên database của bạn
+                    if ($conn->connect_error) {
+                        die("Kết nối thất bại: " . $conn->connect_error);
+                    }
 
-    // Cập nhật thông tin trong cơ sở dữ liệu
-    $sql = "UPDATE nguoidung SET Ten_nguoidung = ?, So_dien_thoai = ?, Email = ?, Dia_chi = ? WHERE ID_nguoidung = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssi", $name, $phone, $email, $address, $userId);
+                // Cập nhật thông tin trong cơ sở dữ liệu
+                $sql = "UPDATE nguoidung SET Ten_nguoidung = ?, So_dien_thoai = ?, Email = ?, Dia_chi = ? WHERE ID_nguoidung = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("ssssi", $name, $phone, $email, $address, $userId);
 
-    if ($stmt->execute()) {
+                if ($stmt->execute()) {
 
-        if ($stmt->execute()) {
-            // Cập nhật lại thông tin trong session
-            $_SESSION['user']['Ten_nguoidung'] = $name;
-            $_SESSION['user']['So_dien_thoai'] = $phone;
-            $_SESSION['user']['Email'] = $email;
-            $_SESSION['user']['Dia_chi'] = $address;
+                    if ($stmt->execute()) {
+                        // Cập nhật lại thông tin trong session
+                        $_SESSION['user']['Ten_nguoidung'] = $name;
+                        $_SESSION['user']['So_dien_thoai'] = $phone;
+                        $_SESSION['user']['Email'] = $email;
+                        $_SESSION['user']['Dia_chi'] = $address;
+                    
+                        // Redirect để làm mới giao diện
+                        header('Location: ' . $_SERVER['PHP_SELF'] . '?page=User_profile');
+                        exit;
+                    }
+                    
+                    // Đồng bộ lại $user
+                    $user = $_SESSION['user'];
+                } else {
+                    echo "Lỗi: " . $stmt->error;
+                }
+                    $stmt->close();
+                    $conn->close();
+                }
+            ?>
         
-            // Redirect để làm mới giao diện
-            header('Location: ' . $_SERVER['PHP_SELF'] . '?page=User_profile');
-            exit;
-        }
-        
-        // Đồng bộ lại $user
-        $user = $_SESSION['user'];
-    } else {
-        echo "Lỗi: " . $stmt->error;
-    }
-        $stmt->close();
-        $conn->close();
-    }
-    ?>
-        <container class="main-userProfile">
-            <div class="container">
-                <div id="personal-info" class="box-right">
-                    <div class="profile">
-                        <div class="sub-title">Thông tin cá nhân</div>
-                        <form method="POST" action="">
+            <div id="personal-info" class="box-right" style="display: none;">
+                <div class="profile">
+                    <div class="sub-title">Thông tin cá nhân</div>
+                        <form  class="form" method="POST" action="">
                             <div class="information">
                                 <div class="content">
-                                    <label for="name">Họ và Tên:</label>
-                                    <input type="text" id="name" name="name" value="<?= htmlspecialchars($user['Ten_nguoidung'] ?? ''); ?>" required />
+                                    <label class="label" for="name">Họ và Tên:</label>
+                                    <input class="name-box" type="text" id="name" name="name" value="<?= htmlspecialchars($user['Ten_nguoidung'] ?? ''); ?>" required />
                                 </div>
 
                                 <div class="content">
-                                    <label for="phone">Số Điện Thoại:</label>
-                                    <input type="text" id="phone" name="phone" value="<?= htmlspecialchars($user['So_dien_thoai'] ?? ''); ?>" required />
+                                    <label class="label" for="phone">Số Điện Thoại:</label>
+                                    <input class="name-box" type="text" id="phone" name="phone" value="<?= htmlspecialchars($user['So_dien_thoai'] ?? ''); ?>" required />
                                 </div>
 
                                 <div class="content">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['Email'] ?? ''); ?>" required />
+                                    <label class="label" for="email">Email:</label>
+                                    <input class="name-box" type="email" id="email" name="email" value="<?= htmlspecialchars($user['Email'] ?? ''); ?>" required />
                                 </div>
 
                                 <div class="content">
-                                    <label for="address">Địa Chỉ:</label>
-                                    <input type="text" id="address" name="address" value="<?= htmlspecialchars($user['Dia_chi'] ?? ''); ?>" required />
+                                    <label class="label" for="address">Địa Chỉ:</label>
+                                    <input class="name-box" type="text" id="address" name="address" value="<?= htmlspecialchars($user['Dia_chi'] ?? ''); ?>" required />
                                 </div>
                             </div>
                             <button type="submit" name="update" class="buy-btn">Cập nhật</button>
@@ -212,5 +202,5 @@
                     </div>
                 </div>
             </div>
-        </container>
+        </div>
     </main>

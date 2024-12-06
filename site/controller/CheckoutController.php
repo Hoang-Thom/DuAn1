@@ -65,7 +65,7 @@ class CheckoutController {
         $order = $this->checkoutModel->getOrder($id);
         
         // print_r($orderdetail);
-        print_r($order);
+        // print_r($order);
         require_once('view/pay.php');
 
         

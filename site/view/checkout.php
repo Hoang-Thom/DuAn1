@@ -1,18 +1,20 @@
-<main>
+
     <div class="checkout-container">
-        <form action="" method="post">
+        <form class="form-check" action="" method="post">
             <div class="info-order">
                 <div class="info-order-1">
                     <h1>Thông tin giao hàng</h1>
                     <p>Bạn đã có tài khoản? <a href="index.php?page=loginpage">Đăng nhập</a></p>
-                        <input type="hidden" name="ID_nguoi_dung" value="<?=  $_SESSION['user']['ID_nguoidung'] ?>">
-                        <input type="text" name="name" value="<?= $_SESSION['user']['Ten_nguoidung'] ?>" placeholder="Họ và tên">
-                        <div class="form-info">
-                            <input class="form-email" type="text" name="email" value="<?= $_SESSION['user']['Email'] ?>" placeholder="Email">
-                            <input class="form-sdt" type="text" name="phone" value="<?= $_SESSION['user']['So_dien_thoai'] ?>" placeholder="Số điện thoại">
+                        <div class="check-info">
+                            <input type="hidden" name="ID_nguoi_dung" value="<?=  $_SESSION['user']['ID_nguoidung'] ?>">
+                            <input type="text" name="name" value="<?= $_SESSION['user']['Ten_nguoidung'] ?>" placeholder="Họ và tên">
+                            <div class="form-info">
+                                <input class="form-email" type="text" name="email" value="<?= $_SESSION['user']['Email'] ?>" placeholder="Email">
+                                <input class="form-sdt" type="text" name="phone" value="<?= $_SESSION['user']['So_dien_thoai'] ?>" placeholder="Số điện thoại">
+                            </div>
+                            <input type="text" name="address" value="<?= $_SESSION['user']['Dia_chi'] ?>" placeholder="Địa chỉ">
+                            <!-- <textarea class="" type="text" placeholder="Ghi chú"></textarea> -->
                         </div>
-                        <input type="text" name="address" value="<?= $_SESSION['user']['Dia_chi'] ?>" placeholder="Địa chỉ">
-                        <!-- <textarea class="" type="text" placeholder="Ghi chú"></textarea> -->
                 </div>
                 <div class="info-order-2">
                     <h1>Phương thức thanh toán</h1>
@@ -61,9 +63,18 @@
                                         <td><?= number_format($itemTotal, 0, ',', '.') . ' VNĐ'?></td>
                                     </tr>
                         <?php 
-                                } 
+                                }
                             }
+                        ?>
+                    
+                    </table>
 
+                    <div class="row-tamtinh">
+                        <p class="tamtinh-p"> Tạm tính: </p>
+                        <span> <?= number_format($tong_tien, 0, ',', '.') ?> VNĐ </span>
+                    </div>
+
+                        <?php
                             // Biến giảm giá và xử lý mã giảm giá
                             $ma_giam = isset($_POST['ma_giam']) ? $_POST['ma_giam'] : null;
                             $giam_gia = 0;
@@ -97,26 +108,29 @@
                             // Đóng kết nối
                             $conn->close();
                         ?>
-                    
-                    </table>
 
-                    
+                   <div class="rowCheck">
+                        <form class="check-giam" method="POST">
+                            <label class="magiam-form" for="ma_giam">Mã giảm giá:</label>
+                            <div class="row-giam">
+                                <input class="inputma" type="text" id="ma_giam" name="ma_giam" placeholder="Nhập mã giảm giá">
+                                <button class="inputbt" type="submit">Áp dụng</button>
+                            </div>
+                        </form>
+                   </div>
 
-                    <form method="POST">
-                        <label for="ma_giam">Mã giảm giá:</label>
-                        <input type="text" id="ma_giam" name="ma_giam" placeholder="Nhập mã giảm giá">
-                        <button type="submit">Áp dụng</button>
-                    </form>
+                    <div class="row-tamtinh">
+                        <p class="tamtinh-p"> Giảm giá: </p>
+                        <span><?= number_format($giam_gia, 0, ',', '.') ?> VNĐ</span>
+                    </div>
 
-                    <p>Giảm giá: <?= number_format($giam_gia, 0, ',', '.') ?> VNĐ</p>
+                    <div class="row-tamtinh">
+                        <p class="tamtinh-p"> Tổng tiền: </p>
+                        <span><?=number_format($tong_tien, 0, ',', '.') . ' VNĐ'?></span>
+                    </div>
 
                     <div class="cart-total">
                         <div class="total">
-                            <p>Tổng tiền: 
-                                <span>
-                                    <?=number_format($tong_tien, 0, ',', '.') . ' VNĐ'?>
-                                </span>
-                            </p>
                             <input type="hidden" name="ID_khuyenmai" value="<?= $id_khuyenmai ?>">
                             <input type="hidden" name="total" value="<?=$tong_tien?>">
                             <input type="submit" class="muaNgay" value="Thanh toán" name="thanhtoan">
@@ -126,4 +140,3 @@
             </div>
         </form>
     </div>
-</main>
