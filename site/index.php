@@ -139,9 +139,6 @@ switch ($page) {
         $productController = new ProductController();
         $productController->renderSearch($search);
         break;
-    case 'editUser':
-
-        break;
     default:
         echo "Trang không tồn tại";
         break;

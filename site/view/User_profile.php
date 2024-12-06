@@ -62,7 +62,7 @@
             </div>
             <div id="order-history" class="box-right" style="display: none;">
                 <div class="profile">
-                    <div class="sub-title">Lịch sử mua Hoàng</div>
+                    <div class="sub-title">Lịch sử mua hàng</div>
                     <table>
                         <tr>
                             <th>Đơn hàng</th>
@@ -71,6 +71,9 @@
                             <th>Tình trạng thanh toán</th>
                             <th>Hành động</th>
                         </tr>
+
+                        <!-- <?php foreach ( $orderUser as $o) { ?> -->
+
                         <tr>
                             <td>1</td>
                             <td>30/10/2024 22:32</td>
@@ -78,6 +81,9 @@
                             <td>Chưa thanh toán</td>
                             <td><a href="#" style="color: #303030">Xem</a></td>
                         </tr>
+
+                        <!-- <?php } ?> -->
+                         
                         <tr>
                             <td>
                                 <h1></h1>
