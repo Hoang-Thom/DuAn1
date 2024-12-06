@@ -1,4 +1,13 @@
-    <main class="main-userProfile">
+<main class="main-userProfile">
+    <?php
+    // Kiểm tra giá trị session
+    if (!isset($_SESSION['user']['Ten_nguoidung'])) {
+        echo "Bạn cần đăng nhập.";
+            exit;
+        } else {
+            echo "Chào Mừng: " . $_SESSION['user']['Ten_nguoidung'];
+        }
+    ?>
         <div class="container">
             <div class="box-left">
                 <div class="title">Thông tin tài khoản</div>
@@ -115,52 +124,93 @@
                         </form>
                 </div>
             </div>
-            <?php
-                if(isset($_SESSION['user'])) {
-                    $name = $_SESSION['user']['Ten_nguoidung'];
-                    $email = $_SESSION['user']['Email'];
-                    $phone = $_SESSION['user']['So_dien_thoai'];
-                    $address = $_SESSION['user']['Dia_chi'];
-                } else{
-                    $name = '';
-                    $email = '';
-                    $phone = '';
-                    $address = '';
-                }
-            ?>
-            <div id="personal-info" class="box-right" style="display: none;">
-                <div class="profile">
-                    <div class="sub-title">Thông tin cá nhân</div>
-                    <form class="form" action="" method="post">
-                        <div class="information">
-                            <div class="content">
-                                <div class="label">Họ và Tên:</div>
-                                <input type="text" name="Ten_nguoidung" class="name-box" value="<?= $name ?>" placeholder="Nhập họ và tên">
-                            </div>
+            
+    <?php
+    // Kiểm tra nếu người dùng chưa đăng nhập
+    if (!isset($_SESSION['user']) || empty($_SESSION['user']['ID_nguoidung'])) {
+        echo "Bạn cần đăng nhập trước.";
+        exit;
+    }
+    
+    // Lấy thông tin người dùng từ session
+    $user = $_SESSION['user'];
 
-                            <div class="content">
-                                <div class="label">Điện thoại:</div>
-                                <input type="text" name="So_dien_thoai" class="name-box" value="<?= $phone ?>" placeholder="Nhập số điện thoại">
-                            </div>
-                            
-                            <div class="content">
-                                <div class="label">Email:</div>
-                                <input type="text" name="Email" class="name-box" value="<?= $email ?>" placeholder="Nhập email">
-                            </div>
+    // Xử lý khi cập nhật thông tin
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
+        // Lấy dữ liệu từ form
+        $name = $_POST['name'] ?? '';
+        $phone = $_POST['phone'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $address = $_POST['address'] ?? '';
 
-                            <div class="content">
-                                <div class="label">Địa chỉ:</div>
-                                <input type="text" name="Dia_chi" class="name-box" value="<?= $address ?>" placeholder="Nhập địa chỉ">
+    // Lấy ID người dùng từ session
+    $userId = $user['ID_nguoidung'];
+
+    // Kết nối database
+    $conn = new mysqli("localhost", "root", "", "cake"); // Thay "cake" bằng tên database của bạn
+        if ($conn->connect_error) {
+            die("Kết nối thất bại: " . $conn->connect_error);
+        }
+
+    // Cập nhật thông tin trong cơ sở dữ liệu
+    $sql = "UPDATE nguoidung SET Ten_nguoidung = ?, So_dien_thoai = ?, Email = ?, Dia_chi = ? WHERE ID_nguoidung = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssi", $name, $phone, $email, $address, $userId);
+
+    if ($stmt->execute()) {
+
+        if ($stmt->execute()) {
+            // Cập nhật lại thông tin trong session
+            $_SESSION['user']['Ten_nguoidung'] = $name;
+            $_SESSION['user']['So_dien_thoai'] = $phone;
+            $_SESSION['user']['Email'] = $email;
+            $_SESSION['user']['Dia_chi'] = $address;
+        
+            // Redirect để làm mới giao diện
+            header('Location: ' . $_SERVER['PHP_SELF'] . '?page=User_profile');
+            exit;
+        }
+        
+        // Đồng bộ lại $user
+        $user = $_SESSION['user'];
+    } else {
+        echo "Lỗi: " . $stmt->error;
+    }
+        $stmt->close();
+        $conn->close();
+    }
+    ?>
+        <container class="main-userProfile">
+            <div class="container">
+                <div id="personal-info" class="box-right">
+                    <div class="profile">
+                        <div class="sub-title">Thông tin cá nhân</div>
+                        <form method="POST" action="">
+                            <div class="information">
+                                <div class="content">
+                                    <label for="name">Họ và Tên:</label>
+                                    <input type="text" id="name" name="name" value="<?= htmlspecialchars($user['Ten_nguoidung'] ?? ''); ?>" required />
+                                </div>
+
+                                <div class="content">
+                                    <label for="phone">Số Điện Thoại:</label>
+                                    <input type="text" id="phone" name="phone" value="<?= htmlspecialchars($user['So_dien_thoai'] ?? ''); ?>" required />
+                                </div>
+
+                                <div class="content">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['Email'] ?? ''); ?>" required />
+                                </div>
+
+                                <div class="content">
+                                    <label for="address">Địa Chỉ:</label>
+                                    <input type="text" id="address" name="address" value="<?= htmlspecialchars($user['Dia_chi'] ?? ''); ?>" required />
+                                </div>
                             </div>
-                            
-                        </div>
-                        <button type="submit" id="updateinfo" class="buy-btn">Cập nhật</button>
-                    </form>
-                    <!-- <a href="#" class="buy-btn">Cập nhật</a> -->
+                            <button type="submit" name="update" class="buy-btn">Cập nhật</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-
-
-        </div>
+        </container>
     </main>

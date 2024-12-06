@@ -1,0 +1,471 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+header {
+    width: 100%;
+    height: 168px;
+    background-color: #6B9160;
+}
+
+header>.header-1 {
+    width: 80%;
+    height: 95px;
+    margin: 0px auto;
+}
+
+header>.header-1>.logo-left {
+    width: 165px;
+    height: 95px;
+    float: left;
+}
+
+header>.header-1>.logo-left img {
+    width: 100%;
+    height: 95px;
+}
+
+header>.header-1>.login {
+    width: 153px;
+    height: 40px;
+    float: right;
+    margin: 30px 0px;
+    border-right: 1px solid #ffffff;
+}
+
+header>.header-1>.login>.img-login {
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    float: left;
+}
+
+header>.header-1>.login>.img-login img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+header>.header-1>.login>.name-login {
+    float: left;
+    font-size: 20px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+header>hr {
+    opacity: 40%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    /* Sử dụng Flexbox để sắp xếp các mục menu theo hàng ngang */
+    justify-content: space-between;
+    /* Dàn đều các mục menu và tạo khoảng cách giữa chúng */
+    padding: 0;
+    /* Loại bỏ padding mặc định */
+    margin: 0;
+    /* Loại bỏ margin mặc định */
+    list-style: none;
+}
+
+nav li {
+    flex-grow: 1;
+    /* Đảm bảo các mục menu co giãn đều */
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 1vw;
+    display: block;
+    /* Biến các liên kết thành block để dễ dàng điều chỉnh */
+    padding: 10px 20px;
+    /* Khoảng cách bên trong mỗi mục */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    color: #ffffff;
+    /* Màu văn bản */
+    /* Màu nền của mục menu */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng khi hover */
+}
+
+nav a:hover {
+    color: #000000;
+}
+
+
+/* --------------------------------footer------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}
+
+main {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    gap: 2rem;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.summoney {
+    background-color: #0077F5;
+    width: 20%;
+}
+
+.summoney p {
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.summoney .quantity {
+    height: 6rem;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.summoney .quantity h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.summoney a {
+    display: block;
+    margin: 0;
+    text-align: right;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.order {
+    /* background-color: #0077F5; */
+    background-color: #AE3EE0;
+    width: 20%;
+}
+
+.order p {
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.order .quantity {
+    height: 6rem;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.order .quantity h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.order a {
+    display: block;
+    margin: 0;
+    text-align: right;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.product {
+    background-color: #6B9160;
+    width: 20%;
+}
+
+.product p {
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.product .quantity {
+    height: 6rem;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.product .quantity h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.product a {
+    display: block;
+    margin: 0;
+    text-align: right;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.blog {
+    background-color: #FFC30D;
+    width: 20%;
+}
+
+.blog p {
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.blog .quantity {
+    height: 6rem;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.blog .quantity h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.blog a {
+    display: block;
+    margin: 0;
+    text-align: right;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.user {
+    background-color: #DC3641;
+    width: 20%;
+}
+
+.user p {
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.user .quantity {
+    height: 6rem;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.user .quantity h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: left;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.user a {
+    display: block;
+    margin: 0;
+    text-align: right;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+canvas {
+    max-width: 100%;
+    /* width: 1000px;
+    height: 600px; */
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+
+.pro {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    float: left;
+    gap: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
+}
+
+.pro h1 {
+    margin: 0;
+    padding: 1rem 0;
+    border-block-end: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.pro .chart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 1rem 0;
+    border-block-end: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pro .chart img {
+    width: 12rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 0.4rem;
+}
+
+.pro .chart .nm {
+    padding: 0 5rem 0 0.5rem;
+}

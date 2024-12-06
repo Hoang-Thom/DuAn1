@@ -14,12 +14,6 @@
             return Database::getInstance()->getAll($sql);
         }
 
-        // đếm có bnhiu sản phẩm theo danh mục
-        // public function getPro_ QuantityByCate($id){
-        //     $sql = "SELECT * FROM sanpham WHERE id_danhmuc = $id";
-        //     return Database::getInstance()->getPro_Quantity($sql);
-        // }
-
         // lấy sản phẩm mới nhất
         public function getProNew(){
             $sql = "SELECT * FROM sanpham ORDER BY id_sanpham DESC LIMIT 8";

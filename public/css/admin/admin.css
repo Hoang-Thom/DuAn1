@@ -1,0 +1,670 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    line-height: 1.6vw;
+    background: rgb(248, 248, 248);
+    color: rgba(48, 48, 48, 1);
+}
+
+header {
+    width: 100%;
+    height: 168px;
+    background-color: #6B9160;
+}
+
+header>.header-1 {
+    width: 80%;
+    height: 95px;
+    margin: 0px auto;
+}
+
+header>.header-1>.logo-left {
+    width: 165px;
+    height: 95px;
+    float: left;
+}
+
+header>.header-1>.logo-left img {
+    width: 100%;
+    height: 95px;
+}
+
+header>.header-1>.login {
+    width: 153px;
+    height: 40px;
+    float: right;
+    margin: 30px 0px;
+    border-right: 1px solid #ffffff;
+}
+
+header>.header-1>.login>.img-login {
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    float: left;
+}
+
+header>.header-1>.login>.img-login img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+header>.header-1>.login>.name-login {
+    float: left;
+    font-size: 20px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+header>hr {
+    opacity: 40%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    /* Sử dụng Flexbox để sắp xếp các mục menu theo hàng ngang */
+    justify-content: space-between;
+    /* Dàn đều các mục menu và tạo khoảng cách giữa chúng */
+    padding: 0;
+    /* Loại bỏ padding mặc định */
+    margin: 0;
+    /* Loại bỏ margin mặc định */
+    list-style: none;
+}
+
+nav li {
+    flex-grow: 1;
+    /* Đảm bảo các mục menu co giãn đều */
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 1vw;
+    display: block;
+    /* Biến các liên kết thành block để dễ dàng điều chỉnh */
+    padding: 10px 20px;
+    /* Khoảng cách bên trong mỗi mục */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    color: #ffffff;
+    /* Màu văn bản */
+    /* Màu nền của mục menu */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng khi hover */
+}
+
+nav a:hover {
+    color: #000000;
+}
+
+
+/* --------------------------------footer------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background-color: rgb(107, 145, 96);
+    color: rgb(248, 248, 248);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.contact-info,
+.address-info,
+.opening-hours {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info,
+.address-info {
+    border-width: 0px 1px 0px 0px;
+    border-color: #FFFFFF29;
+    border-style: solid;
+}
+
+.contact-info p,
+.address-info p,
+.opening-hours p {
+    display: block;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.contact-info h3,
+.address-info h3,
+.opening-hours h3 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.footer-line span {
+    margin: 0 0.8rem;
+}
+
+.footer-line::before {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-line::after {
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.161);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.footer-bottom .logo {
+    width: 16vw;
+}
+
+.footer-bottom .social-media {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 1vw;
+}
+
+.footer-bottom .social-media img {
+    width: 2.2vw;
+}
+
+
+/* -------------------------main--------------------- */
+
+main {
+    width: 1440px;
+    min-height: 300px;
+    margin: 20px auto;
+}
+
+main>.row-1 {
+    width: 1200px;
+    height: 208px;
+    margin: 20px auto;
+    /* background-color: #05290c; */
+}
+
+main>.row-1>.col-4 {
+    width: 276px;
+    height: 208px;
+    margin-right: 32px;
+    background-color: #6B9160;
+    float: left;
+}
+
+main>.row-1>.col-4>.name {
+    width: 99%;
+    height: 47px;
+    border: 1px solid #ffffff;
+    font-size: 20px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+main>.row-1>.col-4>.name>p {
+    margin-left: 20px;
+}
+
+main>.row-1>.col-4>.quanlity {
+    width: 99%;
+    height: 113px;
+    background-color: #ffffff;
+    opacity: 10%;
+    font-size: 48px;
+    float: left;
+}
+
+main>.row-1>.col-4>.quanlity>p {
+    color: #ffffff;
+}
+
+
+/* -------------acrticl------------ */
+
+article {
+    width: 80vw;
+    min-height: 300px;
+    margin: 20px auto;
+}
+
+article>h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 0px;
+}
+
+article>.add-new {
+    width: 145px;
+    height: 50px;
+    background-color: #6B9160;
+    float: right;
+    margin: 20px;
+    font-size: 24px;
+    color: white;
+    border-radius: 30px;
+    border: 0px;
+}
+
+article>.add-new>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+article>.add-new:hover {
+    background-color: #38672b;
+}
+
+table {
+    width: 80vw;
+    border-collapse: collapse;
+    margin: 0px auto;
+    table-layout: auto;
+}
+
+textarea {
+    font-size: 12px;
+}
+
+article>table,
+th,
+td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+    font-size: 1vw;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.test {
+    width: 17vw;
+}
+
+.delete-1 {
+    width: 83px;
+    height: 35px;
+    background-color: #6B9160;
+    font-size: 24px;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.delete-1:hover {
+    background-color: #38672b;
+}
+
+.delete-1-1 {
+    font-size: 1.3vw;
+    width: 3.8vw;
+    height: 2.3vw;
+    background-color: #a44232;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.delete-1-1>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.edit-1-1 {
+    width: 7.5vw;
+    height: 2.3vw;
+    background-color: #66325C;
+    font-size: 1.3vw;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 10px 0px;
+}
+
+.edit-1 {
+    width: 83px;
+    height: 35px;
+    background-color: #66325C;
+    font-size: 24px;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.edit-1:hover {
+    background-color: #96127c;
+}
+
+.test>.edit-1>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.xem-1 {
+    width: 3.8vw;
+    height: 2.3vw;
+    border-radius: 5px;
+    background-color: #6B9160;
+    font-size: 1.3vw;
+    border: 0px;
+    color: #000000;
+}
+
+.xem-1>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.xem {
+    width: 83px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #E6BADD;
+    font-size: 24px;
+    border: 0px;
+    margin-top: 10px;
+}
+
+.xem>a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.img-dm img {
+    width: 184px;
+    height: 118px;
+    margin: 10px;
+}
+
+.img-bl img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* -----------------------------admin-add-dm-------------------- */
+
+.login-box {
+    width: 397px;
+    height: auto;
+    background-color: rgb(230, 186, 221);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0px auto;
+    /* Căn giữa trên trang */
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    margin: 0px auto;
+    gap: 15px;
+}
+
+form>select {
+    width: 100%;
+    height: 45px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: #66325C;
+    opacity: 70%;
+}
+
+form>input.mota {
+    height: 107px;
+}
+
+.login-box h2 {
+    color: #fff;
+    font-size: 32px;
+    padding-top: 40px;
+    /* Thu nhỏ kích thước chữ */
+}
+
+.login-box input {
+    width: 100%;
+    height: 45px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: #66325C;
+    opacity: 70%;
+}
+
+.login-box input:focus {
+    outline: none;
+    border: none;
+}
+
+.login-box input::placeholder {
+    color: #66325C;
+}
+
+.login-box button {
+    width: 100%;
+    /* Thu nhỏ chiều rộng nút */
+    padding: 8px;
+    /* Giảm padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgb(102, 50, 92);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0 30px;
+    height: 45px;
+    font-size: 24px;
+}
+
+.login-box button a {
+    text-decoration: none;
+    color: #66325C;
+}
+
+form>.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+form>label {
+    display: flex;
+    font-size: 24px;
+}
+
+form>.checkbox>.check label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* -------------------bai viết------------- */
+
+.baiviet {
+    width: 1224px;
+    height: auto;
+    margin: 0px auto;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    margin: 0px auto;
+    gap: 15px;
+}
+
+.baiviet>input {
+    width: 1193px;
+    height: 45px;
+    background-color: #D9D9D9;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.baiviet>input:focus {
+    outline: none;
+}
+
+main>.add-blog {
+    width: 1224px;
+    min-height: 700px;
+    margin: 20px auto;
+    border: 1px solid #8e8888;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 20px 20px 20px;
+}
+
+main>.add-blog>h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+main>.add-blog>label {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+main>.add-blog>input[type="text"] {
+    width: 100%;
+    height: 45px;
+    background-color: #D9D9D9;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+main>.add-blog>input[type="date"] {
+    width: 100%;
+    height: 45px;
+    background-color: #D9D9D9;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+main>.add-blog>input[type="text"]:focus {
+    outline: none;
+}
+
+main>.add-blog>input[type="file"] {
+    width: 100%;
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+main>.add-blog>textarea {
+    width: 100%;
+    min-height: 336px;
+    background-color: #D9D9D9;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+main>.add-blog>input {
+    height: 30px;
+}
+
+main>.add-blog>textarea:focus {
+    outline: none;
+}
+
+main>.add-blog>.adds {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main>.add-blog>.adds>button {
+    width: 238px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #6B9160;
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    border: 0px;
+}
+
+main>.add-blog>.adds>button>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* ----------------xem bai viet----------- */
+
+.img-star>input {
+    width: 397px;
+    height: 45px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #D9D9D9;
+    padding: 5px;
+}

@@ -5,14 +5,14 @@
                 <div class="info-order-1">
                     <h1>Thông tin giao hàng</h1>
                     <p>Bạn đã có tài khoản? <a href="index.php?page=loginpage">Đăng nhập</a></p>
-                        <input type="hidden" name="ID_nd" value="<?= $_SESSION['user']['ID_nguoidung'] ?>">
+                        <input type="hidden" name="ID_nguoi_dung" value="<?=  $_SESSION['user']['ID_nguoidung'] ?>">
                         <input type="text" name="name" value="<?= $_SESSION['user']['Ten_nguoidung'] ?>" placeholder="Họ và tên">
                         <div class="form-info">
                             <input class="form-email" type="text" name="email" value="<?= $_SESSION['user']['Email'] ?>" placeholder="Email">
                             <input class="form-sdt" type="text" name="phone" value="<?= $_SESSION['user']['So_dien_thoai'] ?>" placeholder="Số điện thoại">
                         </div>
                         <input type="text" name="address" value="<?= $_SESSION['user']['Dia_chi'] ?>" placeholder="Địa chỉ">
-                        <textarea class="" type="text" placeholder="Ghi chú"></textarea>
+                        <!-- <textarea class="" type="text" placeholder="Ghi chú"></textarea> -->
                 </div>
                 <div class="info-order-2">
                     <h1>Phương thức thanh toán</h1>
@@ -58,6 +58,8 @@
                         
                     </table>
 
+                    
+
                     <div class="cart-total">
                         <div class="total">
                             <p>Tổng tiền: 
@@ -65,6 +67,7 @@
                                     <?=number_format($total, 0, ',', '.') . ' VNĐ'?>
                                 </span>
                             </p>
+                            <input type="hidden" name="ID_khuyenmai" value="1">
                             <input type="hidden" name="total" value="<?=$total?>">
                             <input type="submit" class="muaNgay" value="Thanh toán" name="thanhtoan">
                         </div>

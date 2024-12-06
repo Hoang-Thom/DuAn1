@@ -2,33 +2,14 @@
 
     require_once('Database.php');
     class ProductModel {
-        // lấy tất cả sản phẩm
+        // lấy tất cả
         public function getAllProduct(){
+            $sql = "SELECT pr.*, dm.Ten_danh_muc FROM sanpham AS pr INNER JOIN danhmuc AS dm ON pr.ID_danhmuc = dm.ID_danhmuc";
+            return Database::getInstance()->getAll($sql);
+        }
+        //lay so luong san pham
+        public function getQuantityProduct(){
             $sql = "SELECT * FROM sanpham";
-            return Database::getInstance()->getAll($sql);
-        }
-
-        // lấy sản phẩm theo danh mục
-        public function getProByCate($id){
-            $sql = "SELECT * FROM sanpham WHERE id_danhmuc = $id";
-            return Database::getInstance()->getAll($sql);
-        }
-
-        // đếm có bnhiu sản phẩm theo danh mục
-        // public function getPro_ QuantityByCate($id){
-        //     $sql = "SELECT * FROM sanpham WHERE id_danhmuc = $id";
-        //     return Database::getInstance()->getPro_Quantity($sql);
-        // }
-
-        // lấy sản phẩm mới nhất
-        public function getProNew(){
-            $sql = "SELECT * FROM sanpham ORDER BY id_sanpham DESC LIMIT 8";
-            return Database::getInstance()->getAll($sql);
-        }
-
-        // lấy 5 sản phẩm theo danh mục
-        public function getProByCateLIMIT5($id){
-            $sql = "SELECT * FROM sanpham WHERE id_danhmuc = $id LIMIT 6";
             return Database::getInstance()->getAll($sql);
         }
 
@@ -37,24 +18,32 @@
             $sql = "SELECT * FROM sanpham WHERE id_sanpham = $id";
             return Database::getInstance()->getOne($sql);
         }
-
-        // lấy sản phẩm tương tự
-        public function getRelateProduct($id){
-            $sql = "SELECT * FROM sanpham WHERE id_danhmuc = (SELECT id_danhmuc FROM sanpham WHERE id_sanpham = $id) AND id_sanpham!=$id  LIMIT 4";
-            return Database::getInstance()->getAll($sql);
+        //them san pham
+        public function addProduct($data){
+            $sql="INSERT INTO sanpham(Ten_san_pham,Gia_san_pham,So_luong,Mo_ta_san_pham,ID_danhmuc,Anh_san_pham) VALUES (?,?,?,?,?,?)";
+            $params=array_values($data);
+            return Database::getInstance()->execute($sql,$params);
         }
-
-        // tìm kiếm sản phẩm
-        public function getProBySreach($search){
-            $sql = "SELECT * FROM sanpham WHERE 1";
-            if($search!=""){
-                $sql .= " AND Ten_san_pham LIKE '%".$search."%' ";
-            }
-            return Database::getInstance()->getAll($sql);
+        //xoa san pham
+        public function deleteProduct($id){
+            $sql="DELETE FROM sanpham WHERE ID_sanpham=?";
+            return Database::getInstance()->execute($sql,[$id]);
         }
+    
+        // public function getCategoryById($id){
+        //     $sql ="SELECT * FROM danhmuc WHERE ID_danhmuc = $id";
+        //     return Database::getInstance()->getOne($sql);
+        // }
+        public function editProduct($data){
+            $sql = "UPDATE sanpham 
+            SET Ten_san_pham=?, Gia_san_pham=?, So_luong=?, Mo_ta_san_pham=?,ID_danhmuc=?, Anh_san_pham=?
+            WHERE ID_sanpham=?";
+            $params = array_values($data);
+            return Database::getInstance()->execute($sql, $params);
+        }
+        
 
     }
-
 
 
 ?>

@@ -70,7 +70,6 @@ switch ($page) {
     case 'checkout':
         require_once('controller/CheckoutController.php');
         $checkoutController = new CheckoutController();
-
         // Gọi phương thức để hiển thị biểu mẫu thanh toán
         $checkoutController->renderCheckout();
         break;
